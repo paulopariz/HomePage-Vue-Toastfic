@@ -4,6 +4,6 @@ import { Button } from "./components/ui/button";
 
 <template>
   <div>
-    <Button>Click me</Button>
+    <Button> Click me </Button>
   </div>
 </template>
