@@ -19,8 +19,35 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ["@nuxtjs/tailwindcss", "shadcn-nuxt"],
+  build: {
+    transpile: ["vue-toastfic"],
+  },
+
+  modules: [
+    "@nuxtjs/tailwindcss",
+    "shadcn-nuxt",
+    "@nuxtjs/color-mode",
+    "nuxt-phosphor-icons",
+    "@nuxtjs/google-fonts",
+    "@nuxt/image",
+    "@nuxtjs/i18n",
+  ],
   css: ["vue-toastfic/style.css"],
+
+  colorMode: {
+    classSuffix: "",
+  },
+
+  googleFonts: {
+    families: {
+      Poppins: [200, 400, 500, 600],
+    },
+  },
+
+  i18n: {
+    vueI18n: "./i18n",
+  },
+
   shadcn: {
     /**
      * Prefix for all the imported component
