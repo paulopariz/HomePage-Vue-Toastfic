@@ -23,6 +23,16 @@ export default defineNuxtConfig({
     transpile: ["vue-toastfic"],
   },
 
+  vite: {
+    resolve: {
+      alias: {
+        "@components": "/src/components",
+        "@assets": "/src/assets",
+        "@utils": "/src/utils",
+      },
+    },
+  },
+
   modules: [
     "@nuxtjs/tailwindcss",
     "shadcn-nuxt",

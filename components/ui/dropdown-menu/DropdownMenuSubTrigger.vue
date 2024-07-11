@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { type HTMLAttributes, computed } from "vue";
 import { DropdownMenuSubTrigger, type DropdownMenuSubTriggerProps, useForwardProps } from "radix-vue";
-import { ChevronRightIcon } from "@radix-icons/vue";
 import { cn } from "@/lib/utils";
 
 const props = defineProps<DropdownMenuSubTriggerProps & { class?: HTMLAttributes["class"] }>();
@@ -27,6 +26,6 @@ const forwardedProps = useForwardProps(delegatedProps);
     "
   >
     <slot />
-    <ChevronRightIcon class="ml-auto h-4 w-4" />
+    <PhosphorIconCaretRight size="12" color="var(--icon)" weight="bold" class="ml-auto" />
   </DropdownMenuSubTrigger>
 </template>
