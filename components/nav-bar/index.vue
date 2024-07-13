@@ -14,7 +14,7 @@ import { IconNpm } from "~/assets/icons/managers";
 
 <template>
   <nav
-    class="fixed left-1/2 top-0 m-auto flex h-14 w-full -translate-x-1/2 items-center border-b border-border max-md:px-3"
+    class="fixed left-1/2 top-0 z-30 m-auto flex h-14 w-full -translate-x-1/2 items-center border-b border-border bg-background max-md:px-3"
   >
     <div class="container flex h-full items-center justify-between">
       <div class="flex cursor-pointer items-center gap-1">
