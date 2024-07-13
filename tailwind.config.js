@@ -12,9 +12,7 @@ export const theme = {
       "2xl": "1400px",
     },
   },
-  fontFamily: {
-    sans: ["Poppins", "ui-sans-serif", "system-ui"],
-  },
+
   extend: {
     colors: {
       border: "var(--border)",

@@ -38,20 +38,13 @@ export default defineNuxtConfig({
     "shadcn-nuxt",
     "@nuxtjs/color-mode",
     "nuxt-phosphor-icons",
-    "@nuxtjs/google-fonts",
     "@nuxt/image",
     "@nuxtjs/i18n",
   ],
-  css: ["vue-toastfic/style.css"],
+  css: ["vue-toastfic/style.css", "@/assets/css/main.css"],
 
   colorMode: {
     classSuffix: "",
-  },
-
-  googleFonts: {
-    families: {
-      Poppins: [200, 400, 500, 600],
-    },
   },
 
   i18n: {

@@ -74,6 +74,7 @@
 @layer base {
   * {
     @apply border-border;
+    font-family: "Geist-Regular", sans-serif !important;
   }
 }
 @layer base {
