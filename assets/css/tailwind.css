@@ -22,7 +22,7 @@
     --secondary-foreground: #151517;
 
     --muted: #d0d0d0;
-    --muted-foreground: #64748b;
+    --muted-foreground: #686868;
 
     --accent: #d0d0d0;
     --accent-foreground: #151517;
@@ -33,7 +33,7 @@
     --green-light: rgba(12, 165, 99, 0.158);
 
     --border: #d3d3d3;
-    --input: #e2e2e2;
+    --input: #d3d3d3;
     --ring: #dddddd;
 
     --icon: #151517;
@@ -57,7 +57,7 @@
     --secondary-foreground: #e2e2e2;
 
     --muted: #1c1c1f;
-    --muted-foreground: #969696;
+    --muted-foreground: #adabab;
 
     --accent: #1c1c1f;
     --accent-foreground: #e2e2e2;

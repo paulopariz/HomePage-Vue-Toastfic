@@ -41,6 +41,9 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@nuxtjs/i18n",
   ],
+
+  plugins: ["~/plugins/date.ts"],
+
   css: ["vue-toastfic/style.css", "@/assets/css/main.css"],
 
   colorMode: {

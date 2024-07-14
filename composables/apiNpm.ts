@@ -27,7 +27,6 @@ export function useNpmInfo() {
 
   onMounted(async () => {
     await fetchNpmInfo();
-    console.log(npmInfo.value);
   });
 
   return {

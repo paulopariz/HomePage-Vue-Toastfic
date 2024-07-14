@@ -45,7 +45,7 @@ function openCommand() {
     <Button
       size="xs"
       variant="outline"
-      class="relative ml-5 inline-flex h-8 w-full items-center justify-start whitespace-nowrap rounded-md border border-input bg-background px-4 py-2 text-xs font-normal text-muted-foreground shadow-none ring-offset-background transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 sm:pr-12 md:w-40 lg:w-64"
+      class="relative ml-5 inline-flex h-8 w-full items-center justify-start whitespace-nowrap rounded-md border border-border bg-background px-4 py-2 text-xs font-normal text-muted-foreground shadow-none ring-offset-background transition-all hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 sm:pr-12 md:w-40 lg:w-64"
       @click="openCommand"
     >
       Pesquisar documentação...

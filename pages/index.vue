@@ -1,13 +1,10 @@
 <script setup lang="ts">
 import { IconNuxt, IconVue } from "~/assets/icons/managers";
 import { Button } from "~/components/ui/button";
+
 import { useNpmInfo } from "~/composables/apiNpm";
 
 const { npmInfo } = useNpmInfo();
-
-onMounted(() => {
-  console.log(npmInfo.value);
-});
 </script>
 
 <template>
@@ -27,14 +24,27 @@ onMounted(() => {
         <PhosphorIconLightning color="#eede2b" weight="fill" /> Última versão
         <span class="font-semibold">v{{ npmInfo?.last_version }}</span>
       </span>
+
       <h1 class="text-6xl font-black -tracking-wide">Vue Toastfic</h1>
-      <p class="text-lg tracking-wide opacity-70">Light and simple toast library for Vue and Nuxt</p>
-      <div class="mt-4 flex items-center gap-4">
+
+      <p class="text-lg tracking-wide text-muted-foreground">Light and simple toast library for Vue and Nuxt</p>
+
+      <div class="z-40 mt-4 flex items-center gap-4">
         <Button size="lg" class="font-medium">Get Started</Button>
         <Button size="lg" variant="secondary" class="flex items-center gap-2 font-medium">
-          <PhosphorIconGithubLogo size="16" color="var(--icon)" /> Github</Button
-        >
+          <PhosphorIconGithubLogo size="16" color="var(--icon)" />
+          Github
+        </Button>
       </div>
+
+      <!-- <div
+        class="z-20 mt-6 flex h-9 w-40 items-center justify-between rounded-md border border-border bg-background px-4"
+      >
+        <span class="size-3 rounded-full bg-green" />
+        <span class="size-3 rounded-full bg-red-500" />
+        <span class="size-3 rounded-full bg-blue-500" />
+        <span class="size-3 rounded-full bg-yellow-500" />
+      </div> -->
 
       <!-- circles -->
       <div
@@ -78,6 +88,8 @@ onMounted(() => {
   </div>
 
   <section>
+    <div class="absolute left-1/2 -z-20 size-14 -translate-x-1/2 rounded-full bg-foreground opacity-65 blur-3xl" />
+
     <span class="mb-3 flex items-center justify-center text-xs">
       Versão suportada: <PhosphorIconArrowUp color="var(--green)" class="ml-1" weight="bold" />
       <span class="font-semibold"> v3.0.0</span>
@@ -88,6 +100,8 @@ onMounted(() => {
       <IconNuxt />
       <div class="line h-px w-1/2" />
     </div>
+
+    <DataGithub class="mt-32" />
   </section>
 </template>
 
