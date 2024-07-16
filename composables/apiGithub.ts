@@ -28,7 +28,7 @@ export function useGitHubRepoInfo() {
 
   async function fetchInfos() {
     try {
-      const repoUrl = "https://api.github.com/repos/paulopariz/teste";
+      const repoUrl = "https://api.github.com/repos/paulopariz/ChatSK-Client";
       const releasesUrl = `${repoUrl}/releases`;
 
       const [repoResponse, releasesResponse] = await Promise.all([fetch(repoUrl), fetch(releasesUrl)]);

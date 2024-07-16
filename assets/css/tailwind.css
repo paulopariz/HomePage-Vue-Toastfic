@@ -38,6 +38,9 @@
 
     --icon: #151517;
     --radius: 0.8rem;
+
+    --vis-tooltip-background-color: transparent !important;
+    --vis-tooltip-border-color: transparent !important;
   }
 
   .dark {

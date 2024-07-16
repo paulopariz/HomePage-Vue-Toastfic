@@ -66,10 +66,5 @@ onMounted(() => {
         {{ repoInfo?.forks_count }} <PhosphorIconGitFork weight="fill" color="var(--icon)" />
       </div>
     </section>
-
-    <div class="h-96" />
-    <div class="h-96" />
-    <div class="h-96" />
-    <div class="h-96" />
   </div>
 </template>

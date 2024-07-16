@@ -102,6 +102,8 @@ const { npmInfo } = useNpmInfo();
     </div>
 
     <DataGithub class="mt-32" />
+
+    <DataNpm class="mt-32" />
   </section>
 </template>
 
