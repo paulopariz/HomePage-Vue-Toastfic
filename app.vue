@@ -4,13 +4,13 @@
   </NuxtLayout>
 
   <Toast
-    :duration="4000"
+    :duration="4111000"
     position="top-right"
     :close="true"
     :colorful="true"
     theme="dark"
     :max-toasts="7"
-    :progress-bar="true"
+    :progress-bar="false"
     :classes="{
       toast: 'classe-toast',
       title: 'classe-title',

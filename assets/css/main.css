@@ -42,3 +42,31 @@
   font-family: "Geist-UltraLight";
   src: url("@/assets/fonts/Geist-UltraLight.otf") format("opentype");
 }
+
+[toastfic-theme="dark"] {
+  --toastfic-bg: #0a0a0a !important;
+  --toastfic-icon: #e2e2e2 !important;
+  --toastfic-text: #e2e2e2 !important;
+
+  --toastfic-success-icon: #28ab70 !important;
+
+  --toastfic-info-icon: #1976d2 !important;
+
+  --toastfic-warning-icon: #f57c00 !important;
+
+  --toastfic-error-icon: #b42626 !important;
+}
+
+[toastfic-theme="light"] {
+  --toastfic-bg: #e2e2e2 !important;
+  --toastfic-icon: #0a0a0a !important;
+  --toastfic-text: #0a0a0a !important;
+
+  --toastfic-success-icon: #28ab70 !important;
+
+  --toastfic-info-icon: #1976d2 !important;
+
+  --toastfic-warning-icon: #f57c00 !important;
+
+  --toastfic-error-icon: #b42626 !important;
+}

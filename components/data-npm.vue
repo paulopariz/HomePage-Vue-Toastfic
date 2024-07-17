@@ -32,7 +32,7 @@ watch(
 );
 </script>
 <template>
-  <div class="mt-56 grid gap-5">
+  <div class="grid gap-5">
     <h1 class="flex items-center gap-2 text-3xl font-semibold">
       <PhosphorIconHash color="var(--green)" />
       Npm

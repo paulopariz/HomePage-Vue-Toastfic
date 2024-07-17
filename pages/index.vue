@@ -51,13 +51,13 @@ const { npmInfo } = useNpmInfo();
         class="circle absolute -left-36 -top-28 -z-10 flex size-80 items-center justify-center rounded-full bg-green-light blur-3xl"
       />
       <div
-        class="circle absolute -right-32 -top-28 -z-10 flex size-80 items-center justify-center rounded-full bg-red-600/10 blur-3xl"
+        class="circle absolute -right-32 -top-28 -z-10 flex size-80 items-center justify-center rounded-full bg-red-600/20 blur-3xl dark:bg-red-600/10"
       />
       <div
-        class="circle absolute -bottom-48 -left-36 -z-10 flex size-80 items-center justify-center rounded-full bg-blue-600/10 blur-3xl"
+        class="circle absolute -bottom-48 -left-36 -z-10 flex size-80 items-center justify-center rounded-full bg-blue-600/20 blur-3xl dark:bg-blue-600/10"
       />
       <div
-        class="circle delay-500-z-10 absolute -bottom-48 -right-32 flex size-80 items-center justify-center rounded-full bg-yellow-600/10 blur-3xl"
+        class="circle absolute -bottom-48 -right-32 -z-10 flex size-80 items-center justify-center rounded-full bg-yellow-600/20 blur-3xl dark:bg-yellow-600/10"
       />
 
       <!-- icons -->
@@ -101,9 +101,13 @@ const { npmInfo } = useNpmInfo();
       <div class="line h-px w-1/2" />
     </div>
 
-    <DataGithub class="mt-32" />
+    <div class="mt-56 grid gap-56">
+      <DataGithub />
 
-    <DataNpm class="mt-32" />
+      <DataNpm />
+
+      <RedirectForm />
+    </div>
   </section>
 </template>
 
