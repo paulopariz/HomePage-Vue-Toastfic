@@ -1,7 +1,17 @@
 <script setup lang="ts">
-import { ref, onMounted, watch } from "vue";
+import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+
 import { CurveType } from "@unovis/ts";
 import { AreaChart } from "@/components/ui/chart-area";
+
+import { ref, onMounted, watch } from "vue";
+
 import { useNpmInfo } from "~/composables/apiNpm";
 import { useNpmDownloads } from "~/composables/apiNpmDownloads";
 
@@ -44,12 +54,34 @@ watch(
       testes.
     </p>
 
-    <section class="mt-10 grid grid-cols-2 gap-x-10">
-      <div class="flex size-full h-72 flex-col">
-        <h1 class="font-semibold">Downloads:</h1>
-        <p class="text-sm leading-7 tracking-wider text-muted-foreground">
-          Quantidade de downloads feitas nos últimos {{ dayActive }} dias.
-        </p>
+    <section class="mt-10 grid">
+      <div class="flex size-full flex-col">
+        <header class="flex items-center justify-between">
+          <div>
+            <h1 class="font-semibold">Downloads:</h1>
+            <p class="text-sm leading-7 tracking-wider text-muted-foreground">
+              Quantidade de downloads feitas nos últimos {{ dayActive }} dias.
+            </p>
+          </div>
+
+          <DropdownMenu>
+            <DropdownMenuTrigger as-child>
+              <Button variant="outline"> Versões </Button>
+            </DropdownMenuTrigger>
+
+            <DropdownMenuContent align="end" class="max-h-72 w-32 overflow-auto">
+              <DropdownMenuItem
+                v-for="(version, index) in limitedVersions"
+                :key="index"
+                class="flex items-center justify-between gap-4"
+              >
+                {{ version.version }}
+
+                <span v-if="index === 0" class="rounded-full px-1 text-[11px] text-green"> latest </span>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+        </header>
 
         <div class="mt-10 flex items-center gap-3">
           <button
@@ -70,7 +102,7 @@ watch(
         </div>
 
         <AreaChart
-          class="mt-5 h-40 w-3/4"
+          class="mt-5 h-40 w-full"
           index="day"
           :data="downloads.length > 0 ? downloads : [{ day: '15/06/2024', downloads: 0 }]"
           :colors="['var(--green)']"
@@ -81,31 +113,6 @@ watch(
           :show-y-axis="false"
           :curve-type="CurveType.Linear"
         />
-      </div>
-
-      <div class="flex size-full h-72 flex-col">
-        <h1 class="pl-8 font-semibold">Versões:</h1>
-        <p class="pl-8 text-sm leading-7 tracking-wider text-muted-foreground">Versões lançadas.</p>
-
-        <div class="mt-7 grid grid-cols-6">
-          <NuxtLink
-            v-for="(version, index) in limitedVersions"
-            :key="index"
-            :href="`https://www.npmjs.com/package/vue-toastfic/v/${version.version}`"
-            target="_blank"
-            class="flex h-20 items-center justify-center rounded-md transition-all hover:bg-green-light hover:text-green hover:underline"
-          >
-            {{ version.version }}
-          </NuxtLink>
-
-          <NuxtLink
-            href="https://www.npmjs.com/package/vue-toastfic/v/0.0.0?activeTab=versions"
-            target="_blank"
-            class="ml-6 mt-6 flex h-8 w-16 items-center justify-center rounded-md bg-primary text-xs text-background transition-all hover:opacity-90"
-          >
-            Todas
-          </NuxtLink>
-        </div>
       </div>
     </section>
   </div>
