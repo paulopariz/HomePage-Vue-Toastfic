@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import Preferences from "./preferences.vue";
 import Command from "./command.vue";
-import { Button } from "@/components/ui/button";
 
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { IconNpm } from "~/assets/icons/managers";
@@ -45,12 +44,14 @@ import { IconNpm } from "~/assets/icons/managers";
         <TooltipProvider>
           <Tooltip>
             <TooltipTrigger as-child>
-              <Button
+              <NuxtLink
+                href="https://github.com/paulopariz/vue-toastfic"
+                target="_blank"
                 variant="outline"
-                class="group flex h-full w-20 cursor-pointer items-center rounded-none border-y-0 border-l border-r-0 border-border px-5 text-sm font-medium opacity-80 transition-all hover:border-transparent hover:bg-green-light hover:text-green"
+                class="group flex h-full w-20 cursor-pointer items-center justify-center rounded-none border-y-0 border-l border-r-0 border-border px-5 text-sm font-medium opacity-80 transition-all hover:border-transparent hover:bg-green-light hover:text-green"
               >
                 <PhosphorIconGithubLogo size="21" />
-              </Button>
+              </NuxtLink>
             </TooltipTrigger>
             <TooltipContent>
               <p>Repositório no github</p>
@@ -61,12 +62,14 @@ import { IconNpm } from "~/assets/icons/managers";
         <TooltipProvider>
           <Tooltip>
             <TooltipTrigger as-child>
-              <Button
+              <NuxtLink
+                href="https://www.npmjs.com/package/vue-toastfic"
+                target="_blank"
                 variant="outline"
-                class="border-l-1 group flex h-full w-20 cursor-pointer items-center rounded-none border-x border-y-0 border-border px-5 text-sm font-medium opacity-80 transition-all hover:border-transparent hover:bg-green-light hover:text-green"
+                class="border-l-1 group flex h-full w-20 cursor-pointer items-center justify-center rounded-none border-x border-y-0 border-border px-5 text-sm font-medium opacity-80 transition-all hover:border-transparent hover:bg-green-light hover:text-green"
               >
                 <IconNpm />
-              </Button>
+              </NuxtLink>
             </TooltipTrigger>
             <TooltipContent>
               <p>Pacote no npm</p>
