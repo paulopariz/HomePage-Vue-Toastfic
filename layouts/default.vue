@@ -2,10 +2,22 @@
   <main>
     <NavBar />
 
-    <div class="container mb-20 mt-32 max-md:px-3">
-      <slot />
-    </div>
+    <main>
+      <div class="container mx-auto">
+        <div class="flex flex-col lg:grid lg:grid-cols-10 lg:gap-8">
+          <div class="lg:col-span-2">
+            <Sidebar v-if="$route.path !== '/'" />
+          </div>
 
-    <Footer />
+          <div class="overflow-hidden lg:col-span-8" :class="{ 'lg:!col-span-10': $route.path === '/' }">
+            <div class="break-words p-4">
+              <slot />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <Footer v-if="$route.path === '/'" />
   </main>
 </template>

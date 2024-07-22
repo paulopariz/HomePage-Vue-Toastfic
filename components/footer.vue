@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg- relative m-auto h-32 w-full overflow-hidden border-t border-border max-md:px-3">
+  <footer class="relative m-auto mt-28 h-32 w-full overflow-hidden border-t border-border bg-background max-md:px-3">
     <div class="container flex items-start justify-between py-5">
       <div class="flex cursor-pointer items-center gap-1">
         <NuxtImg src="/logo.svg" alt="Vue Toasctfic" class="h-9 w-9" />
@@ -31,7 +31,7 @@
     </div>
 
     <div
-      class="absolute -top-36 left-1/2 -z-10 flex size-48 -translate-x-1/2 items-center justify-center rounded-full bg-border blur-3xl"
+      class="absolute -top-36 left-1/2 flex size-48 -translate-x-1/2 items-center justify-center rounded-full bg-border blur-3xl"
     />
   </footer>
 </template>

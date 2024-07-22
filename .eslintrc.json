@@ -71,6 +71,7 @@
     "definePageMeta": "readonly",
     "useCookie": "readonly",
     "useNuxtApp": "readonly",
+    "useRoute": "readonly",
     "useColorMode": "readonly",
     "useI18n": "readonly",
     "useHead": "readonly",
