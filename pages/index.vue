@@ -5,6 +5,10 @@ import { Button } from "~/components/ui/button";
 import { useNpmInfo } from "~/composables/apiNpm";
 
 const { npmInfo } = useNpmInfo();
+
+function openRepository() {
+  window.open("https://github.com/paulopariz/vue-toastfic", "_blank");
+}
 </script>
 
 <template>
@@ -30,21 +34,12 @@ const { npmInfo } = useNpmInfo();
       <p class="text-lg tracking-wide text-muted-foreground">Light and simple toast library for Vue and Nuxt</p>
 
       <div class="z-40 mt-4 flex items-center gap-4">
-        <Button size="lg" class="font-medium">Get Started</Button>
-        <Button size="lg" variant="secondary" class="flex items-center gap-2 font-medium">
+        <Button size="lg" class="font-medium" @click="$router.push('/getting-started')">Get Started</Button>
+        <Button size="lg" variant="secondary" class="flex items-center gap-2 font-medium" @click="openRepository">
           <PhosphorIconGithubLogo size="16" color="var(--icon)" />
           Github
         </Button>
       </div>
-
-      <!-- <div
-        class="z-20 mt-6 flex h-9 w-40 items-center justify-between rounded-md border border-border bg-background px-4"
-      >
-        <span class="size-3 rounded-full bg-green" />
-        <span class="size-3 rounded-full bg-red-500" />
-        <span class="size-3 rounded-full bg-blue-500" />
-        <span class="size-3 rounded-full bg-yellow-500" />
-      </div> -->
 
       <!-- circles -->
       <div
@@ -59,31 +54,6 @@ const { npmInfo } = useNpmInfo();
       <div
         class="circle absolute -bottom-48 -right-32 -z-10 flex size-80 items-center justify-center rounded-full bg-yellow-600/20 blur-3xl dark:bg-yellow-600/10"
       />
-
-      <!-- icons -->
-      <!-- <div
-        class="absolute -left-12 -top-9 flex size-11 items-center justify-center rounded-md bg-green-light text-green"
-      >
-        <PhosphorIconCheck size="22" />
-      </div>
-
-      <div
-        class="absolute -right-10 -top-4 flex size-11 items-center justify-center rounded-md bg-red-500/10 text-red-600"
-      >
-        <PhosphorIconX size="22" />
-      </div>
-
-      <div
-        class="absolute -bottom-20 -left-10 flex size-11 items-center justify-center rounded-md bg-blue-500/10 text-blue-600"
-      >
-        <PhosphorIconInfo size="22" />
-      </div>
-
-      <div
-        class="absolute -bottom-24 -right-0 flex size-11 items-center justify-center rounded-md bg-yellow-500/10 text-yellow-600"
-      >
-        <PhosphorIconWarningCircle size="22" />
-      </div> -->
     </section>
   </div>
 

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Command from "../nav-bar/command.vue";
+import Card from "./card.vue";
 import Group from "./group.vue";
 
 interface Link {
@@ -8,7 +9,7 @@ interface Link {
 }
 
 const getting_started: Link[] = [
-  { to: "/", text: "Demonstração" },
+  { to: "/getting-started", text: "Demonstração" },
   { to: "/", text: "Instalar" },
   { to: "/", text: "Nuxt" },
 ];
@@ -26,12 +27,6 @@ const use: Link[] = [
   { to: "/", text: "Opções" },
   { to: "/", text: "Personalização do toast" },
 ];
-
-function redirectForm() {
-  console.log("wew");
-
-  window.open("https://tally.so/r/w4jjPk", "_blank");
-}
 </script>
 
 <template>
@@ -48,28 +43,6 @@ function redirectForm() {
       </div>
     </div>
 
-    <div class="absolute bottom-3 h-32 w-[90%]">
-      <div class="relative flex size-full flex-col justify-between overflow-hidden rounded-lg border p-4">
-        <div>
-          <h1 class="font-semibold">Sugestões e melhorias</h1>
-          <p class="mt-0.5 text-xs tracking-wide text-muted-foreground">Ajude a impulsionar o vue-toastfic</p>
-        </div>
-
-        <Button size="xs" class="text-sm" @click="redirectForm">Formulário</Button>
-
-        <div
-          class="circle absolute left-0 top-0 -z-10 flex h-16 w-32 items-center justify-center rounded-full bg-green-light blur-xl"
-        />
-        <div
-          class="circle absolute right-0 top-0 -z-10 flex h-16 w-32 items-center justify-center rounded-full bg-red-600/20 blur-xl dark:bg-red-600/15"
-        />
-        <div
-          class="circle absolute bottom-0 left-0 -z-10 flex h-16 w-32 items-center justify-center rounded-full bg-blue-600/20 blur-xl dark:bg-blue-600/15"
-        />
-        <div
-          class="circle absolute bottom-0 right-0 -z-10 flex h-16 w-32 items-center justify-center rounded-full bg-yellow-600/20 blur-xl dark:bg-yellow-600/15"
-        />
-      </div>
-    </div>
+    <Card />
   </aside>
 </template>

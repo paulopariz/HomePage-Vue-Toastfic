@@ -19,17 +19,17 @@ function isActive(link: string) {
 <template>
   <div>
     <h1 class="flex items-center gap-3 font-semibold">
-      <PhosphorIconFolderOpen color="var(--icon)" weight="fill" class="-mt-0.5" />
+      <PhosphorIconFolderOpen color="var(--icon)" weight="fill" class="-mt-1" />
       {{ title }}
     </h1>
 
-    <div class="ml-7 mt-4 grid gap-3">
+    <div class="ml-2 mt-2 grid gap-3 border-l border-dashed pl-5">
       <NuxtLink
         v-for="(link, index) in links"
         :key="index"
         :to="link.to"
-        class="text-sm hover:underline"
-        :class="{ 'font-semibold text-green': isActive(link.to) }"
+        class="text-sm text-muted-foreground hover:underline"
+        :class="{ '!text-green': isActive(link.to) }"
       >
         {{ link.text }}
       </NuxtLink>
