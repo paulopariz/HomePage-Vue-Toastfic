@@ -1,4 +1,8 @@
 <script setup lang="ts">
+definePageMeta({
+  layout: "home",
+});
+
 import { IconNuxt, IconVue } from "~/assets/icons/managers";
 import { Button } from "~/components/ui/button";
 

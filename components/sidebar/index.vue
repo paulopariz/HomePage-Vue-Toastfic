@@ -9,8 +9,7 @@ interface Link {
 }
 
 const getting_started: Link[] = [
-  { to: "/getting-started", text: "Demonstração" },
-  { to: "/", text: "Instalar" },
+  { to: "/getting-started", text: "Instalar" },
   { to: "/", text: "Nuxt" },
 ];
 

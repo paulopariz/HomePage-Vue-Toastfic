@@ -9,15 +9,13 @@
             <Sidebar v-if="$route.path !== '/'" />
           </div>
 
-          <div class="overflow-hidden lg:col-span-8" :class="{ 'lg:!col-span-10': $route.path === '/' }">
-            <div class="break-words p-4">
+          <div class="overflow-hidden py-3.5 lg:col-span-8">
+            <div class="grid gap-12 break-words p-4">
               <slot />
             </div>
           </div>
         </div>
       </div>
     </main>
-
-    <Footer v-if="$route.path === '/'" />
   </main>
 </template>
