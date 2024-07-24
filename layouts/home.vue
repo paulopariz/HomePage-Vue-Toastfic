@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import { Footer, NavBar } from "~/components/_default";
+</script>
+
 <template>
   <main>
     <NavBar />

@@ -6,6 +6,13 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import {
+  Header,
+  HeaderDescription,
+  HeaderTitle,
+  HeaderSubDescription,
+  HeaderSubTitle,
+} from "@/components/_default/header";
 
 import { CurveType } from "@unovis/ts";
 import { AreaChart } from "@/components/ui/chart-area";
@@ -43,26 +50,24 @@ watch(
 </script>
 <template>
   <div class="grid gap-5">
-    <h1 class="flex items-center gap-2 text-3xl font-semibold">
-      <PhosphorIconHash color="var(--green)" />
-      Npm
-    </h1>
-
-    <p class="max-w-4xl leading-7 tracking-wider text-muted-foreground">
-      Pacote oficial do vue-toastfic no npm. Aqui você pode baixar qualquer versão, acompanhar as atualizações e mais.
-      Lembre-se de que as versões anteriores à <span class="font-extrabold underline">v1.0.0</span> são apenas para
-      testes.
-    </p>
+    <Header>
+      <HeaderTitle class="flex items-center gap-2"> Npm </HeaderTitle>
+      <HeaderDescription class="">
+        Pacote oficial do vue-toastfic no npm. Aqui você pode baixar qualquer versão, acompanhar as atualizações e mais.
+        Lembre-se de que as versões anteriores à <span class="font-extrabold underline">v1.0.0</span> são apenas para
+        testes.
+      </HeaderDescription>
+    </Header>
 
     <section class="mt-10 grid">
       <div class="flex size-full flex-col">
-        <header class="flex items-center justify-between">
-          <div>
-            <h1 class="font-semibold">Downloads:</h1>
-            <p class="text-sm leading-7 tracking-wider text-muted-foreground">
+        <div class="flex items-center justify-between">
+          <Header>
+            <HeaderSubTitle>Downloads:</HeaderSubTitle>
+            <HeaderSubDescription>
               Quantidade de downloads feitas nos últimos {{ dayActive }} dias.
-            </p>
-          </div>
+            </HeaderSubDescription>
+          </Header>
 
           <DropdownMenu>
             <DropdownMenuTrigger as-child>
@@ -81,7 +86,7 @@ watch(
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
-        </header>
+        </div>
 
         <div class="mt-10 flex items-center gap-3">
           <button
@@ -89,7 +94,7 @@ watch(
             :disabled="dayActive === 7"
             @click="setDays(7)"
           >
-            <span class="size-2 rounded-full bg-border" :class="{ 'bg-green': dayActive === 7 }" /> 7 dias
+            <span class="size-2 rounded-full bg-muted" :class="{ '!bg-green': dayActive === 7 }" /> 7 dias
           </button>
 
           <button
@@ -97,7 +102,7 @@ watch(
             :disabled="dayActive === 30"
             @click="setDays(30)"
           >
-            <span class="size-2 rounded-full bg-border" :class="{ 'bg-green': dayActive === 30 }" /> 30 dias
+            <span class="size-2 rounded-full bg-muted" :class="{ '!bg-green': dayActive === 30 }" /> 30 dias
           </button>
         </div>
 

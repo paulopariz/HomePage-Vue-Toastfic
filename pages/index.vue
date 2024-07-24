@@ -4,6 +4,7 @@ definePageMeta({
 });
 
 import { IconNuxt, IconVue } from "~/assets/icons/managers";
+import { DataGithub, DataNpm, RedirectForm } from "~/components/_default";
 import { Button } from "~/components/ui/button";
 
 import { useNpmInfo } from "~/composables/apiNpm";

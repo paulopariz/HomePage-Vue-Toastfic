@@ -31,7 +31,7 @@
     </div>
 
     <div
-      class="absolute -top-36 left-1/2 flex size-48 -translate-x-1/2 items-center justify-center rounded-full bg-border blur-3xl"
+      class="absolute -top-36 left-1/2 flex size-48 -translate-x-1/2 items-center justify-center rounded-full bg-muted blur-3xl"
     />
   </footer>
 </template>

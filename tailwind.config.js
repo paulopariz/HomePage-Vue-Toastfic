@@ -21,9 +21,10 @@ export const theme = {
       background: "var(--background)",
       foreground: "var(--foreground)",
 
-      green: "var(--green)",
-      "green-light": "var(--green-light)",
-
+      green: {
+        DEFAULT: "var(--green)",
+        light: "var(--green-light)",
+      },
       primary: {
         DEFAULT: "var(--primary)",
         foreground: "var(--primary-foreground)",
@@ -40,6 +41,7 @@ export const theme = {
       muted: {
         DEFAULT: "var(--muted)",
         foreground: "var(--muted-foreground)",
+        light: "var(--muted-light)",
       },
       accent: {
         DEFAULT: "var(--accent)",

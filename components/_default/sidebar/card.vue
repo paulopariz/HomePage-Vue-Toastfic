@@ -44,7 +44,7 @@ onMounted(() => {
       />
     </div>
     <button
-      class="absolute -right-1 -top-1 z-10 flex size-4 items-center justify-center rounded-full bg-border opacity-0 transition-all group-hover:opacity-100"
+      class="absolute -right-1 -top-1 z-10 flex size-4 items-center justify-center rounded-full bg-muted opacity-0 transition-all group-hover:opacity-100"
       @click="hiddenCard"
     >
       <PhosphorIconX color="var(--icon)" size="10" weight="bold" />
