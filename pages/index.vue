@@ -3,7 +3,7 @@ definePageMeta({
   layout: "home",
 });
 
-import { IconNuxt, IconVue } from "~/assets/icons/managers";
+import { IconNuxtLight, IconVueLight } from "~/assets/icons/managers";
 import { DataGithub, DataNpm, RedirectForm } from "~/components/_default";
 import { Button } from "~/components/ui/button";
 
@@ -27,7 +27,7 @@ function openRepository() {
   >
     useToast
   </button> -->
-  <div class="h-[75dvh] w-full">
+  <div class="h-dvh w-full">
     <section class="absolute left-1/2 top-[45%] flex -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-3">
       <span class="flex items-center gap-1 rounded-sm px-2 py-1 text-start text-xs underline">
         <PhosphorIconLightning color="#eede2b" weight="fill" /> Última versão
@@ -71,8 +71,8 @@ function openRepository() {
     </span>
     <div class="flex items-center gap-7">
       <div class="line h-px w-1/2" />
-      <IconVue />
-      <IconNuxt />
+      <IconVueLight />
+      <IconNuxtLight />
       <div class="line h-px w-1/2" />
     </div>
 

@@ -1,3 +1,7 @@
+<script setup lang="ts">
+const colorMode = useColorMode();
+</script>
+
 <template>
   <NuxtLayout>
     <NuxtPage />
@@ -5,26 +9,12 @@
 
   <Toast
     :duration="4111000"
-    position="top-right"
+    position="bottom-right"
     :close="true"
     :colorful="true"
-    theme="dark"
+    :theme="colorMode.preference === 'dark' ? 'light' : 'dark'"
     :max-toasts="7"
     :progress-bar="false"
-    :classes="{
-      toast: 'classe-toast',
-      title: 'classe-title',
-      description: 'classe-description',
-      buttonHandle: 'classe-handle',
-      buttonClose: 'classe-close',
-      icon: 'classe-icon',
-      icons: {
-        success: 'classe-icon-success',
-        error: 'classe-icon-error',
-        info: 'classe-icon-info',
-        warning: 'classe-icon-warning',
-      },
-    }"
   />
 </template>
 

@@ -11,7 +11,7 @@ import {
   CommandList,
   CommandSeparator,
 } from "@/components/ui/command";
-import { IconNpm } from "~/assets/icons/managers";
+import { IconNpmLight } from "~/assets/icons/managers";
 
 const colorMode = useColorMode();
 
@@ -81,7 +81,7 @@ function openCommand() {
           </CommandItem>
 
           <CommandItem value="npm" class="group flex items-center gap-3">
-            <IconNpm />
+            <IconNpmLight />
             Pacote no npm
           </CommandItem>
         </CommandGroup>

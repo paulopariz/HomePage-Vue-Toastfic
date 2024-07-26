@@ -54,8 +54,7 @@ watch(
       <HeaderTitle class="flex items-center gap-2"> Npm </HeaderTitle>
       <HeaderDescription class="">
         Pacote oficial do vue-toastfic no npm. Aqui você pode baixar qualquer versão, acompanhar as atualizações e mais.
-        Lembre-se de que as versões anteriores à <span class="font-extrabold underline">v1.0.0</span> são apenas para
-        testes.
+        Lembre-se de que as versões anteriores à <b>v1.0.0</b> são apenas para testes.
       </HeaderDescription>
     </Header>
 
