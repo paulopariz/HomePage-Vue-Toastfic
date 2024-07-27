@@ -40,6 +40,7 @@ export default defineNuxtConfig({
     "nuxt-phosphor-icons",
     "@nuxt/image",
     "@nuxtjs/i18n",
+    "@nuxt/content",
   ],
 
   plugins: ["~/plugins/date.ts"],
@@ -64,5 +65,12 @@ export default defineNuxtConfig({
      * @default "./components/ui"
      */
     componentDir: "./components/ui",
+  },
+
+  content: {
+    highlight: {
+      theme: "github-dark", // Você pode escolher outros temas suportados pelo Shiki
+      preload: ["javascript", "typescript", "vue"], // Linguagens a serem pré-carregadas
+    },
   },
 });

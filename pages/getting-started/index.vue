@@ -6,9 +6,12 @@ import {
   HeaderTitle,
   HeaderSubDescription,
   HeaderSubTitle,
-} from "@/components/_default/header";
-import { Tag } from "@/components/ui/tag";
+} from "~/components/_default/header";
+import { Tag } from "~/components/ui/tag";
 import { Terminal, ImportCss } from "~/components/pages";
+
+import { Code, CodeContent, CodeHeader } from "~/components/_default/code-block";
+import { IconTs } from "~/assets/icons/managers";
 </script>
 
 <template>
@@ -57,5 +60,14 @@ import { Terminal, ImportCss } from "~/components/pages";
     </Header>
 
     <ImportCss />
+
+    <Code>
+      <CodeHeader>
+        <IconTs />
+        main.ts
+      </CodeHeader>
+
+      <CodeContent code="const message: string = 'Hello, Shiki!'" lang="typescript" />
+    </Code>
   </div>
 </template>
