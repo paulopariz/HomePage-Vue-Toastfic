@@ -8,10 +8,45 @@ import {
   HeaderSubTitle,
 } from "~/components/_default/header";
 import { Tag } from "~/components/ui/tag";
+import { type ICode, Code } from "~/components/_default/code-block";
 import { Terminal, ImportCss } from "~/components/pages";
 
-import { Code, CodeContent, CodeHeader } from "~/components/_default/code-block";
-import { IconTs } from "~/assets/icons/managers";
+import { IconTs, IconVue, IconNuxt } from "@/assets/icons/managers";
+import { pluginNuxt, appNuxt, configNuxt, appVue } from "~/utils/codes/getting-started";
+
+const useVue: ICode[] = [
+  {
+    key: "app",
+    label: "App.vue",
+    icon: IconVue,
+    code: appVue,
+    lang: "vue",
+  },
+];
+
+const useNuxt: ICode[] = [
+  {
+    key: "plugin",
+    label: "plugins/toastfic.ts",
+    icon: IconTs,
+    code: pluginNuxt,
+    lang: "typescript",
+  },
+  {
+    key: "app",
+    label: "app.vue",
+    icon: IconVue,
+    code: appNuxt,
+    lang: "vue",
+  },
+  {
+    key: "nuxt",
+    label: "nuxt.config.ts",
+    icon: IconNuxt,
+    code: configNuxt,
+    lang: "typescript",
+  },
+];
 </script>
 
 <template>
@@ -60,14 +95,25 @@ import { IconTs } from "~/assets/icons/managers";
     </Header>
 
     <ImportCss />
+  </div>
 
-    <Code>
-      <CodeHeader>
-        <IconTs />
-        main.ts
-      </CodeHeader>
+  <div>
+    <Header>
+      <HeaderSubTitle> 03. Para Vue 3 </HeaderSubTitle>
 
-      <CodeContent code="const message: string = 'Hello, Shiki!'" lang="typescript" />
-    </Code>
+      <HeaderSubDescription> Uso simples para seu app Vue.js 3: </HeaderSubDescription>
+    </Header>
+
+    <Code :codes="useVue" />
+  </div>
+
+  <div>
+    <Header>
+      <HeaderSubTitle> 04. Para Nuxt 3 </HeaderSubTitle>
+
+      <HeaderSubDescription> Uso para seu app Nuxt.js 3: </HeaderSubDescription>
+    </Header>
+
+    <Code :codes="useNuxt" />
   </div>
 </template>

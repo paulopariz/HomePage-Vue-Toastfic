@@ -1,3 +1,12 @@
 export { default as Code } from "./code.vue";
-export { default as CodeHeader } from "./code-header.vue";
-export { default as CodeContent } from "./code-content.vue";
+
+type Lang = "typescript" | "vue" | "html" | "css";
+
+export interface ICode {
+  label: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  icon: any;
+  code: string;
+  lang: Lang;
+  key: string;
+}

@@ -70,3 +70,7 @@
 
   --toastfic-error-icon: #b42626 !important;
 }
+
+.shiki {
+  background-color: transparent !important;
+}

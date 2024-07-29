@@ -69,7 +69,7 @@ import { IconNpmLight } from "~/assets/icons/managers";
                 variant="outline"
                 class="border-l-1 group flex h-full w-20 cursor-pointer items-center justify-center rounded-none border-x border-y-0 border-border px-5 text-sm font-medium opacity-80 transition-all hover:border-transparent hover:bg-green-light hover:text-green"
               >
-                <IconNpmLight />
+                <IconNpmLight class="size-9" />
               </NuxtLink>
             </TooltipTrigger>
             <TooltipContent>

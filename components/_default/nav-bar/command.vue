@@ -103,14 +103,9 @@ function openCommand() {
               }
             "
           >
-            <PhosphorIconFolder
-              class="transition-opacity duration-300 group-hover:opacity-0"
-              color="var(--icon)"
-              size="16"
-              weight="fill"
-            />
+            <PhosphorIconFolder class="group-hover:opacity-0" color="var(--icon)" size="16" weight="fill" />
             <PhosphorIconFolderOpen
-              class="absolute opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+              class="absolute opacity-0 group-hover:opacity-100"
               color="var(--icon)"
               size="16"
               weight="fill"
