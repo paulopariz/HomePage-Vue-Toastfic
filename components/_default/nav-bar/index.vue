@@ -12,7 +12,7 @@ import { IconNpmLight } from "~/assets/icons/managers";
 </script>
 
 <template>
-  <nav class="sticky top-0 z-30 flex h-16 w-full items-center border-b border-border bg-background max-md:px-3">
+  <nav class="sticky top-0 z-30 flex h-16 w-full items-center border-b border-border backdrop-blur-2xl max-md:px-3">
     <div class="container flex h-full items-center justify-between">
       <div class="flex items-center gap-10">
         <NuxtLink to="/" class="flex items-center gap-1">

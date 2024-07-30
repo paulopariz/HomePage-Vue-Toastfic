@@ -20,7 +20,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <Tabs :defaultValue="codes[0].key" class="mt-5 w-3/4 overflow-hidden rounded-md border border-[#1c1c1f]">
+  <Tabs :defaultValue="codes[0].key" class="mt-5 w-full overflow-hidden rounded-md border border-[#1c1c1f]">
     <TabsList
       class="border-muted- flex h-12 w-full items-center justify-start gap-3 rounded-none border-b border-[#1c1c1f] bg-[#0a0a0a] px-2"
     >

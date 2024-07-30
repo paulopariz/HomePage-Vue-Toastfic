@@ -33,18 +33,18 @@ const useNuxt: ICode[] = [
     lang: "typescript",
   },
   {
-    key: "app",
-    label: "app.vue",
-    icon: IconVue,
-    code: appNuxt,
-    lang: "vue",
-  },
-  {
     key: "nuxt",
     label: "nuxt.config.ts",
     icon: IconNuxt,
     code: configNuxt,
     lang: "typescript",
+  },
+  {
+    key: "app",
+    label: "app.vue",
+    icon: IconVue,
+    code: appNuxt,
+    lang: "vue",
   },
 ];
 </script>

@@ -41,7 +41,7 @@ function selectLanguage(code: string) {
   <DropdownMenu>
     <DropdownMenuTrigger
       as-child
-      class="group flex h-full w-20 cursor-pointer items-center rounded-none border-y-0 border-l border-r-0 border-border px-5 text-sm font-medium opacity-80 transition-all hover:border-transparent hover:bg-green-light hover:text-green"
+      class="group flex h-full w-20 cursor-pointer items-center rounded-none border-y-0 border-l border-r-0 border-border bg-transparent px-5 text-sm font-medium opacity-80 transition-all hover:border-transparent hover:bg-green-light hover:text-green"
     >
       <Button variant="outline"> <PhosphorIconGearSix size="21" /> </Button>
     </DropdownMenuTrigger>
