@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { NavBar, Navigation, Sidebar } from "~/components/_default";
+import { NavBar, Navigation, MapNavigation, Sidebar } from "~/components/_default";
 </script>
 
 <template>
@@ -23,10 +23,8 @@ import { NavBar, Navigation, Sidebar } from "~/components/_default";
             </div>
           </div>
 
-          <div class="sticky top-24 hidden h-min flex-col gap-2 border-l pl-3 lg:col-span-2 lg:flex">
-            <NuxtLink class="text-sm text-muted-foreground"> Instalar vue-toastfic </NuxtLink>
-            <NuxtLink class="text-sm text-muted-foreground"> Importe o arquivo CSS </NuxtLink>
-            <NuxtLink class="text-sm text-muted-foreground"> Para Vue 3 </NuxtLink>
+          <div class="sticky top-24 hidden h-min lg:col-span-2 lg:flex">
+            <MapNavigation />
           </div>
         </div>
       </div>

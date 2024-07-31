@@ -77,7 +77,7 @@ const useNuxt: ICode[] = [
 
   <div>
     <Header>
-      <HeaderSubTitle> 01. Instalar vue-toastfic </HeaderSubTitle>
+      <HeaderSubTitle id="Instalar vue-toastfic"> 01. Instalar vue-toastfic </HeaderSubTitle>
 
       <HeaderSubDescription> Instale o pacote usando algum desses comandos: </HeaderSubDescription>
     </Header>
@@ -87,7 +87,7 @@ const useNuxt: ICode[] = [
 
   <div>
     <Header>
-      <HeaderSubTitle> 02. Importe o arquivo CSS </HeaderSubTitle>
+      <HeaderSubTitle id="Importe o arquivo CSS"> 02. Importe o arquivo CSS </HeaderSubTitle>
 
       <HeaderSubDescription>
         É necessário importar o arquivo de estilo no <b>main.ts</b> ou no <b>nuxt.config.ts</b> caso esteja no Nuxt:
@@ -99,7 +99,7 @@ const useNuxt: ICode[] = [
 
   <div>
     <Header>
-      <HeaderSubTitle> 03. Para Vue 3 </HeaderSubTitle>
+      <HeaderSubTitle id="Para Vue 3"> 03. Para Vue 3 </HeaderSubTitle>
 
       <HeaderSubDescription> Uso simples para seu app Vue.js 3: </HeaderSubDescription>
     </Header>
@@ -109,7 +109,7 @@ const useNuxt: ICode[] = [
 
   <div>
     <Header>
-      <HeaderSubTitle> 04. Para Nuxt 3 </HeaderSubTitle>
+      <HeaderSubTitle id="Para Nuxt 3"> 04. Para Nuxt 3 </HeaderSubTitle>
 
       <HeaderSubDescription> Uso para seu app Nuxt.js 3: </HeaderSubDescription>
     </Header>

@@ -17,22 +17,17 @@ function openRepository() {
 </script>
 
 <template>
-  <!-- <button
-    @click="
-      () =>
-        $useToast.error('mweorm', {
-          description: 'ewrewrwer',
-        })
-    "
-  >
-    useToast
-  </button> -->
   <div class="h-dvh w-full">
     <section class="absolute left-1/2 top-[45%] flex -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-3">
-      <span class="flex items-center gap-1 rounded-sm px-2 py-1 text-start text-xs underline">
+      <span
+        v-if="npmInfo?.last_version"
+        class="flex items-center gap-1 rounded-sm px-2 py-1 text-start text-xs underline"
+      >
         <PhosphorIconLightning color="#eede2b" weight="fill" /> Última versão
         <span class="font-semibold">v{{ npmInfo?.last_version }}</span>
       </span>
+
+      <Skeleton v-else class="h-6 w-36" />
 
       <h1 class="text-6xl font-black -tracking-wide">Vue Toastfic</h1>
 

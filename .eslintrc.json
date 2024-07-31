@@ -78,6 +78,7 @@
     "ref": "readonly",
     "onMounted": "readonly",
     "onUnmounted": "readonly",
+    "onBeforeUnmount": "readonly",
     "watch": "readonly",
     "watchEffect": "readonly",
     "computed": "readonly"
