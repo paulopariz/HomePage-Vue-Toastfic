@@ -9,14 +9,54 @@ import {
 } from "~/components/_default/header";
 import { Tag } from "~/components/ui/tag";
 import { type ICode, Code } from "~/components/_default/code-block";
-import { Terminal, ImportCss } from "~/components/pages";
 
-import { IconTs, IconVue, IconNuxt } from "@/assets/icons/managers";
-import { pluginNuxt, appNuxt, configNuxt, appVue } from "~/utils/codes/getting-started";
+import { IconTs, IconVue, IconNuxt, IconNpm, IconYarn, IconPnpm, IconBun } from "@/assets/icons/managers";
+import { pluginNuxt, appNuxt, configNuxt, appVue, install, importCss } from "~/utils/codes/getting-started";
 
-const useVue: ICode[] = [
+const codeInstall: ICode[] = [
   {
-    key: "app",
+    label: "npm",
+    icon: IconNpm,
+    code: install.npm,
+    lang: "zsh",
+  },
+  {
+    label: "yarn",
+    icon: IconYarn,
+    code: install.yarn,
+    lang: "zsh",
+  },
+  {
+    label: "pnpm",
+    icon: IconPnpm,
+    code: install.pnpm,
+    lang: "zsh",
+  },
+  {
+    label: "bun",
+    icon: IconBun,
+    code: install.bun,
+    lang: "zsh",
+  },
+];
+
+const codeImportCss: ICode[] = [
+  {
+    label: "main.ts",
+    icon: IconTs,
+    code: importCss.main,
+    lang: "typescript",
+  },
+  {
+    label: "nuxt.config.ts",
+    icon: IconNuxt,
+    code: importCss.nuxt,
+    lang: "vue",
+  },
+];
+
+const codeUseVue: ICode[] = [
+  {
     label: "App.vue",
     icon: IconVue,
     code: appVue,
@@ -24,23 +64,20 @@ const useVue: ICode[] = [
   },
 ];
 
-const useNuxt: ICode[] = [
+const codeUseNuxt: ICode[] = [
   {
-    key: "plugin",
     label: "plugins/toastfic.ts",
     icon: IconTs,
     code: pluginNuxt,
     lang: "typescript",
   },
   {
-    key: "nuxt",
     label: "nuxt.config.ts",
     icon: IconNuxt,
     code: configNuxt,
     lang: "typescript",
   },
   {
-    key: "app",
     label: "app.vue",
     icon: IconVue,
     code: appNuxt,
@@ -82,7 +119,7 @@ const useNuxt: ICode[] = [
       <HeaderSubDescription> Instale o pacote usando algum desses comandos: </HeaderSubDescription>
     </Header>
 
-    <Terminal />
+    <Code :codes="codeInstall" />
   </div>
 
   <div>
@@ -94,7 +131,7 @@ const useNuxt: ICode[] = [
       </HeaderSubDescription>
     </Header>
 
-    <ImportCss />
+    <Code :codes="codeImportCss" />
   </div>
 
   <div>
@@ -104,7 +141,7 @@ const useNuxt: ICode[] = [
       <HeaderSubDescription> Uso simples para seu app Vue.js 3: </HeaderSubDescription>
     </Header>
 
-    <Code :codes="useVue" />
+    <Code :codes="codeUseVue" />
   </div>
 
   <div>
@@ -114,6 +151,6 @@ const useNuxt: ICode[] = [
       <HeaderSubDescription> Uso para seu app Nuxt.js 3: </HeaderSubDescription>
     </Header>
 
-    <Code :codes="useNuxt" />
+    <Code :codes="codeUseNuxt" />
   </div>
 </template>

@@ -1,3 +1,15 @@
+export const install = {
+  npm: "npm install vue-toastfic",
+  yarn: "yarn add vue-toastfic",
+  pnpm: "pnpm add vue-toastfic",
+  bun: "bun add vue-toastfic",
+};
+
+export const importCss = {
+  main: "import 'vue-toastfic/style.css'",
+  nuxt: "css: ['vue-toastfic/style.css']",
+};
+
 export const appVue = `<script setup lang="ts">
 import { Toast, useToast } from "vue-toastfic";
 
