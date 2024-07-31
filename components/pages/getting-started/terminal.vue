@@ -56,7 +56,7 @@ function copyCommand() {
 </script>
 
 <template>
-  <Tabs defaultValue="npm" class="mt-5 w-3/4 overflow-hidden rounded-md border">
+  <Tabs defaultValue="npm" class="mt-5 w-full overflow-hidden rounded-md border">
     <TabsList class="flex h-12 w-full items-center justify-start gap-3 rounded-none border-b bg-transparent px-2">
       <TabsTrigger
         v-for="tab in tabs"
