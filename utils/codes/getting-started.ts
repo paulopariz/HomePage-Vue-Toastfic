@@ -1,3 +1,4 @@
+/* eslint-disable quotes */
 export const install = {
   npm: "npm install vue-toastfic",
   yarn: "yarn add vue-toastfic",
@@ -6,8 +7,8 @@ export const install = {
 };
 
 export const importCss = {
-  main: "import 'vue-toastfic/style.css'",
-  nuxt: "css: ['vue-toastfic/style.css']",
+  main: 'import "vue-toastfic/style.css"',
+  nuxt: 'css: ["vue-toastfic/style.css"]',
 };
 
 export const appVue = `<script setup lang="ts">

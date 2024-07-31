@@ -8,7 +8,7 @@ const colorMode = useColorMode();
   </NuxtLayout>
 
   <Toast
-    :duration="4111000"
+    :duration="4000"
     position="bottom-right"
     :close="true"
     :colorful="true"

@@ -8,7 +8,10 @@ interface Link {
   text: string;
 }
 
-const getting_started: Link[] = [{ to: "/getting-started", text: "Instalar" }];
+const getting_started: Link[] = [
+  { to: "/getting-started", text: "Instalar" },
+  { to: "/getting-started/demo", text: "Demonstração" },
+];
 
 const style: Link[] = [{ to: "/getting-started/palette", text: "Paleta de cores" }];
 

@@ -51,7 +51,7 @@ const codeImportCss: ICode[] = [
     label: "nuxt.config.ts",
     icon: IconNuxt,
     code: importCss.nuxt,
-    lang: "vue",
+    lang: "typescript",
   },
 ];
 
