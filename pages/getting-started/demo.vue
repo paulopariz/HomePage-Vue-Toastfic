@@ -83,7 +83,7 @@ function toastDefault() {
 
   <div>
     <Header>
-      <HeaderSubTitle id="Instalar vue-toastfic"> Toasts </HeaderSubTitle>
+      <HeaderSubTitle id="Toasts"> Toasts </HeaderSubTitle>
 
       <HeaderSubDescription> Clique nos botões para acioná-los: </HeaderSubDescription>
     </Header>

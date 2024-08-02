@@ -6,6 +6,8 @@ export { default as IconNuxtLight } from "./nuxt-light.vue";
 
 export { default as IconTs } from "./ts.vue";
 
+export { default as IconCss } from "./css.vue";
+
 export { default as IconNpm } from "./npm.vue";
 export { default as IconNpmLight } from "./npm-light.vue";
 
