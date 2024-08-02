@@ -112,7 +112,7 @@ const currentVarsLight = ref<ICurrentVars[]>([
 
     <div class="grid grid-cols-1 gap-20">
       <div>
-        <HeaderSubTitle class="mb-5 text-sm">Light: </HeaderSubTitle>
+        <HeaderSubTitle class="mb-5 text-sm"> Light: </HeaderSubTitle>
 
         <div class="grid gap-y-4">
           <div
@@ -153,7 +153,7 @@ const currentVarsLight = ref<ICurrentVars[]>([
 
   <div class="grid gap-5">
     <Header>
-      <HeaderSubTitle id="Variáveis padrão"> 02. Personalizar </HeaderSubTitle>
+      <HeaderSubTitle id="Personalizar"> 02. Personalizar </HeaderSubTitle>
 
       <HeaderSubDescription>
         As cores podem ser personalizadas como quiser. Para aplicar essas alterações, é necessário salvá-las em um

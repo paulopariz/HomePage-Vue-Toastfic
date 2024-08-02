@@ -77,7 +77,7 @@ function toastDefault() {
 
     <HeaderDescription>
       Uma demostração dos diferentes tipos de toast que você pode encontrar aqui. Inclui cinco tipos variados de toast:
-      success, error, info, warning e default.
+      <b>success</b>, <b>error</b>, <b>info</b>, <b>warning</b> e <b>default</b>.
     </HeaderDescription>
   </Header>
 

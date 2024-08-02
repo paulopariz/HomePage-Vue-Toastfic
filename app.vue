@@ -14,7 +14,6 @@ const colorMode = useColorMode();
     :colorful="true"
     :theme="colorMode.preference === 'dark' ? 'light' : 'dark'"
     :max-toasts="7"
-    :progress-bar="false"
   />
 </template>
 

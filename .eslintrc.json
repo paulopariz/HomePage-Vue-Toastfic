@@ -73,6 +73,7 @@
     "useNuxtApp": "readonly",
     "useRoute": "readonly",
     "useColorMode": "readonly",
+    "useSlots": "readonly",
     "useI18n": "readonly",
     "useHead": "readonly",
     "ref": "readonly",
