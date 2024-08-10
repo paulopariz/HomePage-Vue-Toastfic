@@ -19,7 +19,7 @@ const use: Link[] = [
   { to: "/getting-started/position", text: "Posição" },
   { to: "/getting-started/close-toast", text: "Fechar toast" },
   { to: "/getting-started/colorful", text: "Ativar/Desativar cores" },
-  { to: "/getting-started/", text: "Tempo de fechamento" },
+  { to: "/getting-started/duration", text: "Tempo de fechamento" },
   { to: "/getting-started/", text: "Máximo de toasts" },
   { to: "/getting-started/", text: "Tema" },
   { to: "/getting-started/", text: "Lidar com eventos" },

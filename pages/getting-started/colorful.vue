@@ -44,7 +44,7 @@ const isColor: ICode[] = [
 
   <div>
     <Header>
-      <HeaderSubTitle id="Esconder o botão"> 01. Exemplo de uso </HeaderSubTitle>
+      <HeaderSubTitle id="Exemplo de uso"> 01. Exemplo de uso </HeaderSubTitle>
       <HeaderSubDescription> Use <b>true</b> ou <b>false</b>: </HeaderSubDescription>
     </Header>
 

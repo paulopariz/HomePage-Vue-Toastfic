@@ -1,14 +1,12 @@
 <script setup lang="ts">
-const { $useToast } = useNuxtApp();
+import { useToast } from "vue-toastfic";
 
 function handle() {
-  $useToast.default("First toast in Nuxt.js");
+  useToast.default("Duration: 10000");
 }
 </script>
 
 <template>
-  <NuxtPage />
-  <Toast theme="dark" />
-
-  <button @click="handle">Toastfic Nuxt.js</button>
+  <Toast />
+  <button @click="handle">Toastfic Vue.js 3</button>
 </template>
