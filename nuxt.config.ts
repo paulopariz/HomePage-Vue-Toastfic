@@ -43,7 +43,7 @@ export default defineNuxtConfig({
     "@nuxt/content",
   ],
 
-  plugins: ["~/plugins/date.ts"],
+  plugins: ["~/plugins/date.ts", "~/plugins/toast.ts"],
 
   css: ["vue-toastfic/style.css", "@/assets/css/main.css"],
 

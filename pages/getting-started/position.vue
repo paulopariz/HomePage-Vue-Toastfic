@@ -12,6 +12,7 @@ import { postion } from "~/utils/codes/position";
 import { IconVue } from "~/assets/icons/managers";
 
 import { useToastManager } from "~/composables/useSequenceToast";
+import { Toast } from "vue-toastfic";
 
 const codePostion: ICode[] = [
   {
@@ -26,6 +27,8 @@ const { showNextToast } = useToastManager();
 </script>
 
 <template>
+  <Toast position="top-left" :theme="$colorMode.preference === 'dark' ? 'light' : 'dark'" />
+
   <Header>
     <HeaderBreadcrumb />
 
@@ -33,7 +36,7 @@ const { showNextToast } = useToastManager();
 
     <HeaderDescription>
       Todos os toasts são posicionados no canto superior direito por padrão. Esse comportamento pode ser alterado
-      utilizando a prop <b>position</b>.
+      utilizando a prop <b class="rounded-[6px] bg-green-light px-2 py-1 text-sm text-green">position</b>.
 
       <p class="mt-3">
         Posições: <b>top-left</b>, <b>top-center</b>, <b>top-right</b>, <b>bottom-left</b>, <b>bottom-center</b> e

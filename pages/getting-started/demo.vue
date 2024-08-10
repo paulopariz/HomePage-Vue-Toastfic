@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { Toast } from "vue-toastfic";
 import {
   Header,
   HeaderBreadcrumb,
@@ -70,6 +71,8 @@ function toastDefault() {
 </script>
 
 <template>
+  <Toast position="bottom-right" :theme="$colorMode.preference === 'dark' ? 'light' : 'dark'" />
+
   <Header>
     <HeaderBreadcrumb />
 

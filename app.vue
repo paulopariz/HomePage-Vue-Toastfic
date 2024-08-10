@@ -1,20 +1,7 @@
-<script setup lang="ts">
-const colorMode = useColorMode();
-</script>
-
 <template>
   <NuxtLayout>
     <NuxtPage />
   </NuxtLayout>
-
-  <Toast
-    :duration="4000"
-    position="bottom-right"
-    :close="true"
-    :colorful="true"
-    :theme="colorMode.preference === 'dark' ? 'light' : 'dark'"
-    :max-toasts="7"
-  />
 </template>
 
 <style>

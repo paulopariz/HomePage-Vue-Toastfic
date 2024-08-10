@@ -23,7 +23,7 @@ import { NavBar, Navigation, MapNavigation, Sidebar } from "~/components/_defaul
             </div>
           </div>
 
-          <div class="sticky top-24 hidden h-min lg:col-span-2 lg:flex">
+          <div class="sticky top-24 z-[1] hidden h-min lg:col-span-2 lg:flex">
             <MapNavigation />
           </div>
         </div>
