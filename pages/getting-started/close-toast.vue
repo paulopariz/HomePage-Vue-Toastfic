@@ -1,5 +1,12 @@
 <script setup lang="ts">
-import { Header, HeaderBreadcrumb, HeaderDescription, HeaderSubTitle, HeaderTitle } from "~/components/_default/header";
+import {
+  Header,
+  HeaderBreadcrumb,
+  HeaderDescription,
+  HeaderSubDescription,
+  HeaderSubTitle,
+  HeaderTitle,
+} from "~/components/_default/header";
 import { type ICode, Code } from "~/components/_default/code-block";
 import { close, automaticClose } from "~/utils/codes/close-toast";
 import { IconVue } from "~/assets/icons/managers";
@@ -39,6 +46,7 @@ const codeAutomaticClose: ICode[] = [
   <div>
     <Header>
       <HeaderSubTitle id="Esconder o botão"> 01. Esconder o botão </HeaderSubTitle>
+      <HeaderSubDescription> Use <b>true</b> ou <b>false</b>: </HeaderSubDescription>
     </Header>
 
     <Code :codes="codeClose" />
@@ -47,6 +55,7 @@ const codeAutomaticClose: ICode[] = [
   <div>
     <Header>
       <HeaderSubTitle id="Desabilitar fechamento"> 02. Desabilitar fechamento </HeaderSubTitle>
+      <HeaderSubDescription> Use <b>true</b> ou <b>false</b>: </HeaderSubDescription>
     </Header>
 
     <Code :codes="codeAutomaticClose" />

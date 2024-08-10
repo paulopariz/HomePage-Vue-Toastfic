@@ -15,7 +15,7 @@ const routes: IRoutes[] = [
   { path: "/getting-started/palette", name: "Paleta de cores" },
   { path: "/getting-started/position", name: "Posição" },
   { path: "/getting-started/close-toast", name: "Fechar toast" },
-  { path: "/getting-started/", name: "Ativar/Desativar cores" },
+  { path: "/getting-started/colorful", name: "Ativar/Desativar cores" },
   { path: "/getting-started/", name: "Tempo de fechamento" },
   { path: "/getting-started/", name: "Máximo de toasts" },
   { path: "/getting-started/", name: "Tema" },
