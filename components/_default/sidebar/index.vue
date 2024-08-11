@@ -20,7 +20,7 @@ const use: Link[] = [
   { to: "/getting-started/close-toast", text: "Fechar toast" },
   { to: "/getting-started/colorful", text: "Ativar/Desativar cores" },
   { to: "/getting-started/duration", text: "Tempo de fechamento" },
-  { to: "/getting-started/", text: "Máximo de toasts" },
+  { to: "/getting-started/maximum", text: "Máximo de toasts" },
   { to: "/getting-started/", text: "Tema" },
   { to: "/getting-started/", text: "Lidar com eventos" },
   { to: "/getting-started/", text: "Opções" },
