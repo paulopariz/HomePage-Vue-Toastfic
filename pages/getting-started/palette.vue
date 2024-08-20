@@ -162,7 +162,7 @@ const currentVarsLight = ref<ICurrentVars[]>([
     </Header>
 
     <div class="flex w-full items-center gap-4 rounded-md border border-dashed border-yellow-600 bg-yellow-600/10 p-3">
-      <PhosphorIconWarning size="30" weight="fill" class="text-yellow-600" />
+      <PhosphorIconWarning size="24" weight="fill" class="text-yellow-600" />
 
       <p class="text-sm tracking-wide text-yellow-600">
         Se as alterações nas cores não forem aplicadas imediatamente, use a regra <b>!important</b> para garantir que

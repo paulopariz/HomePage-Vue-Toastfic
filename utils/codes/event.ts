@@ -1,4 +1,5 @@
-<script setup lang="ts">
+// eslint-disable-next-line quotes
+export const event = `<script setup lang="ts">
 import { useToast } from "vue-toastfic";
 
 function handle() {
@@ -20,4 +21,4 @@ function hello() {
   <Toast />
 
   <button @click="handle">Show</button>
-</template>
+</template>`;
