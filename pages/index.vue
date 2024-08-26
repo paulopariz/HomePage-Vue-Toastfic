@@ -2,6 +2,7 @@
 definePageMeta({
   layout: "home",
 });
+const { $router } = useNuxtApp();
 
 import { IconNuxtLight, IconVueLight } from "~/assets/icons/managers";
 import { DataGithub, DataNpm, RedirectForm } from "~/components/_default";
@@ -29,7 +30,11 @@ function openRepository() {
 
       <Skeleton v-else class="h-6 w-36" />
 
-      <h1 class="text-6xl font-black -tracking-wide">Vue Toastfic</h1>
+      <h1
+        class="animate-text inline-flex bg-[linear-gradient(110deg,var(--foreground),45%,#a2a2a2,55%,var(--foreground))] bg-[length:200%_100%] bg-clip-text text-6xl font-black -tracking-wide text-transparent"
+      >
+        Vue Toastfic
+      </h1>
 
       <p class="text-lg tracking-wide text-muted-foreground">Light and simple toast library for Vue and Nuxt</p>
 

@@ -18,8 +18,8 @@ const style: Link[] = [{ to: "/getting-started/palette", text: "Paleta de cores"
 const use: Link[] = [
   { to: "/getting-started/position", text: "Posição" },
   { to: "/getting-started/close-toast", text: "Fechar toast" },
-  { to: "/getting-started/colorful", text: "Ativar/Desativar cores" },
   { to: "/getting-started/duration", text: "Tempo de fechamento" },
+  { to: "/getting-started/colorful", text: "Ativar/Desativar cores" },
   { to: "/getting-started/maximum", text: "Máximo de toasts" },
   { to: "/getting-started/theme", text: "Tema" },
   { to: "/getting-started/event", text: "Lidar com eventos" },

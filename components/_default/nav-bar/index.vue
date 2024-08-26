@@ -5,6 +5,10 @@ import Command from "./command.vue";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { IconNpmLight } from "~/assets/icons/managers";
 
+import { useRoute } from "vue-router";
+
+const route = useRoute();
+
 // function openDialog(event: KeyboardEvent) {
 //   if (event.ctrlKey && event.key.toLowerCase() === "k") {
 //   }
@@ -12,7 +16,7 @@ import { IconNpmLight } from "~/assets/icons/managers";
 </script>
 
 <template>
-  <nav class="sticky top-0 flex h-16 w-full items-center border-b border-border backdrop-blur-2xl max-md:px-3">
+  <nav class="z sticky top-0 z-10 flex h-16 w-full items-center border-b border-border backdrop-blur-2xl max-md:px-3">
     <div class="container flex h-full items-center justify-between">
       <div class="flex items-center gap-10">
         <NuxtLink to="/" class="flex items-center gap-1">
@@ -20,7 +24,7 @@ import { IconNpmLight } from "~/assets/icons/managers";
           <h1 class="text-xs font-extrabold leading-4">toastfic</h1>
         </NuxtLink>
 
-        <Command v-if="$route.path === '/'" />
+        <Command v-if="route.path === '/'" />
       </div>
 
       <div class="flex h-full items-center">

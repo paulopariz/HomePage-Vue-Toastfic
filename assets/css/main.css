@@ -45,8 +45,8 @@
 
 [toastfic-theme="dark"] {
   --toastfic-bg: #151517 !important;
-  --toastfic-icon: #e2e2e2 !important;
-  --toastfic-text: #e2e2e2 !important;
+  --toastfic-icon: #fff !important;
+  --toastfic-text: #fff !important;
 
   --toastfic-success-icon: #28ab70 !important;
 
@@ -58,7 +58,7 @@
 }
 
 [toastfic-theme="light"] {
-  --toastfic-bg: #e2e2e2 !important;
+  --toastfic-bg: #fff !important;
   --toastfic-icon: #151517 !important;
   --toastfic-text: #151517 !important;
 
