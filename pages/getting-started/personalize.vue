@@ -15,12 +15,12 @@ import { Toast } from "vue-toastfic";
 import { useToastManager } from "~/composables/useSequenceToast";
 
 useHead({
-  title: "Vue Toastfic | Máximo de toasts",
+  title: "Vue Toastfic | Personalização do toast",
   meta: [
     {
       name: "description",
       content:
-        "Para evitar o acúmulo de toasts na tela, você pode configurar o número máximo de toasts exibidos simultaneamente utilizando a prop maxToasts.",
+        "Seus toasts podem ser altamente personalizados de acordo com suas preferências. Esse recurso pode ser implementado usando a prop classes. Todos os elementos, como title, description, buttonHandle, entre outros, podem ser ajustados conforme a sua necessidade.",
     },
   ],
 });
@@ -38,16 +38,22 @@ const maximumToasts: ICode[] = [
 </script>
 
 <template>
-  <Toast position="bottom-right" :max-toasts="3" :theme="$colorMode.preference === 'dark' ? 'light' : 'dark'" />
+  <Toast
+    :classes="{}"
+    position="bottom-right"
+    :max-toasts="3"
+    :theme="$colorMode.preference === 'dark' ? 'light' : 'dark'"
+  />
 
   <Header>
     <HeaderBreadcrumb />
 
-    <HeaderTitle> Máximo de toasts </HeaderTitle>
+    <HeaderTitle> Personalização do toast </HeaderTitle>
 
     <HeaderDescription>
-      Para evitar o acúmulo de toasts na tela, você pode configurar o número máximo de toasts exibidos simultaneamente
-      utilizando a prop <b class="rounded-[6px] bg-green-light px-2 py-1 text-sm text-green">maxToasts</b>.
+      Seus toasts podem ser altamente personalizados de acordo com suas preferências. Esse recurso pode ser implementado
+      usando a prop <b class="rounded-[6px] bg-green-light px-2 py-1 text-sm text-green">classes</b>. Todos os
+      elementos, como title, description, buttonHandle, entre outros, podem ser ajustados conforme a sua necessidade.
     </HeaderDescription>
   </Header>
 

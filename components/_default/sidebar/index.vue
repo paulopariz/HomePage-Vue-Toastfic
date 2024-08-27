@@ -23,8 +23,7 @@ const use: Link[] = [
   { to: "/getting-started/maximum", text: "Máximo de toasts" },
   { to: "/getting-started/theme", text: "Tema" },
   { to: "/getting-started/event", text: "Lidar com eventos" },
-  { to: "/getting-started/", text: "Opções" },
-  { to: "/getting-started/", text: "Personalização do toast" },
+  { to: "/getting-started/personalize", text: "Personalização do toast" },
 ];
 </script>
 

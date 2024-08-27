@@ -14,6 +14,30 @@ export default defineNuxtConfig({
           name: "description",
           content: "Light and simple toast library for Vue and Nuxt",
         },
+        {
+          name: "keywords",
+          content: "Vue, Nuxt, toast library, simple toast, Vue Toastfic",
+        },
+        {
+          name: "robots",
+          content: "index, follow",
+        },
+        {
+          property: "og:title",
+          content: "Vue Toastfic | 💬 Light and simple toast library for Vue and Nuxt",
+        },
+        {
+          property: "og:description",
+          content: "Light and simple toast library for Vue and Nuxt, customizable and easy to use.",
+        },
+        {
+          property: "og:type",
+          content: "website",
+        },
+        {
+          property: "og:url",
+          content: "https://vue-toastfic.vercel.app/",
+        },
       ],
       link: [{ rel: "icon", type: "image/x-icon", href: "/logo.svg" }],
     },

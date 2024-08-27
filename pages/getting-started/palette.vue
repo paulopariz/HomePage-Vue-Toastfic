@@ -12,6 +12,17 @@ import { type ICode, Code } from "~/components/_default/code-block";
 import { vars } from "~/utils/codes/palette";
 import { IconCss } from "~/assets/icons/managers";
 
+useHead({
+  title: "Vue Toastfic | Paleta de cores",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Neste guia de estilo, você pode ajustar todas as variáveis globais do vue-toastfic para personalizá-las conforme suas necessidades, garantindo uma boa experiência ao seu projeto.",
+    },
+  ],
+});
+
 interface ICurrentVars {
   hex: string;
   name: string;

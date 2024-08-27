@@ -14,6 +14,17 @@ import { IconVue } from "~/assets/icons/managers";
 import { useToastManager } from "~/composables/useSequenceToast";
 import { Toast } from "vue-toastfic";
 
+useHead({
+  title: "Vue Toastfic | Posição",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Todos os toasts são posicionados no canto superior direito por padrão. Esse comportamento pode ser alterado utilizando a prop position.",
+    },
+  ],
+});
+
 const codePostion: ICode[] = [
   {
     label: "app.vue",

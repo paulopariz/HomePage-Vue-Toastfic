@@ -11,6 +11,17 @@ import { type ICode, Code } from "~/components/_default/code-block";
 import { close, automaticClose } from "~/utils/codes/close-toast";
 import { IconVue } from "~/assets/icons/managers";
 
+useHead({
+  title: "Vue Toastfic | Fechar toast",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Você pode configurar o fechamento do toast de duas maneiras: ocultando o ícone de fechar com a prop close e desativando o fechamento automático com a prop automatic-close.",
+    },
+  ],
+});
+
 const codeClose: ICode[] = [
   {
     label: "app.vue",

@@ -13,6 +13,17 @@ import { event } from "~/utils/codes/event";
 import { IconVue } from "~/assets/icons/managers";
 import { Toast } from "vue-toastfic";
 
+useHead({
+  title: "Vue Toastfic | Lidar com eventos",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Você pode usar eventos dentro de um useToast passando um handle com o evento de clique(click) para executar uma outra função, além de definir o texto do botão(text).",
+    },
+  ],
+});
+
 const { $useToast } = useNuxtApp();
 
 const maximumToasts: ICode[] = [

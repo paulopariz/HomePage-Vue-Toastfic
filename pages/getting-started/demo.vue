@@ -9,6 +9,17 @@ import {
   HeaderSubTitle,
 } from "~/components/_default/header";
 
+useHead({
+  title: "Vue Toastfic | Demostração",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Uma demostração dos diferentes tipos de toast que você pode encontrar aqui. Inclui cinco tipos variados de toast: success, error, info, warning e default.",
+    },
+  ],
+});
+
 const { $useToast } = useNuxtApp();
 
 const buttons = ref([

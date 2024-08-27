@@ -13,6 +13,16 @@ import { type ICode, Code } from "~/components/_default/code-block";
 import { IconTs, IconVue, IconNuxt, IconNpm, IconYarn, IconPnpm, IconBun } from "@/assets/icons/managers";
 import { pluginNuxt, appNuxt, configNuxt, appVue, install, importCss } from "~/utils/codes/getting-started";
 
+useHead({
+  title: "Vue Toastfic | Instalar",
+  meta: [
+    {
+      name: "description",
+      content: "Instale e aproveite o vue-toastfic em seus projetos Vue.js e Nuxt.js.",
+    },
+  ],
+});
+
 const codeInstall: ICode[] = [
   {
     label: "npm",

@@ -14,6 +14,17 @@ import { IconVue } from "~/assets/icons/managers";
 import { Toast } from "vue-toastfic";
 import { useToastManager } from "~/composables/useSequenceToast";
 
+useHead({
+  title: "Vue Toastfic | Tema",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Uma ótima funcionalidade para integrar ao seu projeto é a possibilidade de escolher entre os temas light e dark para os toasts. Esses temas podem ser alterados facilmente através da prop theme",
+    },
+  ],
+});
+
 const { showNextToast } = useToastManager();
 
 const maximumToasts: ICode[] = [

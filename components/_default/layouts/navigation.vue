@@ -20,8 +20,7 @@ const routes: IRoutes[] = [
   { path: "/getting-started/maximum", name: "Máximo de toasts" },
   { path: "/getting-started/theme", name: "Tema" },
   { path: "/getting-started/event", name: "Lidar com eventos" },
-  { path: "/getting-started/", name: "Opções" },
-  { path: "/getting-started/", name: "Personalização do toast" },
+  { path: "/getting-started/personalize", name: "Personalização do toast" },
 ];
 
 const currentIndex = computed(() => {

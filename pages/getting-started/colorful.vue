@@ -15,6 +15,17 @@ import { Toast } from "vue-toastfic";
 
 import { useToastManager } from "~/composables/useSequenceToast";
 
+useHead({
+  title: "Vue Toastfic | Ativar/Desativar cores",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Você pode personalizar os toasts de acordo com sua preferência de cores. As cores podem estar ativadas ou desativadas; por padrão, estão ativadas. Para definir a cor, utilize a propriedade colorful.",
+    },
+  ],
+});
+
 const { showNextToast } = useToastManager();
 
 const isColor: ICode[] = [

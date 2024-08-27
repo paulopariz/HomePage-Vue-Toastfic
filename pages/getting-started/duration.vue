@@ -8,6 +8,16 @@ import {
   HeaderTitle,
 } from "~/components/_default/header";
 
+useHead({
+  title: "Vue Toastfic | Tempo de fechamento",
+  meta: [
+    {
+      name: "description",
+      content: "O tempo de fechamento pode ser personalizado utilizando a prop duration ou pelo useToast.",
+    },
+  ],
+});
+
 import { type ICode, Code } from "~/components/_default/code-block";
 import { duration, durationOption } from "~/utils/codes/duration";
 import { IconVue } from "~/assets/icons/managers";
