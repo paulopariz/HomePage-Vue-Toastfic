@@ -12,15 +12,15 @@ interface IRoutes {
 const routes: IRoutes[] = [
   { path: "/getting-started", name: "Instalar" },
   { path: "/getting-started/demo", name: "Demonstração" },
-  { path: "/getting-started/palette", name: "Paleta de cores" },
-  { path: "/getting-started/position", name: "Posição" },
-  { path: "/getting-started/close-toast", name: "Fechar toast" },
-  { path: "/getting-started/duration", name: "Tempo de fechamento" },
-  { path: "/getting-started/colorful", name: "Ativar/Desativar cores" },
-  { path: "/getting-started/maximum", name: "Máximo de toasts" },
-  { path: "/getting-started/theme", name: "Tema" },
-  { path: "/getting-started/event", name: "Lidar com eventos" },
-  { path: "/getting-started/personalize", name: "Personalização do toast" },
+  { path: "/style/palette", name: "Paleta de cores" },
+  { path: "/use/position", name: "Posição" },
+  { path: "/use/close-toast", name: "Fechar toast" },
+  { path: "/use/duration", name: "Tempo de fechamento" },
+  { path: "/use/colorful", name: "Ativar/Desativar cores" },
+  { path: "/use/maximum", name: "Máximo de toasts" },
+  { path: "/use/theme", name: "Tema" },
+  { path: "/use/event", name: "Lidar com eventos" },
+  { path: "/use/personalize", name: "Personalização do toast" },
 ];
 
 const currentIndex = computed(() => {
@@ -55,7 +55,7 @@ function navigateTo(path: string) {
       {{ prevRouteName ?? "Página inicial" }}
     </Button>
 
-    <Button :disabled="!nextRoute" variant="secondary" class="flex items-center gap-2" @click="navigateTo(nextRoute)">
+    <Button v-if="nextRoute" variant="secondary" class="flex items-center gap-2" @click="navigateTo(nextRoute)">
       {{ nextRouteName }}
       <PhosphorIconCaretRight color="var(--icon)" weight="bold" />
     </Button>
