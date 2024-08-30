@@ -84,7 +84,7 @@ const maximumToasts: ICode[] = [
   <div>
     <Header>
       <HeaderSubTitle id="Exemplo de uso"> 01. Exemplo de uso </HeaderSubTitle>
-      <HeaderSubDescription> Use um valor maior que 0: </HeaderSubDescription>
+      <HeaderSubDescription> Altere todo o estilo de seus toasts. </HeaderSubDescription>
     </Header>
 
     <Code :codes="maximumToasts">
