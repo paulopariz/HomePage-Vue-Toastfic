@@ -1,81 +1,30 @@
-@font-face {
-  font-family: "Geist-Black";
-  src: url("@/assets/fonts/Geist-Black.otf") format("opentype");
-}
+// eslint-disable-next-line quotes
+export const personalize = `<Toast
+    position="bottom-right"
+    :classes="{
+      toast: 'classe-toast',
+      toasts: {
+        success: 'classe-toast-success',
+        error: 'classe-toast-error',
+        info: 'classe-toast-info',
+        warning: 'classe-toast-warning',
+        default: 'classe-toast-default',
+      },
+      title: 'classe-title',
+      description: 'classe-description',
+      buttonHandle: 'classe-handle',
+      buttonClose: 'classe-close',
+      icon: 'classe-icon',
+      icons: {
+        success: 'classe-icon-success',
+        error: 'classe-icon-error',
+        info: 'classe-icon-info',
+        warning: 'classe-icon-warning',
+      },
+    }"
+  />`;
 
-@font-face {
-  font-family: "Geist-Bold";
-  src: url("@/assets/fonts/Geist-Bold.otf") format("opentype");
-}
-
-@font-face {
-  font-family: "Geist-Light";
-  src: url("@/assets/fonts/Geist-Light.otf") format("opentype");
-}
-
-@font-face {
-  font-family: "Geist-Medium";
-  src: url("@/assets/fonts/Geist-Medium.otf") format("opentype");
-}
-
-@font-face {
-  font-family: "Geist-Regular";
-  src: url("@/assets/fonts/Geist-Regular.otf") format("opentype");
-}
-
-@font-face {
-  font-family: "Geist-SemiBold";
-  src: url("@/assets/fonts/Geist-SemiBold.otf") format("opentype");
-}
-
-@font-face {
-  font-family: "Geist-Thin";
-  src: url("@/assets/fonts/Geist-Thin.otf") format("opentype");
-}
-
-@font-face {
-  font-family: "Geist-UltraBlack";
-  src: url("@/assets/fonts/Geist-UltraBlack.otf") format("opentype");
-}
-
-@font-face {
-  font-family: "Geist-UltraLight";
-  src: url("@/assets/fonts/Geist-UltraLight.otf") format("opentype");
-}
-
-[toastfic-theme="dark"] {
-  --toastfic-bg: #151517 !important;
-  --toastfic-icon: #fff !important;
-  --toastfic-text: #fff !important;
-
-  --toastfic-success-icon: #28ab70 !important;
-
-  --toastfic-info-icon: #1976d2 !important;
-
-  --toastfic-warning-icon: #f57c00 !important;
-
-  --toastfic-error-icon: #b42626 !important;
-}
-
-[toastfic-theme="light"] {
-  --toastfic-bg: #fff !important;
-  --toastfic-icon: #151517 !important;
-  --toastfic-text: #151517 !important;
-
-  --toastfic-success-icon: #28ab70 !important;
-
-  --toastfic-info-icon: #1976d2 !important;
-
-  --toastfic-warning-icon: #f57c00 !important;
-
-  --toastfic-error-icon: #b42626 !important;
-}
-
-.shiki {
-  background-color: transparent !important;
-}
-
-.classe-toast {
+export const style = `.classe-toast {
   background-color: #000 !important;
   border-radius: 5px !important;
   border: 1px solid #181818;
@@ -188,3 +137,4 @@
     }
   }
 }
+`;

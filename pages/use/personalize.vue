@@ -9,8 +9,8 @@ import {
 } from "~/components/_default/header";
 
 import { type ICode, Code } from "~/components/_default/code-block";
-import { maximum } from "~/utils/codes/maximum";
-import { IconVue } from "~/assets/icons/managers";
+import { personalize, style } from "~/utils/codes/personalize";
+import { IconCss, IconVue } from "~/assets/icons/managers";
 import { Toast } from "vue-toastfic";
 import { useToastManager } from "~/composables/useSequenceToast";
 
@@ -31,18 +31,42 @@ const maximumToasts: ICode[] = [
   {
     label: "app.vue",
     icon: IconVue,
-    code: maximum,
+    code: personalize,
     lang: "vue",
+  },
+  {
+    label: "main.css",
+    icon: IconCss,
+    code: style,
+    lang: "css",
   },
 ];
 </script>
 
 <template>
   <Toast
-    :classes="{}"
     position="bottom-right"
-    :max-toasts="3"
-    :theme="$colorMode.preference === 'dark' ? 'light' : 'dark'"
+    :classes="{
+      toast: 'classe-toast',
+      toasts: {
+        success: 'classe-toast-success',
+        error: 'classe-toast-error',
+        info: 'classe-toast-info',
+        warning: 'classe-toast-warning',
+        default: 'classe-toast-default',
+      },
+      title: 'classe-title',
+      description: 'classe-description',
+      buttonHandle: 'classe-handle',
+      buttonClose: 'classe-close',
+      icon: 'classe-icon',
+      icons: {
+        success: 'classe-icon-success',
+        error: 'classe-icon-error',
+        info: 'classe-icon-info',
+        warning: 'classe-icon-warning',
+      },
+    }"
   />
 
   <Header>
@@ -72,3 +96,5 @@ const maximumToasts: ICode[] = [
     </Code>
   </div>
 </template>
+
+<style scoped></style>
