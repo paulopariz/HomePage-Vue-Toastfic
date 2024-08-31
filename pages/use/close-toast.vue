@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import {
   Header,
-  HeaderBreadcrumb,
   HeaderDescription,
   HeaderSubDescription,
   HeaderSubTitle,
@@ -43,8 +42,6 @@ const codeAutomaticClose: ICode[] = [
 
 <template>
   <Header>
-    <HeaderBreadcrumb />
-
     <HeaderTitle> Fechar toast </HeaderTitle>
 
     <HeaderDescription>

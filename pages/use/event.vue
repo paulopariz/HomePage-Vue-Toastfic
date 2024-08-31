@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import {
   Header,
-  HeaderBreadcrumb,
   HeaderDescription,
   HeaderSubDescription,
   HeaderSubTitle,
@@ -54,8 +53,6 @@ function hello() {
   <Toast position="bottom-right" theme="light" />
 
   <Header>
-    <HeaderBreadcrumb />
-
     <HeaderTitle> Lidar com eventos </HeaderTitle>
 
     <HeaderDescription>

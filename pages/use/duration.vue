@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import {
   Header,
-  HeaderBreadcrumb,
   HeaderDescription,
   HeaderSubDescription,
   HeaderSubTitle,
@@ -64,8 +63,6 @@ function handleTwelve() {
   <Toast position="bottom-right" :colorful="false" :theme="$colorMode.preference === 'dark' ? 'light' : 'dark'" />
 
   <Header>
-    <HeaderBreadcrumb />
-
     <HeaderTitle> Tempo de fechamento </HeaderTitle>
 
     <HeaderDescription>

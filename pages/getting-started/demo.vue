@@ -2,7 +2,6 @@
 import { Toast } from "vue-toastfic";
 import {
   Header,
-  HeaderBreadcrumb,
   HeaderDescription,
   HeaderTitle,
   HeaderSubDescription,
@@ -85,8 +84,6 @@ function toastDefault() {
   <Toast position="bottom-right" :theme="$colorMode.preference === 'dark' ? 'light' : 'dark'" />
 
   <Header>
-    <HeaderBreadcrumb />
-
     <HeaderTitle> Demostração </HeaderTitle>
 
     <HeaderDescription>

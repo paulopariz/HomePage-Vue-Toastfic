@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import {
   Header,
-  HeaderBreadcrumb,
   HeaderDescription,
   HeaderSubDescription,
   HeaderSubTitle,
@@ -41,8 +40,6 @@ const maximumToasts: ICode[] = [
   <Toast position="bottom-right" :max-toasts="3" :theme="$colorMode.preference === 'dark' ? 'light' : 'dark'" />
 
   <Header>
-    <HeaderBreadcrumb />
-
     <HeaderTitle> Máximo de toasts </HeaderTitle>
 
     <HeaderDescription>

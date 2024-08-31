@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import {
   Header,
-  HeaderBreadcrumb,
   HeaderDescription,
   HeaderSubDescription,
   HeaderSubTitle,
@@ -42,8 +41,6 @@ const isColor: ICode[] = [
   <Toast position="bottom-right" :colorful="false" :theme="$colorMode.preference === 'dark' ? 'light' : 'dark'" />
 
   <Header>
-    <HeaderBreadcrumb />
-
     <HeaderTitle> Ativar/Desativar cores </HeaderTitle>
 
     <HeaderDescription>

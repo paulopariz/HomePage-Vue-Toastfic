@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import {
   Header,
-  HeaderBreadcrumb,
   HeaderDescription,
   HeaderSubDescription,
   HeaderSubTitle,
@@ -41,8 +40,6 @@ const { showNextToast } = useToastManager();
   <Toast position="top-left" :theme="$colorMode.preference === 'dark' ? 'light' : 'dark'" />
 
   <Header>
-    <HeaderBreadcrumb />
-
     <HeaderTitle> Posição </HeaderTitle>
 
     <HeaderDescription>

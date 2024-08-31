@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import {
   Header,
-  HeaderBreadcrumb,
   HeaderDescription,
   HeaderTitle,
   HeaderSubDescription,
@@ -98,8 +97,6 @@ const codeUseNuxt: ICode[] = [
 
 <template>
   <Header>
-    <HeaderBreadcrumb />
-
     <HeaderTitle> Instalar </HeaderTitle>
 
     <HeaderDescription> Instale e aproveite o vue-toastfic em seus projetos Vue.js e Nuxt.js. </HeaderDescription>

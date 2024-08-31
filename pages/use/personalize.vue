@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import {
   Header,
-  HeaderBreadcrumb,
   HeaderDescription,
   HeaderSubDescription,
   HeaderSubTitle,
@@ -70,8 +69,6 @@ const maximumToasts: ICode[] = [
   />
 
   <Header>
-    <HeaderBreadcrumb />
-
     <HeaderTitle> Personalização do toast </HeaderTitle>
 
     <HeaderDescription>

@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import {
   Header,
-  HeaderBreadcrumb,
   HeaderDescription,
   HeaderTitle,
   HeaderSubDescription,
@@ -102,8 +101,6 @@ const currentVarsLight = ref<ICurrentVars[]>([
 
 <template>
   <Header>
-    <HeaderBreadcrumb />
-
     <HeaderTitle> Paleta de cores </HeaderTitle>
 
     <HeaderDescription>
