@@ -1,20 +1,21 @@
 <script setup lang="ts">
-import { NavBar, Navigation, MapNavigation, Sidebar } from "~/components/_default";
+import { NavBar, Navigation, MapNavigation, Sidebar, SidebarMobile } from "~/components/_default";
 </script>
 
 <template>
   <main>
     <NavBar />
+    <SidebarMobile class="md:hidden" />
 
     <main>
-      <div class="container mx-auto">
+      <div class="container mx-auto max-sm:px-4">
         <div class="flex flex-col lg:grid lg:grid-cols-10 lg:gap-8">
           <div class="lg:col-span-2">
             <Sidebar />
           </div>
 
           <div class="overflow-hidden py-3.5 lg:col-span-6">
-            <div class="grid gap-12 break-words p-4">
+            <div class="flex flex-col gap-12 break-words">
               <slot />
 
               <div class="flex items-center justify-between gap-2">

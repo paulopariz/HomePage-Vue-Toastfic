@@ -5,7 +5,7 @@ import { Footer, NavBar } from "~/components/_default";
 <template>
   <main>
     <NavBar />
-    <div class="container mb-20 mt-32 max-md:px-3">
+    <div class="container mb-20 mt-32">
       <slot />
     </div>
     <Footer />

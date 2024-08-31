@@ -41,14 +41,43 @@ function selectLanguage(code: string) {
   <DropdownMenu>
     <DropdownMenuTrigger
       as-child
-      class="group flex h-full w-20 cursor-pointer items-center rounded-none border-y-0 border-l border-r-0 border-border bg-transparent px-5 text-sm font-medium opacity-80 transition-all hover:border-transparent hover:bg-green-light hover:text-green"
+      class="group flex h-full w-20 cursor-pointer items-center rounded-none border-y-0 border-l border-r-0 border-border bg-transparent px-5 text-sm font-medium opacity-80 transition-all hover:border-transparent hover:bg-green-light hover:text-green max-md:h-9 max-md:w-10 max-md:rounded-sm max-md:border max-md:p-0"
     >
-      <Button variant="outline"> <PhosphorIconGearSix size="21" /> </Button>
+      <Button variant="outline">
+        <PhosphorIconGearSix size="21" class="max-md:hidden" />
+        <PhosphorIconList size="18" class="md:hidden" />
+      </Button>
     </DropdownMenuTrigger>
 
     <DropdownMenuContent class="w-56" align="end">
-      <DropdownMenuLabel> Preferências </DropdownMenuLabel>
-      <DropdownMenuSeparator />
+      <DropdownMenuLabel class="max-md:hidden"> Preferências </DropdownMenuLabel>
+      <DropdownMenuSeparator class="max-md:hidden" />
+
+      <DropdownMenuGroup class="md:hidden">
+        <DropdownMenuLabel> Links </DropdownMenuLabel>
+
+        <DropdownMenuItem class="flex items-center gap-4 text-xs">
+          <PhosphorIconArrowUpRight weight="bold" size="18" />
+          <NuxtLink to="/getting-started"> Iniciar </NuxtLink>
+        </DropdownMenuItem>
+
+        <DropdownMenuItem class="flex items-center gap-4 text-xs">
+          <PhosphorIconArrowUpRight weight="bold" size="18" />
+          <NuxtLink target="_blank" href="/https://github.com/paulopariz/vue-toastfic/releases"> Alterações </NuxtLink>
+        </DropdownMenuItem>
+
+        <DropdownMenuItem class="flex items-center gap-4 text-xs">
+          <PhosphorIconArrowUpRight weight="bold" size="18" />
+          <NuxtLink target="_blank" href="https://github.com/paulopariz/vue-toastfic"> Repositório no github </NuxtLink>
+        </DropdownMenuItem>
+
+        <DropdownMenuItem class="flex items-center gap-4 text-xs">
+          <PhosphorIconArrowUpRight weight="bold" size="18" />
+          <NuxtLink target="_blank" href="https://www.npmjs.com/package/vue-toastfic"> Pacote no npm </NuxtLink>
+        </DropdownMenuItem>
+      </DropdownMenuGroup>
+
+      <DropdownMenuSeparator class="md:hidden" />
 
       <DropdownMenuGroup>
         <DropdownMenuLabel> Tema </DropdownMenuLabel>

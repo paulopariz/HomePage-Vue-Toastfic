@@ -1,5 +1,5 @@
 <template>
-  <footer class="relative m-auto mt-28 h-32 w-full overflow-hidden border-t border-border bg-background max-md:px-3">
+  <footer class="relative m-auto mt-28 h-32 w-full overflow-hidden border-t border-border bg-background">
     <div class="container flex items-start justify-between py-5">
       <div class="flex cursor-pointer items-center gap-1">
         <NuxtImg src="/logo.svg" alt="Vue Toasctfic" class="h-9 w-9" />

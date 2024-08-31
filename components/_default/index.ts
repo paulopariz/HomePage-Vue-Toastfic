@@ -1,5 +1,6 @@
 export { default as NavBar } from "./nav-bar/index.vue";
 export { default as Sidebar } from "./sidebar/index.vue";
+export { default as SidebarMobile } from "./sidebar-mobile/index.vue";
 export { default as Navigation } from "./layouts/navigation.vue";
 export { default as MapNavigation } from "./layouts/map-navigation.vue";
 

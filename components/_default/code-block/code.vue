@@ -66,7 +66,10 @@ onMounted(async () => {
         class="flex w-min items-center gap-2 rounded-[6px] bg-transparent !text-[#e2e2e2] !shadow-none hover:bg-[#1c1c1f] data-[state=active]:bg-[#1c1c1f]"
       >
         <component :is="tab.icon" />
-        {{ tab.label }}
+
+        <span class="max-sm:hidden">
+          {{ tab.label }}
+        </span>
       </TabsTrigger>
 
       <TabsTrigger
