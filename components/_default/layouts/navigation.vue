@@ -16,6 +16,7 @@ const routes: IRoutes[] = [
   { path: "/use/position", name: "Posição" },
   { path: "/use/close-toast", name: "Fechar toast" },
   { path: "/use/duration", name: "Tempo de fechamento" },
+  { path: "/use/progress-bar", name: "Barra de progresso" },
   { path: "/use/colorful", name: "Ativar/Desativar cores" },
   { path: "/use/maximum", name: "Máximo de toasts" },
   { path: "/use/theme", name: "Tema" },

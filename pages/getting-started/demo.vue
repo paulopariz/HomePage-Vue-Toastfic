@@ -81,7 +81,7 @@ function toastDefault() {
 </script>
 
 <template>
-  <Toast position="bottom-right" :theme="$colorMode.preference === 'dark' ? 'light' : 'dark'" />
+  <Toast position="bottom-right" :theme="$colorMode.preference === 'dark' ? 'dark' : 'light'" />
 
   <Header>
     <HeaderTitle> Demostração </HeaderTitle>

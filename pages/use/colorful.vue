@@ -38,7 +38,7 @@ const isColor: ICode[] = [
 </script>
 
 <template>
-  <Toast position="bottom-right" :colorful="false" :theme="$colorMode.preference === 'dark' ? 'light' : 'dark'" />
+  <Toast position="bottom-right" :colorful="false" :theme="$colorMode.preference === 'dark' ? 'dark' : 'light'" />
 
   <Header>
     <HeaderTitle> Ativar/Desativar cores </HeaderTitle>

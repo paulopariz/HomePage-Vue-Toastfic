@@ -37,7 +37,7 @@ const maximumToasts: ICode[] = [
 </script>
 
 <template>
-  <Toast position="bottom-right" :max-toasts="3" :theme="$colorMode.preference === 'dark' ? 'light' : 'dark'" />
+  <Toast position="bottom-right" :max-toasts="3" :theme="$colorMode.preference === 'dark' ? 'dark' : 'light'" />
 
   <Header>
     <HeaderTitle> Máximo de toasts </HeaderTitle>

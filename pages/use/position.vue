@@ -37,7 +37,7 @@ const { showNextToast } = useToastManager();
 </script>
 
 <template>
-  <Toast position="top-left" :theme="$colorMode.preference === 'dark' ? 'light' : 'dark'" />
+  <Toast position="top-left" :theme="$colorMode.preference === 'dark' ? 'dark' : 'light'" />
 
   <Header>
     <HeaderTitle> Posição </HeaderTitle>
