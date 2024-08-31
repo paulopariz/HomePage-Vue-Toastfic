@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+
 import { highlightCode } from "~/utils/useHighlighter";
 import { type ICode } from "~/components/_default/code-block";
 
@@ -13,6 +15,9 @@ type ISlots = {
 const slots = useSlots() as ISlots;
 
 const tabContents = ref<{ [key: string]: string }>({});
+const activeTab = ref(props.codes[0].label);
+const currentCode = ref("");
+const tooltipVisible = ref(false);
 
 async function setCodes() {
   for (const tab of props.codes) {
@@ -20,13 +25,36 @@ async function setCodes() {
   }
 }
 
+function handleCopyClick() {
+  if (!currentCode.value) return;
+  navigator.clipboard.writeText(currentCode.value);
+  tooltipVisible.value = true;
+
+  setTimeout(() => {
+    tooltipVisible.value = false;
+  }, 3000);
+}
+
+watch(activeTab, (newTab) => {
+  const tab = props.codes.find((t) => t.label === newTab);
+
+  if (tab?.code) {
+    currentCode.value = tab.code;
+  }
+});
+
 onMounted(async () => {
   await setCodes();
+  currentCode.value = props.codes[0].code;
 });
 </script>
 
 <template>
-  <Tabs :defaultValue="codes[0].label" class="mt-5 w-full overflow-hidden rounded-md border border-[#1c1c1f]">
+  <Tabs
+    :defaultValue="codes[0].label"
+    class="mt-5 w-full overflow-hidden rounded-md border border-[#1c1c1f]"
+    @update:modelValue="activeTab = String($event)"
+  >
     <TabsList
       class="border-muted- flex h-12 w-full items-center justify-start gap-3 rounded-none border-b border-[#1c1c1f] bg-[#0a0a0a] px-2"
     >
@@ -50,9 +78,24 @@ onMounted(async () => {
         Preview
       </TabsTrigger>
 
-      <Button variant="ghost" class="ml-auto size-8 rounded-[6px] p-0 hover:bg-[#1c1c1f]">
-        <PhosphorIconCopySimple size="18" weight="fill" color="#e2e2e2" />
-      </Button>
+      <TooltipProvider>
+        <Tooltip :open="tooltipVisible">
+          <TooltipTrigger as-child>
+            <Button
+              variant="ghost"
+              class="ml-auto size-8 rounded-[6px] p-0 hover:bg-[#1c1c1f]"
+              @click="handleCopyClick"
+            >
+              <PhosphorIconCopySimple v-if="!tooltipVisible" size="18" weight="fill" color="#e2e2e2" />
+              <PhosphorIconCheck v-else size="18" color="var(--green)" />
+            </Button>
+          </TooltipTrigger>
+
+          <TooltipContent>
+            <p>Copiado!</p>
+          </TooltipContent>
+        </Tooltip>
+      </TooltipProvider>
     </TabsList>
 
     <div class="flex min-h-12 items-center bg-[#0d0d0d] p-4">
