@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger, SheetClose } from "@/components/ui/sheet";
 import Group from "./group.vue";
+import Card from "../sidebar/card.vue";
 
 interface Link {
   to: string;
@@ -32,7 +33,7 @@ const use: Link[] = [
     <Sheet>
       <SheetTrigger
         as-child
-        class="container fixed top-16 flex h-9 w-full items-center border-b bg-background max-md:px-4"
+        class="container fixed top-16 flex h-9 w-full items-center border-b bg-background max-sm:px-4"
       >
         <div class="flex items-center gap-1">
           <p class="cursor-pointer text-sm text-muted-foreground hover:text-foreground hover:underline">Documentação</p>
@@ -40,16 +41,26 @@ const use: Link[] = [
         </div>
       </SheetTrigger>
 
-      <SheetContent side="bottom">
+      <SheetContent side="bottom" class="h-[93%]">
         <SheetHeader class="items-start">
           <SheetTitle> Documentação </SheetTitle>
         </SheetHeader>
 
-        <div class="mt-8 grid gap-6">
-          <Group title="Iniciar" :links="getting_started" />
-          <Group title="Style" :links="style" />
-          <Group title="Uso" :links="use" />
+        <div class="mt-5 grid w-min gap-3">
+          <SheetClose>
+            <Group title="Iniciar" :links="getting_started" />
+          </SheetClose>
+
+          <SheetClose>
+            <Group title="Style" :links="style" />
+          </SheetClose>
+
+          <SheetClose>
+            <Group title="Uso" :links="use" />
+          </SheetClose>
         </div>
+
+        <Card />
       </SheetContent>
     </Sheet>
   </section>

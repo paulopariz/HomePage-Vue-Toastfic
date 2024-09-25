@@ -17,8 +17,8 @@ function isActive(link: string) {
 </script>
 
 <template>
-  <div class="">
-    <h1 class="font-semibold">
+  <div class="w-min">
+    <h1 class="text-start font-semibold">
       {{ title }}
     </h1>
 
@@ -27,7 +27,7 @@ function isActive(link: string) {
         v-for="(link, index) in links"
         :key="index"
         :to="link.to"
-        class="text-sm text-muted-foreground hover:underline"
+        class="text-nowrap text-start text-sm text-muted-foreground hover:underline"
         :class="{ '!text-green': isActive(link.to) }"
       >
         {{ link.text }}

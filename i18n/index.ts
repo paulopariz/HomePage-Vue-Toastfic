@@ -6,7 +6,7 @@ import it from "./it.json";
 
 export default defineI18nConfig(() => ({
   legacy: false,
-  locale: localStorage.getItem("language") || "en",
+  locale: process.client ? localStorage.getItem("language") || "en" : "en",
   messages: {
     pt,
     es,

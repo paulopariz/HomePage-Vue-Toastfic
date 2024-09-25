@@ -17,17 +17,17 @@ onMounted(() => {
   <div class="grid gap-5">
     <Header>
       <HeaderTitle class="flex items-center gap-2"> Github </HeaderTitle>
-      <HeaderDescription class="">
+      <HeaderDescription>
         Repositório oficial do vue-toastfic. Aqui você pode acompanhar as atualizações da biblioteca, acessar a
         documentação, relatar bugs, sugerir melhorias e muito mais.
       </HeaderDescription>
     </Header>
 
     <section class="mt-10 grid w-full grid-cols-3 items-start justify-between divide-x rounded-md">
-      <div class="flex items-center gap-5 rounded-md py-5 pl-6 pr-10">
+      <div class="flex items-center gap-5 rounded-md py-5 pl-6 pr-10 max-md:pl-0">
         <div class="grid gap-4">
-          <div class="flex gap-8">
-            <p class="flex items-center gap-2 text-sm text-muted-foreground">
+          <div class="flex gap-8 max-lg:grid max-lg:gap-4">
+            <p class="flex items-center gap-2 text-sm text-muted-foreground max-md:text-xs">
               <PhosphorIconCalendar size="20" color="var(--icon)" weight="fill" />
               {{ repoInfo?.created_at ? $formatDate(repoInfo?.created_at) : "" }}
             </p>
@@ -39,7 +39,7 @@ onMounted(() => {
               <NuxtLink
                 target="_blank"
                 href="https://github.com/paulopariz"
-                class="cursor-pointer text-muted-foreground transition-all hover:underline"
+                class="cursor-pointer text-muted-foreground transition-all hover:underline max-lg:text-xs"
               >
                 {{ repoInfo?.owner.login }}
               </NuxtLink>
@@ -51,7 +51,7 @@ onMounted(() => {
             href="https://github.com/paulopariz/vue-toastfic"
             class="flex w-min cursor-pointer items-center gap-2 text-lg font-semibold transition-all hover:underline"
           >
-            <p class="text-6xl font-black -tracking-wide">
+            <p class="text-6xl font-black -tracking-wide max-lg:text-2xl">
               vue-<br />
               toastfic
             </p>
@@ -59,11 +59,21 @@ onMounted(() => {
         </div>
       </div>
 
-      <div class="flex h-full items-center justify-center gap-8 p-10 text-7xl font-black">
-        {{ repoInfo?.stargazers_count }} <PhosphorIconStar weight="fill" color="var(--icon)" />
+      <div
+        class="flex h-full items-center justify-center gap-8 p-10 text-7xl font-black max-md:grid max-md:px-0 max-md:text-4xl"
+      >
+        <span class="max-md:ml-1">
+          {{ repoInfo?.stargazers_count }}
+        </span>
+        <PhosphorIconStar weight="fill" color="var(--icon)" />
       </div>
-      <div class="flex h-full items-center justify-center gap-8 p-10 text-7xl font-black">
-        {{ repoInfo?.forks_count }} <PhosphorIconGitFork weight="fill" color="var(--icon)" />
+      <div
+        class="flex h-full items-center justify-center gap-8 p-10 text-7xl font-black max-md:grid max-md:px-0 max-md:text-4xl"
+      >
+        <span class="max-md:ml-1">
+          {{ repoInfo?.forks_count }}
+        </span>
+        <PhosphorIconGitFork weight="fill" color="var(--icon)" />
       </div>
     </section>
   </div>

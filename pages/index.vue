@@ -31,12 +31,14 @@ function openRepository() {
       <Skeleton v-else class="h-6 w-36" />
 
       <h1
-        class="animate-text inline-flex bg-[linear-gradient(110deg,var(--foreground),45%,#a2a2a2,55%,var(--foreground))] bg-[length:200%_100%] bg-clip-text text-6xl font-black -tracking-wide text-transparent"
+        class="inline-flex animate-text text-nowrap bg-[linear-gradient(110deg,var(--foreground),45%,#a2a2a2,55%,var(--foreground))] bg-[length:200%_100%] bg-clip-text text-6xl font-black -tracking-wide text-transparent max-sm:text-5xl"
       >
         Vue Toastfic
       </h1>
 
-      <p class="text-lg tracking-wide text-muted-foreground">Light and simple toast library for Vue and Nuxt</p>
+      <p class="text-center text-lg tracking-wide text-muted-foreground max-sm:text-sm">
+        Light and simple toast library for Vue and Nuxt
+      </p>
 
       <div class="z-40 mt-4 flex items-center gap-4">
         <Button size="lg" class="font-medium" @click="$router.push('/getting-started')">Get Started</Button>
@@ -48,16 +50,16 @@ function openRepository() {
 
       <!-- circles -->
       <div
-        class="circle absolute -left-36 -top-28 -z-10 flex size-80 items-center justify-center rounded-full bg-green-light blur-3xl"
+        class="circle absolute -left-36 -top-28 -z-10 flex size-80 items-center justify-center rounded-full bg-green-light blur-3xl max-sm:-left-24 max-sm:-top-20 max-sm:size-56"
       />
       <div
-        class="circle absolute -right-32 -top-28 -z-10 flex size-80 items-center justify-center rounded-full bg-red-600/20 blur-3xl dark:bg-red-600/10"
+        class="circle absolute -right-32 -top-28 -z-10 flex size-80 items-center justify-center rounded-full bg-red-600/20 blur-3xl dark:bg-red-600/10 max-sm:-right-12 max-sm:-top-20 max-sm:size-56"
       />
       <div
-        class="circle absolute -bottom-48 -left-36 -z-10 flex size-80 items-center justify-center rounded-full bg-blue-600/20 blur-3xl dark:bg-blue-600/10"
+        class="circle absolute -bottom-48 -left-36 -z-10 flex size-80 items-center justify-center rounded-full bg-blue-600/20 blur-3xl dark:bg-blue-600/10 max-sm:-bottom-36 max-sm:-left-24 max-sm:size-56"
       />
       <div
-        class="circle absolute -bottom-48 -right-32 -z-10 flex size-80 items-center justify-center rounded-full bg-yellow-600/20 blur-3xl dark:bg-yellow-600/10"
+        class="circle absolute -bottom-48 -right-32 -z-10 flex size-80 items-center justify-center rounded-full bg-yellow-600/20 blur-3xl dark:bg-yellow-600/10 max-sm:-bottom-36 max-sm:-right-12 max-sm:size-56"
       />
     </section>
   </div>

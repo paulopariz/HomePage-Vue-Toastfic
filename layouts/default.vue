@@ -5,10 +5,10 @@ import { NavBar, Navigation, MapNavigation, Sidebar, SidebarMobile } from "~/com
 <template>
   <main>
     <NavBar />
-    <SidebarMobile class="md:hidden" />
+    <SidebarMobile class="lg:hidden" />
 
     <main>
-      <div class="container mx-auto max-sm:px-4">
+      <div class="container mx-auto max-lg:mt-12 max-sm:px-4">
         <div class="flex flex-col lg:grid lg:grid-cols-10 lg:gap-8">
           <div class="lg:col-span-2">
             <Sidebar />

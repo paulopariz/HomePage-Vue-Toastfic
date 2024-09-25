@@ -6,11 +6,11 @@ function redirectForm() {
 
 <template>
   <div
-    class="relative flex h-48 w-full items-center justify-between gap-7 overflow-hidden rounded-3xl border bg-foreground"
+    class="relative flex h-48 w-full items-center justify-between gap-7 overflow-hidden rounded-3xl border bg-foreground max-md:h-56"
   >
     <div class="grid gap-1 px-7">
       <h1 class="text-2xl font-medium -tracking-wide text-background">Sugestões e melhorias</h1>
-      <p class="stracking-wide max-w-2xl text-sm text-background">
+      <p class="stracking-wide max-w-2xl text-sm text-background max-lg:text-sm">
         Olá, sua opinião é muito importante para futuras versões do vue-toastfic. Suas sugestões de melhorias e
         relatórios de bugs contribuirão significativamente para nosso progresso.
       </p>
@@ -24,7 +24,7 @@ function redirectForm() {
       </Button>
     </div>
 
-    <div class="mr-6">
+    <div class="mr-6 max-md:hidden">
       <div
         class="h-48 w-[305px] bg-[url('~/assets/images/component-toast-dark.svg')] bg-cover bg-center bg-no-repeat dark:bg-[url('~/assets/images/component-toast-light.svg')]"
       />

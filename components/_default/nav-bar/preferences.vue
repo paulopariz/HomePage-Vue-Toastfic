@@ -32,7 +32,7 @@ const languageSelected = computed(() => {
 });
 
 function selectLanguage(code: string) {
-  localStorage.setItem("language", code);
+  localStorage?.setItem("language", code);
   setLocale(code);
 }
 </script>
