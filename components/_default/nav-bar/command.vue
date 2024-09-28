@@ -75,13 +75,13 @@ function openCommand() {
         <CommandSeparator />
 
         <CommandGroup heading="Utilitários">
-          <CommandItem value="github" class="group flex items-center gap-[21px]">
+          <CommandItem value="github" class="group flex items-center gap-4">
             <PhosphorIconGithubLogo size="21" />
             Repositório no github
           </CommandItem>
 
           <CommandItem value="npm" class="group flex items-center gap-3">
-            <IconNpmLight />
+            <IconNpmLight class="size-7" />
             Pacote no npm
           </CommandItem>
         </CommandGroup>
