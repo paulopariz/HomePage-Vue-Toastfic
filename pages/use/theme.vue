@@ -13,13 +13,14 @@ import { IconVue } from "~/assets/icons/managers";
 import { Toast } from "vue-toastfic";
 import { useToastManager } from "~/composables/useSequenceToast";
 
+const { $i18n } = useNuxtApp();
+
 useHead({
-  title: "Vue Toastfic | Tema",
+  title: `Vue Toastfic - ${$i18n.t("pages.use.theme.title-theme")}`,
   meta: [
     {
       name: "description",
-      content:
-        "Uma ótima funcionalidade para integrar ao seu projeto é a possibilidade de escolher entre os temas light e dark para os toasts. Esses temas podem ser alterados facilmente através da prop theme",
+      content: $i18n.t("pages.use.theme.desc-theme"),
     },
   ],
 });
@@ -41,19 +42,18 @@ const maximumToasts: ICode[] = [
   <Toast position="bottom-right" theme="light" />
 
   <Header>
-    <HeaderTitle> Tema </HeaderTitle>
+    <HeaderTitle> {{ $t("pages.use.theme.title-theme") }} </HeaderTitle>
 
     <HeaderDescription>
-      Uma ótima funcionalidade para integrar ao seu projeto é a possibilidade de escolher entre os temas <b>light</b> e
-      <b>dark</b> para os toasts. Esses temas podem ser alterados facilmente através da prop
+      {{ $t("pages.use.theme.desc-theme") }}
       <b class="rounded-[6px] bg-green-light px-2 py-1 text-sm text-green">theme</b>.
     </HeaderDescription>
   </Header>
 
   <div>
     <Header>
-      <HeaderSubTitle id="Exemplo de uso"> 01. Exemplo de uso </HeaderSubTitle>
-      <HeaderSubDescription> Usando os temas: </HeaderSubDescription>
+      <HeaderSubTitle id="Exemplo de uso"> 01. {{ $t("pages.use.theme.subtitle-example") }} </HeaderSubTitle>
+      <HeaderSubDescription> {{ $t("pages.use.theme.desc-example") }} </HeaderSubDescription>
     </Header>
 
     <Code :codes="maximumToasts">
@@ -65,3 +65,5 @@ const maximumToasts: ICode[] = [
     </Code>
   </div>
 </template>
+
+<style scoped></style>

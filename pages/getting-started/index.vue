@@ -12,12 +12,14 @@ import { type ICode, Code } from "~/components/_default/code-block";
 import { IconTs, IconVue, IconNuxt, IconNpm, IconYarn, IconPnpm, IconBun } from "@/assets/icons/managers";
 import { pluginNuxt, appNuxt, configNuxt, appVue, install, importCss } from "~/utils/codes/getting-started";
 
+const { $i18n } = useNuxtApp();
+
 useHead({
-  title: "Vue Toastfic | Instalar",
+  title: `Vue Toastfic - ${$i18n.t("pages.getting-started.title-install")}`,
   meta: [
     {
       name: "description",
-      content: "Instale e aproveite o vue-toastfic em seus projetos Vue.js e Nuxt.js.",
+      content: $i18n.t("pages.getting-started.desc-install"),
     },
   ],
 });
@@ -97,33 +99,35 @@ const codeUseNuxt: ICode[] = [
 
 <template>
   <Header>
-    <HeaderTitle> Instalar </HeaderTitle>
+    <HeaderTitle> {{ $t("pages.getting-started.title-install") }} </HeaderTitle>
 
-    <HeaderDescription> Instale e aproveite o vue-toastfic em seus projetos Vue.js e Nuxt.js. </HeaderDescription>
+    <HeaderDescription> {{ $t("pages.getting-started.desc-install") }} </HeaderDescription>
   </Header>
 
   <div class="grid gap-3">
-    <HeaderSubTitle> Pré-requisitos: </HeaderSubTitle>
+    <HeaderSubTitle> {{ $t("pages.getting-started.prerequisites") }} </HeaderSubTitle>
     <div class="ml-4 grid gap-2">
       <HeaderSubDescription class="flex items-center gap-1.5">
         - Node.js
         <Tag> v18.0.0 </Tag>
-        ou maior;
+        {{ $t("pages.getting-started.or-greater") }}
       </HeaderSubDescription>
 
       <HeaderSubDescription class="flex items-center gap-1.5">
         - Vue.js
         <Tag> v3.0.0 </Tag>
-        ou maior;
+        {{ $t("pages.getting-started.or-greater") }}
       </HeaderSubDescription>
     </div>
   </div>
 
   <div>
     <Header>
-      <HeaderSubTitle id="Instalar vue-toastfic"> 01. Instalar vue-toastfic </HeaderSubTitle>
+      <HeaderSubTitle :id="`${$t('pages.getting-started.title-install')} vue-toastfic`">
+        01. {{ $t("pages.getting-started.title-install") }} vue-toastfic
+      </HeaderSubTitle>
 
-      <HeaderSubDescription> Instale o pacote usando algum desses comandos: </HeaderSubDescription>
+      <HeaderSubDescription> {{ $t("pages.getting-started.subdesc-install-packge") }} </HeaderSubDescription>
     </Header>
 
     <Code :codes="codeInstall" />
@@ -131,10 +135,14 @@ const codeUseNuxt: ICode[] = [
 
   <div>
     <Header>
-      <HeaderSubTitle id="Importe o arquivo CSS"> 02. Importe o arquivo CSS </HeaderSubTitle>
+      <HeaderSubTitle :id="$t('pages.getting-started.subtitle-import-css')">
+        02. {{ $t("pages.getting-started.subtitle-import-css") }}
+      </HeaderSubTitle>
 
       <HeaderSubDescription>
-        É necessário importar o arquivo de estilo no <b>main.ts</b> ou no <b>nuxt.config.ts</b> caso esteja no Nuxt:
+        {{ $t("pages.getting-started.subdesc-import-css-1") }} <b>main.ts</b> {{ $t("pages.getting-started.or in") }}
+        <b>nuxt.config.ts</b> {{ $t("pages.getting-started.case-is-not") }}
+        Nuxt:
       </HeaderSubDescription>
     </Header>
 
@@ -143,9 +151,11 @@ const codeUseNuxt: ICode[] = [
 
   <div>
     <Header>
-      <HeaderSubTitle id="Para Vue 3"> 03. Para Vue 3 </HeaderSubTitle>
+      <HeaderSubTitle :id="$t('pages.getting-started.to') + ' Vue 3'">
+        03. {{ $t("pages.getting-started.to") }} Vue 3
+      </HeaderSubTitle>
 
-      <HeaderSubDescription> Uso simples para seu app Vue.js 3: </HeaderSubDescription>
+      <HeaderSubDescription> {{ $t("pages.getting-started.use-app") }} Vue.js 3: </HeaderSubDescription>
     </Header>
 
     <Code :codes="codeUseVue" />
@@ -153,9 +163,11 @@ const codeUseNuxt: ICode[] = [
 
   <div>
     <Header>
-      <HeaderSubTitle id="Para Nuxt 3"> 04. Para Nuxt 3 </HeaderSubTitle>
+      <HeaderSubTitle :id="$t('pages.getting-started.to') + ' Nuxt 3'">
+        04. {{ $t("pages.getting-started.to") }} Nuxt 3
+      </HeaderSubTitle>
 
-      <HeaderSubDescription> Uso para seu app Nuxt.js 3: </HeaderSubDescription>
+      <HeaderSubDescription> {{ $t("pages.getting-started.use-app") }} Nuxt.js 3: </HeaderSubDescription>
     </Header>
 
     <Code :codes="codeUseNuxt" />

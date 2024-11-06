@@ -13,18 +13,18 @@ import { IconCss, IconVue } from "~/assets/icons/managers";
 import { Toast } from "vue-toastfic";
 import { useToastManager } from "~/composables/useSequenceToast";
 
+const { $i18n } = useNuxtApp();
+const { showNextToast } = useToastManager();
+
 useHead({
-  title: "Vue Toastfic | Personalização do toast",
+  title: `Vue Toastfic - ${$i18n.t("pages.use.personalize.title-personalize")}`,
   meta: [
     {
       name: "description",
-      content:
-        "Seus toasts podem ser altamente personalizados de acordo com suas preferências. Esse recurso pode ser implementado usando a prop classes. Todos os elementos, como title, description, buttonHandle, entre outros, podem ser ajustados conforme a sua necessidade.",
+      content: $i18n.t("pages.use.personalize.desc-personalize"),
     },
   ],
 });
-
-const { showNextToast } = useToastManager();
 
 const maximumToasts: ICode[] = [
   {
@@ -69,19 +69,21 @@ const maximumToasts: ICode[] = [
   />
 
   <Header>
-    <HeaderTitle> Personalização do toast </HeaderTitle>
+    <HeaderTitle> {{ $t("pages.use.personalize.title-personalize") }} </HeaderTitle>
 
     <HeaderDescription>
-      Seus toasts podem ser altamente personalizados de acordo com suas preferências. Esse recurso pode ser implementado
-      usando a prop <b class="rounded-[6px] bg-green-light px-2 py-1 text-sm text-green">classes</b>. Todos os
-      elementos, como title, description, buttonHandle, entre outros, podem ser ajustados conforme a sua necessidade.
+      {{ $t("pages.use.personalize.desc-personalize-1") }}
+      <b class="rounded-[6px] bg-green-light px-2 py-1 text-sm text-green">classes</b>.
+      {{ $t("pages.use.personalize.desc-personalize-2") }}
     </HeaderDescription>
   </Header>
 
   <div>
     <Header>
-      <HeaderSubTitle id="Exemplo de uso"> 01. Exemplo de uso </HeaderSubTitle>
-      <HeaderSubDescription> Altere todo o estilo de seus toasts. </HeaderSubDescription>
+      <HeaderSubTitle :id="$t('pages.use.personalize.subtitle-example')">
+        01. {{ $t("pages.use.personalize.subtitle-example") }}
+      </HeaderSubTitle>
+      <HeaderSubDescription> {{ $t("pages.use.personalize.desc-example") }} </HeaderSubDescription>
     </Header>
 
     <Code :codes="maximumToasts">
@@ -93,5 +95,3 @@ const maximumToasts: ICode[] = [
     </Code>
   </div>
 </template>
-
-<style scoped></style>

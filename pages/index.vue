@@ -24,7 +24,7 @@ function openRepository() {
         v-if="npmInfo?.last_version"
         class="flex items-center gap-1 rounded-sm px-2 py-1 text-start text-xs underline"
       >
-        <PhosphorIconLightning color="#eede2b" weight="fill" /> Última versão
+        <PhosphorIconLightning color="#eede2b" weight="fill" /> {{ $t("pages.home.last-version") }}
         <span class="font-semibold">v{{ npmInfo?.last_version }}</span>
       </span>
 
@@ -37,11 +37,13 @@ function openRepository() {
       </h1>
 
       <p class="text-center text-lg tracking-wide text-muted-foreground max-sm:text-sm">
-        Light and simple toast library for Vue and Nuxt
+        {{ $t("pages.home.desc-lib") }}
       </p>
 
       <div class="z-40 mt-4 flex items-center gap-4">
-        <Button size="lg" class="font-medium" @click="$router.push('/getting-started')">Get Started</Button>
+        <Button size="lg" class="font-medium" @click="$router.push('/getting-started')">{{
+          $t("pages.home.get-started")
+        }}</Button>
         <Button size="lg" variant="secondary" class="flex items-center gap-2 font-medium" @click="openRepository">
           <PhosphorIconGithubLogo size="16" color="var(--icon)" />
           Github
@@ -68,7 +70,7 @@ function openRepository() {
     <div class="absolute left-1/2 -z-20 size-14 -translate-x-1/2 rounded-full bg-foreground opacity-65 blur-3xl" />
 
     <span class="mb-3 flex items-center justify-center text-xs">
-      Versão suportada: <PhosphorIconArrowUp color="var(--green)" class="ml-1" weight="bold" />
+      {{ $t("pages.home.supported-version") }} <PhosphorIconArrowUp color="var(--green)" class="ml-1" weight="bold" />
       <span class="font-semibold"> v3.0.0</span>
     </span>
     <div class="flex items-center gap-7">

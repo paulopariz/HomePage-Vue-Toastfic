@@ -13,13 +13,14 @@ import { IconVue } from "~/assets/icons/managers";
 import { useToastManager } from "~/composables/useSequenceToast";
 import { Toast } from "vue-toastfic";
 
+const { $i18n } = useNuxtApp();
+
 useHead({
-  title: "Vue Toastfic | Posição",
+  title: `Vue Toastfic - ${$i18n.t("pages.use.position.title-position")}`,
   meta: [
     {
       name: "description",
-      content:
-        "Todos os toasts são posicionados no canto superior direito por padrão. Esse comportamento pode ser alterado utilizando a prop position.",
+      content: $i18n.t("pages.use.position.desc-position"),
     },
   ],
 });
@@ -40,25 +41,26 @@ const { showNextToast } = useToastManager();
   <Toast position="top-left" :theme="$colorMode.preference === 'dark' ? 'dark' : 'light'" />
 
   <Header>
-    <HeaderTitle> Posição </HeaderTitle>
+    <HeaderTitle> {{ $t("pages.use.position.title-position") }} </HeaderTitle>
 
     <HeaderDescription>
-      Todos os toasts são posicionados no canto superior direito por padrão. Esse comportamento pode ser alterado
-      utilizando a prop <b class="rounded-[6px] bg-green-light px-2 py-1 text-sm text-green">position</b>.
+      {{ $t("pages.use.position.desc-position-2") }}
+      <b class="rounded-[6px] bg-green-light px-2 py-1 text-sm text-green">position</b>.
 
       <p class="mt-3">
-        Posições: <b>top-left</b>, <b>top-center</b>, <b>top-right</b>, <b>bottom-left</b>, <b>bottom-center</b> e
-        <b>bottom-right</b>.
+        {{ $t("pages.use.position.desc-positions") }}
       </p>
     </HeaderDescription>
   </Header>
 
   <div>
     <Header>
-      <HeaderSubTitle id="Exemplo de uso"> 01. Exemplo de uso </HeaderSubTitle>
+      <HeaderSubTitle :id="$t('pages.use.position.subtitle-example')">
+        01. {{ $t("pages.use.position.subtitle-example") }}
+      </HeaderSubTitle>
 
       <HeaderSubDescription>
-        Definindo um valor diferente do padrão através da prop <b>position</b>:
+        {{ $t("pages.use.position.desc-example") }}
       </HeaderSubDescription>
     </Header>
 

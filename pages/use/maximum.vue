@@ -13,18 +13,18 @@ import { IconVue } from "~/assets/icons/managers";
 import { Toast } from "vue-toastfic";
 import { useToastManager } from "~/composables/useSequenceToast";
 
+const { $i18n } = useNuxtApp();
+const { showNextToast } = useToastManager();
+
 useHead({
-  title: "Vue Toastfic | Máximo de toasts",
+  title: `Vue Toastfic - ${$i18n.t("pages.use.maximum.title-maximum")}`,
   meta: [
     {
       name: "description",
-      content:
-        "Para evitar o acúmulo de toasts na tela, você pode configurar o número máximo de toasts exibidos simultaneamente utilizando a prop maxToasts.",
+      content: $i18n.t("pages.use.maximum.desc-maximum"),
     },
   ],
 });
-
-const { showNextToast } = useToastManager();
 
 const maximumToasts: ICode[] = [
   {
@@ -40,24 +40,26 @@ const maximumToasts: ICode[] = [
   <Toast position="bottom-right" :max-toasts="3" :theme="$colorMode.preference === 'dark' ? 'dark' : 'light'" />
 
   <Header>
-    <HeaderTitle> Máximo de toasts </HeaderTitle>
+    <HeaderTitle> {{ $t("pages.use.maximum.title-maximum") }} </HeaderTitle>
 
     <HeaderDescription>
-      Para evitar o acúmulo de toasts na tela, você pode configurar o número máximo de toasts exibidos simultaneamente
-      utilizando a prop <b class="rounded-[6px] bg-green-light px-2 py-1 text-sm text-green">maxToasts</b>.
+      {{ $t("pages.use.maximum.toast-description") }}
+      <b class="rounded-[6px] bg-green-light px-2 py-1 text-sm text-green">maxToasts</b>.
     </HeaderDescription>
   </Header>
 
   <div>
     <Header>
-      <HeaderSubTitle id="Exemplo de uso"> 01. Exemplo de uso </HeaderSubTitle>
-      <HeaderSubDescription> Use um valor maior que 0: </HeaderSubDescription>
+      <HeaderSubTitle :id="$t('pages.use.maximum.subtitle-example')">
+        01. {{ $t("pages.use.maximum.subtitle-example") }}
+      </HeaderSubTitle>
+      <HeaderSubDescription> {{ $t("pages.use.maximum.desc-example") }} </HeaderSubDescription>
     </Header>
 
     <Code :codes="maximumToasts">
       <template #preview>
         <div class="flex h-32 items-center justify-center gap-10">
-          <Button variant="outline" class="w-min" @click="showNextToast">Show</Button>
+          <Button variant="outline" class="w-min" @click="showNextToast"> Show </Button>
         </div>
       </template>
     </Code>

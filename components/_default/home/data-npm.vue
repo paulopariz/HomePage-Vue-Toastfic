@@ -53,8 +53,7 @@ watch(
     <Header>
       <HeaderTitle class="flex items-center gap-2"> Npm </HeaderTitle>
       <HeaderDescription class="">
-        Pacote oficial do vue-toastfic no npm. Aqui você pode baixar qualquer versão, acompanhar as atualizações e mais.
-        Lembre-se de que as versões anteriores à <b>v1.0.0</b> são apenas para testes.
+        {{ $t("pages.home.desc-package-npm-1") }} <b>v1.0.0</b> {{ $t("pages.home.desc-package-npm-2") }}
       </HeaderDescription>
     </Header>
 
@@ -64,13 +63,13 @@ watch(
           <Header>
             <HeaderSubTitle>Downloads:</HeaderSubTitle>
             <HeaderSubDescription>
-              Quantidade de downloads feitas nos últimos {{ dayActive }} dias.
+              {{ $t("pages.home.download-last-days-1") }} {{ dayActive }} {{ $t("pages.home.download-last-days-2") }}.
             </HeaderSubDescription>
           </Header>
 
           <DropdownMenu>
             <DropdownMenuTrigger as-child>
-              <Button variant="outline"> Versões </Button>
+              <Button variant="outline"> {{ $t("pages.home.versions-npm") }} </Button>
             </DropdownMenuTrigger>
 
             <DropdownMenuContent align="end" class="max-h-72 w-32 overflow-auto">
@@ -93,7 +92,8 @@ watch(
             :disabled="dayActive === 7"
             @click="setDays(7)"
           >
-            <span class="size-2 rounded-full bg-muted" :class="{ '!bg-green': dayActive === 7 }" /> 7 dias
+            <span class="size-2 rounded-full bg-muted" :class="{ '!bg-green': dayActive === 7 }" /> 7
+            {{ $t("pages.home.download-last-days-2") }}
           </button>
 
           <button
@@ -101,7 +101,8 @@ watch(
             :disabled="dayActive === 30"
             @click="setDays(30)"
           >
-            <span class="size-2 rounded-full bg-muted" :class="{ '!bg-green': dayActive === 30 }" /> 30 dias
+            <span class="size-2 rounded-full bg-muted" :class="{ '!bg-green': dayActive === 30 }" /> 30
+            {{ $t("pages.home.download-last-days-2") }}
           </button>
         </div>
 

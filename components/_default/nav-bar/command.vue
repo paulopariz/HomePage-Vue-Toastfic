@@ -13,16 +13,12 @@ import {
 } from "@/components/ui/command";
 import { IconNpmLight } from "~/assets/icons/managers";
 
+import { useLinks } from "~/composables/useLinks";
+
+const { getting_started, style, use } = useLinks();
 const colorMode = useColorMode();
 
 const open = ref(false);
-const value = ref("");
-
-const links = ref([
-  { name: "Iniciar", value: "start" },
-  { name: "Versões", value: "versions" },
-  { name: "Instalar", value: "install" },
-]);
 
 const { Meta_J, Ctrl_J } = useMagicKeys({
   passive: false,
@@ -37,6 +33,10 @@ watch([Meta_J, Ctrl_J], (v) => {
 
 function openCommand() {
   open.value = !open.value;
+}
+
+function redirectForm() {
+  window.open("https://tally.so/r/w4jjPk", "_blank");
 }
 </script>
 
@@ -66,7 +66,7 @@ function openCommand() {
         <CommandEmpty>Sem resultados.</CommandEmpty>
 
         <CommandGroup heading="Formulário">
-          <CommandItem value="form" class="group flex items-center gap-3">
+          <CommandItem value="form" class="group flex items-center gap-3" @click="redirectForm">
             <PhosphorIconPaperPlaneTilt color="var(--icon)" size="16" weight="fill" />
             Sugestões e melhorias
           </CommandItem>
@@ -75,43 +75,65 @@ function openCommand() {
         <CommandSeparator />
 
         <CommandGroup heading="Utilitários">
-          <CommandItem value="github" class="group flex items-center gap-4">
-            <PhosphorIconGithubLogo size="21" />
-            Repositório no github
-          </CommandItem>
+          <NuxtLink href="https://github.com/paulopariz/vue-toastfic" target="_blank">
+            <CommandItem value="github" class="group flex items-center gap-4">
+              <PhosphorIconGithubLogo size="21" />
+              Repositório no github
+            </CommandItem>
+          </NuxtLink>
 
-          <CommandItem value="npm" class="group flex items-center gap-3">
-            <IconNpmLight class="size-7" />
-            Pacote no npm
-          </CommandItem>
+          <NuxtLink href="https://www.npmjs.com/package/vue-toastfic" target="_blank">
+            <CommandItem value="npm" class="group flex items-center gap-3">
+              <IconNpmLight class="size-7" />
+              Pacote no npm
+            </CommandItem>
+          </NuxtLink>
         </CommandGroup>
 
         <CommandSeparator />
 
-        <CommandGroup heading="Links">
-          <CommandItem
-            v-for="(link, index) in links"
-            :key="index"
-            :value="link.value"
-            class="group flex items-center gap-3"
-            @select="
-              (ev) => {
-                if (typeof ev.detail.value === 'string') {
-                  value = ev.detail.value;
-                }
-                open = false;
-              }
-            "
-          >
-            <PhosphorIconFolder class="group-hover:opacity-0" color="var(--icon)" size="16" weight="fill" />
-            <PhosphorIconFolderOpen
-              class="absolute opacity-0 group-hover:opacity-100"
-              color="var(--icon)"
-              size="16"
-              weight="fill"
-            />
-            {{ link.name }}
-          </CommandItem>
+        <CommandGroup heading="Documentação">
+          <CommandGroup heading="Iniciar">
+            <div class="flex flex-wrap gap-2">
+              <NuxtLink v-for="(link, index) in getting_started" :key="index" :to="link.to">
+                <CommandItem
+                  :value="link.text"
+                  class="w-min text-nowrap rounded-sm border px-2 text-xs"
+                  @select="open = false"
+                >
+                  {{ link.text }}
+                </CommandItem>
+              </NuxtLink>
+            </div>
+          </CommandGroup>
+
+          <CommandGroup heading="Style">
+            <div class="flex flex-wrap gap-2">
+              <NuxtLink v-for="(link, index) in style" :key="index" :to="link.to">
+                <CommandItem
+                  :value="link.text"
+                  class="w-min text-nowrap rounded-sm border px-2 text-xs"
+                  @select="open = false"
+                >
+                  {{ link.text }}
+                </CommandItem>
+              </NuxtLink>
+            </div>
+          </CommandGroup>
+
+          <CommandGroup heading="Uso">
+            <div class="flex flex-wrap gap-2">
+              <NuxtLink v-for="(link, index) in use" :key="index" :to="link.to">
+                <CommandItem
+                  :value="link.text"
+                  class="inline-block text-nowrap rounded-sm border px-2 text-xs"
+                  @select="open = false"
+                >
+                  {{ link.text }}
+                </CommandItem>
+              </NuxtLink>
+            </div>
+          </CommandGroup>
         </CommandGroup>
 
         <CommandSeparator />

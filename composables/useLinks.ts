@@ -3,24 +3,28 @@ export interface Link {
   text: string;
 }
 
+const { $i18n } = useNuxtApp();
+
 export function useLinks() {
+  const { t } = $i18n;
+
   const getting_started: Link[] = [
-    { to: "/getting-started", text: "Instalar" },
-    { to: "/getting-started/demo", text: "Demonstração" },
+    { to: "/getting-started", text: t("routes-name.install") },
+    { to: "/getting-started/demo", text: t("routes-name.demo") },
   ];
 
-  const style: Link[] = [{ to: "/style/palette", text: "Paleta de cores" }];
+  const style: Link[] = [{ to: "/style/palette", text: t("routes-name.palette") }];
 
   const use: Link[] = [
-    { to: "/use/position", text: "Posição" },
-    { to: "/use/close-toast", text: "Fechar toast" },
-    { to: "/use/duration", text: "Tempo de fechamento" },
-    { to: "/use/progress-bar", text: "Barra de progresso" },
-    { to: "/use/colorful", text: "Ativar/Desativar cores" },
-    { to: "/use/maximum", text: "Máximo de toasts" },
-    { to: "/use/theme", text: "Tema" },
-    { to: "/use/event", text: "Lidar com eventos" },
-    { to: "/use/personalize", text: "Personalização do toast" },
+    { to: "/use/position", text: t("routes-name.position") },
+    { to: "/use/close-toast", text: t("routes-name.close-toast") },
+    { to: "/use/duration", text: t("routes-name.duration") },
+    { to: "/use/progress-bar", text: t("routes-name.progress-bar") },
+    { to: "/use/colorful", text: t("routes-name.colorful") },
+    { to: "/use/maximum", text: t("routes-name.maximum") },
+    { to: "/use/theme", text: t("routes-name.theme") },
+    { to: "/use/event", text: t("routes-name.event") },
+    { to: "/use/personalize", text: t("routes-name.personalize") },
   ];
 
   return {

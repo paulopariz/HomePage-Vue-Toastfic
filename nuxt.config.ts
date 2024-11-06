@@ -7,7 +7,7 @@ export default defineNuxtConfig({
     head: {
       charset: "utf-8",
       viewport: "width=device-width, initial-scale=1",
-      title: "Vue Toastfic | 💬 Light and simple toast library for Vue and Nuxt",
+      title: "Vue Toastfic - 💬 Light and simple toast library for Vue and Nuxt",
       meta: [
         {
           name: "description",
@@ -23,7 +23,7 @@ export default defineNuxtConfig({
         },
         {
           property: "og:title",
-          content: "Vue Toastfic | 💬 Light and simple toast library for Vue and Nuxt",
+          content: "Vue Toastfic - 💬 Light and simple toast library for Vue and Nuxt",
         },
         {
           property: "og:description",

@@ -11,13 +11,14 @@ import { type ICode, Code } from "~/components/_default/code-block";
 import { vars } from "~/utils/codes/palette";
 import { IconCss } from "~/assets/icons/managers";
 
+const { $i18n } = useNuxtApp();
+
 useHead({
-  title: "Vue Toastfic | Paleta de cores",
+  title: `Vue Toastfic - ${$i18n.t("pages.style.title-pallete-colors")}`,
   meta: [
     {
       name: "description",
-      content:
-        "Neste guia de estilo, você pode ajustar todas as variáveis globais do vue-toastfic para personalizá-las conforme suas necessidades, garantindo uma boa experiência ao seu projeto.",
+      content: $i18n.t("pages.style.desc-pallete-colors"),
     },
   ],
 });
@@ -101,26 +102,27 @@ const currentVarsLight = ref<ICurrentVars[]>([
 
 <template>
   <Header>
-    <HeaderTitle> Paleta de cores </HeaderTitle>
+    <HeaderTitle> {{ $t("pages.style.title-pallete-colors") }} </HeaderTitle>
 
     <HeaderDescription>
-      Neste guia de estilo, você pode ajustar todas as variáveis globais do vue-toastfic para personalizá-las conforme
-      suas necessidades, garantindo uma boa experiência ao seu projeto.
+      {{ $t("pages.style.desc-pallete-colors") }}
     </HeaderDescription>
   </Header>
 
   <div class="grid gap-5">
     <Header>
-      <HeaderSubTitle id="Variáveis padrão"> 01. Variáveis padrão </HeaderSubTitle>
+      <HeaderSubTitle :id="$t('pages.style.default-variables')">
+        01. {{ $t("pages.style.default-variables") }}
+      </HeaderSubTitle>
 
       <HeaderSubDescription>
-        Essas são variáveis padrões configuradas para os temas light e dark:
+        {{ $t("pages.style.subdesc-variable-default") }}
       </HeaderSubDescription>
     </Header>
 
     <div class="grid grid-cols-1 gap-20">
       <div>
-        <HeaderSubTitle class="mb-5 text-sm"> Light: </HeaderSubTitle>
+        <HeaderSubTitle class="mb-5 text-sm"> {{ $t("pages.style.subtitle-light") }} </HeaderSubTitle>
 
         <div class="grid gap-y-4">
           <div
@@ -139,7 +141,7 @@ const currentVarsLight = ref<ICurrentVars[]>([
       </div>
 
       <div>
-        <HeaderSubTitle class="mb-5 text-sm"> Dark </HeaderSubTitle>
+        <HeaderSubTitle class="mb-5 text-sm"> {{ $t("pages.style.subtitle-dark") }} </HeaderSubTitle>
 
         <div class="grid gap-y-4">
           <div
@@ -161,11 +163,13 @@ const currentVarsLight = ref<ICurrentVars[]>([
 
   <div class="grid gap-5">
     <Header>
-      <HeaderSubTitle id="Personalizar"> 02. Personalizar </HeaderSubTitle>
+      <HeaderSubTitle :id="$t('pages.style.subtitle-personalization')">
+        02. {{ $t("pages.style.subtitle-personalization") }}
+      </HeaderSubTitle>
 
       <HeaderSubDescription>
-        As cores podem ser personalizadas como quiser. Para aplicar essas alterações, é necessário salvá-las em um
-        arquivo CSS global, como <b>global.css</b>, <b>main.css</b>, entre outros.
+        {{ $t("pages.style.subdesc-colors-1") }} <b>global.css</b>, <b>main.css</b>,
+        {{ $t("pages.style.subdesc-colors-2") }}
       </HeaderSubDescription>
     </Header>
 
@@ -173,8 +177,7 @@ const currentVarsLight = ref<ICurrentVars[]>([
       <PhosphorIconWarning size="24" weight="fill" class="text-yellow-600" />
 
       <p class="text-sm tracking-wide text-yellow-600">
-        Se as alterações nas cores não forem aplicadas imediatamente, use a regra <b>!important</b> para garantir que
-        elas sejam aplicadas corretamente.
+        {{ $t("pages.style.desc-warning-1") }} <b>!important</b> {{ $t("pages.style.desc-warning-2") }}
       </p>
     </div>
 

@@ -9,10 +9,9 @@ function redirectForm() {
     class="relative flex h-48 w-full items-center justify-between gap-7 overflow-hidden rounded-3xl border bg-foreground max-md:h-56"
   >
     <div class="grid gap-1 px-7">
-      <h1 class="text-2xl font-medium -tracking-wide text-background">Sugestões e melhorias</h1>
+      <h1 class="text-2xl font-medium -tracking-wide text-background">{{ $t("pages.home.title-redirect-form") }}</h1>
       <p class="stracking-wide max-w-2xl text-sm text-background max-lg:text-sm">
-        Olá, sua opinião é muito importante para futuras versões do vue-toastfic. Suas sugestões de melhorias e
-        relatórios de bugs contribuirão significativamente para nosso progresso.
+        {{ $t("pages.home.desc-redirect-form") }}
       </p>
 
       <Button
@@ -20,7 +19,7 @@ function redirectForm() {
         class="mt-6 flex w-32 items-center justify-center gap-1 bg-background text-foreground"
         @click="redirectForm"
       >
-        Formulário <PhosphorIconCaretRight color="var(--icon)" weight="bold" />
+        {{ $t("pages.home.form") }} <PhosphorIconCaretRight color="var(--icon)" weight="bold" />
       </Button>
     </div>
 

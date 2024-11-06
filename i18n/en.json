@@ -1,1 +1,146 @@
-{}
+{
+  "pages": {
+    "home": {
+      "last-version": "Latest version",
+      "desc-lib": "Light and simple toast library for Vue and Nuxt",
+      "get-started": "Get Started",
+      "supported-version": "Supported Version:",
+      "desc-repository-github": "Official vue-toastfic repository. \nHere you can track library updates, access documentation, report bugs, suggest improvements, and much more.",
+      "desc-package-npm-1": "Official vue-toastfic package on npm. \nHere you can download any version, follow updates and more. \nRemember that versions prior to",
+      "desc-package-npm-2": "They are for testing only.",
+      "download-last-days-1": "Number of downloads made in the last few years",
+      "download-last-days-2": "days",
+      "versions-npm": "Versions",
+      "title-redirect-form": "Suggestions and improvements",
+      "desc-redirect-form": "Hello, your opinion is very important for future versions of vue-toastfic. \nYour suggestions for improvements and bug reports will significantly contribute to our progress.",
+      "form": "Form"
+    },
+    "getting-started": {
+      "title-demo": "Vue Toastfic - Demo",
+      "desc-demo-1": "A demonstration of the different types of toast you can find here. \nIncludes five different types of toast: success, error, info, warning and default.",
+      "desc-demo-2": "A demonstration of the different types of toast you can find here. \nIncludes five varied toast types:",
+      "and": "and",
+      "dispatch-toasts": "Click on the buttons to activate them:",
+      "title-install": "Install",
+      "desc-install": "Install and enjoy vue-toastfic in your Vue.js and Nuxt.js projects.",
+      "prerequisites": "Prerequisites:",
+      "or-greater": "or greater;",
+      "subdesc-install-packge": "Install the package using one of these commands:",
+      "subtitle-import-css": "Import the CSS file",
+      "subdesc-import-css-1": "You need to import the style file into",
+      "case-is-not": "if you are in",
+      "or in": "or in",
+      "to": "To",
+      "use-app": "Usage for your app",
+      "desc-toast-to": "Description for toast"
+    },
+    "style": {
+      "title-pallete-colors": "Color palette",
+      "desc-pallete-colors": "In this style guide, you can adjust all vue-toastfic global variables to customize them according to your needs, ensuring a good experience for your project.",
+      "default-variables": "Default variables",
+      "subdesc-variable-default": "These are standard variables configured for light and dark themes:",
+      "subtitle-light": "Light:",
+      "subtitle-dark": "Dark:",
+      "subtitle-personalization": "Personalize",
+      "subdesc-colors-1": "Colors can be customized as you like. \nTo apply these changes, you need to save them to a global CSS file, such as",
+      "subdesc-colors-2": "between others.",
+      "desc-warning-1": "If color changes are not applied immediately, use the rule",
+      "desc-warning-2": "to ensure they are applied correctly.",
+      "title-colorful": ""
+    },
+    "use": {
+      "close-toast": {
+        "title-close": "Close toast",
+        "desc-close-toast-1": "You can configure toast closing in two ways: hiding the close icon with the close prop and disabling automatic closing with the automatic-close prop.",
+        "desc-close-toast-2": "You can configure toast closing in two ways: hiding the close icon with the prop",
+        "desc-close-toast-3": "and deactivating automatic closing with the prop",
+        "subtitle-use": "Hide the button",
+        "use": "Use",
+        "or": "or",
+        "subtitle-disabled": ""
+      },
+      "colorful": {
+        "title-colorful": "Enable/Disable colors",
+        "desc-colorful": "You can customize the toasts according to your color preference. \nColors can be on or off; \nBy default, they are enabled. \nTo define the color, use the property",
+        "subtitle-example": "Usage example",
+        "use-true-false": "Use",
+        "or": "or"
+      },
+      "duration": {
+        "desc-duration": "The closing time can be customized using the prop",
+        "or": "or by",
+        "duration-toast": "Duration:",
+        "title-duration": "Closing time",
+        "subtitle-prop": "Through the prop",
+        "desc-prop": "Use the duration prop to define the toast closing time globally:",
+        "subtitle-useToast": "Via useToast",
+        "desc-useToast": "The duration can be configured in useToast:"
+      },
+      "event": {
+        "title-event": "Handle events",
+        "desc-event": "You can use events within a useToast by passing a handle with the click event to perform another function, in addition to defining the button's text.",
+        "toast-success": "Success",
+        "toast-description": "Now perform another function by clicking 'ok'.",
+        "button-text": "OK",
+        "hello-world": "Hello World!",
+        "desc-event-1": "You can use events inside a useToast by passing a",
+        "desc-event-2": "with the click event to perform another function, in addition to defining the button text.",
+        "subtitle-function": "Perform another function",
+        "desc-function": "Create a toast by adding an event in the useToast options:",
+        "warning": "Toasts with events do not close automatically; \nthey remain on the screen until the button is clicked."
+      },
+      "maximum": {
+        "title-maximum": "Maximum toasts",
+        "desc-maximum": "To avoid the accumulation of toasts on the screen, you can configure the maximum number of toasts displayed simultaneously using the maxToasts prop.",
+        "toast-description": "To avoid the accumulation of toasts on the screen, you can configure the maximum number of toasts displayed simultaneously using the prop",
+        "subtitle-example": "Usage example",
+        "desc-example": "Use a value greater than 0:"
+      },
+      "personalize": {
+        "title-personalize": "Toast customization",
+        "desc-personalize": "Your toasts can be highly personalized according to your preferences. \nThis feature can be implemented using prop classes. \nAll elements, such as title, description, buttonHandle, among others, can be adjusted according to your needs.",
+        "desc-personalize-1": "Your toasts can be highly personalized according to your preferences. \nThis feature can be implemented using the prop",
+        "desc-personalize-2": "All elements, such as title, description, buttonHandle, among others, can be adjusted according to your needs.",
+        "subtitle-example": "Usage example",
+        "desc-example": "Change the entire style of your toasts."
+      },
+      "position": {
+        "title-position": "Position",
+        "desc-position": "All toasts are positioned in the top right corner by default. \nThis behavior can be changed using the position prop.",
+        "desc-position-2": "All toasts are positioned in the top right corner by default. \nThis behavior can be changed using the prop",
+        "desc-positions": "Positions: top-left, top-center, top-right, bottom-left, bottom-center and bottom-right.",
+        "subtitle-example": "Usage example",
+        "desc-example": "Setting a value other than the default through the position prop:"
+      },
+      "progress-bar": {
+        "title-progress-bar": "Progress bar",
+        "desc-progress-bar": "The progress bar offers a visual way to monitor the duration of your toast. \nIf you prefer to disable this feature, you can do so using the prop",
+        "subtitle-example": "Usage example",
+        "desc-example": "Disabling the progress bar."
+      },
+      "theme": {
+        "title-theme": "Theme",
+        "desc-theme": "A great feature to integrate into your project is the possibility of choosing between light and dark themes for toasts. \nThese themes can be changed easily through the prop",
+        "subtitle-example": "Usage example",
+        "desc-example": "Using themes:"
+      }
+    }
+  },
+  "routes-name": {
+    "install": "Install",
+    "demo": "Demo",
+    "palette": "Color palette",
+    "position": "Position",
+    "close-toast": "Close toast",
+    "duration": "Closing time",
+    "progress-bar": "Progress bar",
+    "colorful": "Enable/Disable colors",
+    "maximum": "Maximum toasts",
+    "theme": "Theme",
+    "personalize": "Toast customization",
+    "event": "Handle events"
+  },
+  "additionals": {
+    "use-sequence-toast": "Description for toast"
+  }
+}

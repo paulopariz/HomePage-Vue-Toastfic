@@ -18,8 +18,7 @@ onMounted(() => {
     <Header>
       <HeaderTitle class="flex items-center gap-2"> Github </HeaderTitle>
       <HeaderDescription>
-        Repositório oficial do vue-toastfic. Aqui você pode acompanhar as atualizações da biblioteca, acessar a
-        documentação, relatar bugs, sugerir melhorias e muito mais.
+        {{ $t("pages.home.desc-repository-github") }}
       </HeaderDescription>
     </Header>
 

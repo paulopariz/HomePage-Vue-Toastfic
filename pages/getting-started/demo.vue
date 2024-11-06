@@ -8,18 +8,17 @@ import {
   HeaderSubTitle,
 } from "~/components/_default/header";
 
+const { $useToast, $i18n } = useNuxtApp();
+
 useHead({
-  title: "Vue Toastfic | Demostração",
+  title: `Vue Toastfic - ${$i18n.t("pages.getting-started.title-demo")}`,
   meta: [
     {
       name: "description",
-      content:
-        "Uma demostração dos diferentes tipos de toast que você pode encontrar aqui. Inclui cinco tipos variados de toast: success, error, info, warning e default.",
+      content: $i18n.t("pages.getting-started.desc-demo-1"),
     },
   ],
 });
-
-const { $useToast } = useNuxtApp();
 
 const buttons = ref([
   {
@@ -51,31 +50,31 @@ const buttons = ref([
 
 function toastSuccess() {
   $useToast.success("Success", {
-    description: "Descrição para o toast success!",
+    description: $i18n.t("pages.getting-started.desc-toast-to") + "success!",
   });
 }
 
 function toastError() {
   $useToast.error("Error", {
-    description: "Descrição para o toast error!",
+    description: $i18n.t("pages.getting-started.desc-toast-to") + "error!",
   });
 }
 
 function toastInfo() {
   $useToast.info("Info", {
-    description: "Descrição para o toast info!",
+    description: $i18n.t("pages.getting-started.desc-toast-to") + "info!",
   });
 }
 
 function toastWarning() {
   $useToast.warning("Warning", {
-    description: "Descrição para o toast warning!",
+    description: $i18n.t("pages.getting-started.desc-toast-to") + "warning!",
   });
 }
 
 function toastDefault() {
   $useToast.default("Default", {
-    description: "Descrição para o toast default!",
+    description: $i18n.t("pages.getting-started.desc-toast-to") + "default!",
   });
 }
 </script>
@@ -84,11 +83,11 @@ function toastDefault() {
   <Toast position="bottom-right" :theme="$colorMode.preference === 'dark' ? 'dark' : 'light'" />
 
   <Header>
-    <HeaderTitle> Demostração </HeaderTitle>
+    <HeaderTitle> {{ $t("pages.getting-started.title-demo") }} </HeaderTitle>
 
     <HeaderDescription>
-      Uma demostração dos diferentes tipos de toast que você pode encontrar aqui. Inclui cinco tipos variados de toast:
-      <b>success</b>, <b>error</b>, <b>info</b>, <b>warning</b> e <b>default</b>.
+      {{ $t("pages.getting-started.desc-demo-2") }}
+      <b>success</b>, <b>error</b>, <b>info</b>, <b>warning</b> {{ $t("pages.getting-started.and") }} <b>default</b>.
     </HeaderDescription>
   </Header>
 
@@ -96,7 +95,7 @@ function toastDefault() {
     <Header>
       <HeaderSubTitle id="Toasts"> Toasts </HeaderSubTitle>
 
-      <HeaderSubDescription> Clique nos botões para acioná-los: </HeaderSubDescription>
+      <HeaderSubDescription> {{ $t("pages.getting-started.dispatch-toasts") }} </HeaderSubDescription>
     </Header>
 
     <div class="mt-5 grid grid-cols-2 gap-4 max-sm:grid-cols-1">

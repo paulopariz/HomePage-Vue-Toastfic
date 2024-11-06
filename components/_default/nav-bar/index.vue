@@ -52,7 +52,6 @@ const route = useRoute();
               <NuxtLink
                 href="https://github.com/paulopariz/vue-toastfic"
                 target="_blank"
-                variant="outline"
                 class="group flex h-full w-20 cursor-pointer items-center justify-center rounded-none border-y-0 border-l border-r-0 border-border px-5 text-sm font-medium opacity-80 transition-all hover:border-transparent hover:bg-green-light hover:text-green"
               >
                 <PhosphorIconGithubLogo size="21" />
@@ -70,7 +69,6 @@ const route = useRoute();
               <NuxtLink
                 href="https://www.npmjs.com/package/vue-toastfic"
                 target="_blank"
-                variant="outline"
                 class="border-l-1 group flex h-full w-20 cursor-pointer items-center justify-center rounded-none border-x border-y-0 border-border px-5 text-sm font-medium opacity-80 transition-all hover:border-transparent hover:bg-green-light hover:text-green"
               >
                 <IconNpmLight class="size-9" />

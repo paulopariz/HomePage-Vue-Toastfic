@@ -1,1 +1,146 @@
-{}
+{
+  "pages": {
+    "home": {
+      "last-version": "Ultima versione",
+      "desc-lib": "Libreria toast leggera e semplice per Vue e Nuxt",
+      "get-started": "Inizia",
+      "supported-version": "Versione supportata:",
+      "desc-repository-github": "Repository ufficiale di vue-toastfic. \nQui puoi tenere traccia degli aggiornamenti della libreria, accedere alla documentazione, segnalare bug, suggerire miglioramenti e molto altro.",
+      "desc-package-npm-1": "Pacchetto ufficiale vue-toastfic su npm. \nQui puoi scaricare qualsiasi versione, seguire gli aggiornamenti e altro ancora. \nRicorda che le versioni precedenti a",
+      "desc-package-npm-2": "Servono solo per testare.",
+      "download-last-days-1": "Numero di download effettuati negli ultimi anni",
+      "download-last-days-2": "giorni",
+      "versions-npm": "Versioni",
+      "title-redirect-form": "Suggerimenti e miglioramenti",
+      "desc-redirect-form": "Ciao, la tua opinione è molto importante per le future versioni di vue-toastfic. \nI tuoi suggerimenti per miglioramenti e segnalazioni di bug contribuiranno in modo significativo al nostro progresso.",
+      "form": "Modulo"
+    },
+    "getting-started": {
+      "title-demo": "Vue Toastfic - Demo",
+      "desc-demo-1": "Una dimostrazione dei diversi tipi di toast che puoi trovare qui. \nInclude cinque diversi tipi di avviso: success, error, info, warning e default.",
+      "desc-demo-2": "Una dimostrazione dei diversi tipi di toast che puoi trovare qui. \nInclude cinque diversi tipi di toast:",
+      "and": "E",
+      "dispatch-toasts": "Clicca sui pulsanti per attivarli:",
+      "title-install": "Installare",
+      "desc-install": "Installa e goditi vue-toastfic nei tuoi progetti Vue.js e Nuxt.js.",
+      "prerequisites": "Prerequisiti:",
+      "or-greater": "o maggiore;",
+      "subdesc-install-packge": "Installa il pacchetto utilizzando uno di questi comandi:",
+      "subtitle-import-css": "Importa il file CSS",
+      "subdesc-import-css-1": "È necessario importare il file di stile in",
+      "case-is-not": "se sei dentro",
+      "or in": "o dentro",
+      "to": "A",
+      "use-app": "Utilizzo della tua app",
+      "desc-toast-to": "Descrizione per toast"
+    },
+    "style": {
+      "title-pallete-colors": "Tavolozza dei colori",
+      "desc-pallete-colors": "In questa guida di stile, puoi regolare tutte le variabili globali di vue-toastfic per personalizzarle in base alle tue esigenze, garantendo una buona esperienza per il tuo progetto.",
+      "default-variables": "Variabili predefinite",
+      "subdesc-variable-default": "Queste sono le variabili standard configurate per temi chiari e scuri:",
+      "subtitle-light": "Leggero:",
+      "subtitle-dark": "Buio:",
+      "subtitle-personalization": "Personalizzare",
+      "subdesc-colors-1": "I colori possono essere personalizzati come preferisci. \nPer applicare queste modifiche, è necessario salvarle in un file CSS globale, come",
+      "subdesc-colors-2": "tra gli altri.",
+      "desc-warning-1": "Se le modifiche al colore non vengono applicate immediatamente, utilizzare la regola",
+      "desc-warning-2": "per garantire che siano applicati correttamente.",
+      "title-colorful": ""
+    },
+    "use": {
+      "close-toast": {
+        "title-close": "Chiudi il toast",
+        "desc-close-toast-1": "Puoi configurare la chiusura del toast in due modi: nascondendo l'icona di chiusura con l'oggetto di chiusura e disabilitando la chiusura automatica con l'oggetto di chiusura automatica.",
+        "desc-close-toast-2": "Puoi configurare la chiusura del toast in due modi: nascondendo l'icona di chiusura con l'oggetto di scena",
+        "desc-close-toast-3": "e disattivando la chiusura automatica con il puntello",
+        "subtitle-use": "Nascondi il pulsante",
+        "use": "Utilizzo",
+        "or": "O",
+        "subtitle-disabled": ""
+      },
+      "colorful": {
+        "title-colorful": "Abilita/Disabilita colori",
+        "desc-colorful": "Puoi personalizzare i toast in base alla tua preferenza di colore. \nI colori possono essere accesi o spenti; \nPer impostazione predefinita, sono abilitati. \nPer definire il colore, utilizzare la proprietà",
+        "subtitle-example": "Esempio di utilizzo",
+        "use-true-false": "Utilizzo",
+        "or": "O"
+      },
+      "duration": {
+        "desc-duration": "L'orario di chiusura può essere personalizzato utilizzando il prop",
+        "or": "o da",
+        "duration-toast": "Durata:",
+        "title-duration": "Orario di chiusura",
+        "subtitle-prop": "Attraverso l'elica",
+        "desc-prop": "Utilizza la prop durata per definire l'orario di chiusura del toast a livello globale:",
+        "subtitle-useToast": "Tramite useToast",
+        "desc-useToast": "La durata può essere configurata in useToast:"
+      },
+      "event": {
+        "title-event": "Gestire gli eventi",
+        "desc-event": "Puoi utilizzare gli eventi all'interno di useToast passando un handle con l'evento click per eseguire un'altra funzione, oltre a definire il testo del pulsante.",
+        "toast-success": "Successo",
+        "toast-description": "Ora esegui un'altra funzione facendo clic su \"ok\".",
+        "button-text": "OK",
+        "hello-world": "Ciao mondo!",
+        "desc-event-1": "Puoi utilizzare gli eventi all'interno di useToast passando a",
+        "desc-event-2": "con l'evento click per eseguire un'altra funzione, oltre a definire il testo del pulsante.",
+        "subtitle-function": "Eseguire un'altra funzione",
+        "desc-function": "Crea un toast aggiungendo un evento nelle opzioni useToast:",
+        "warning": "I toast con eventi non si chiudono automaticamente; \nrimangono sullo schermo finché non si clicca sul pulsante."
+      },
+      "maximum": {
+        "title-maximum": "Toast massimi",
+        "desc-maximum": "Per evitare l'accumulo di toast sullo schermo, puoi configurare il numero massimo di toast visualizzati contemporaneamente utilizzando la prop maxToasts.",
+        "toast-description": "Per evitare l'accumulo di toast sullo schermo, puoi configurare il numero massimo di toast visualizzati contemporaneamente utilizzando il prop",
+        "subtitle-example": "Esempio di utilizzo",
+        "desc-example": "Utilizza un valore maggiore di 0:"
+      },
+      "personalize": {
+        "title-personalize": "Personalizzazione del toast",
+        "desc-personalize": "I tuoi toast possono essere altamente personalizzati in base alle tue preferenze. \nQuesta funzionalità può essere implementata utilizzando le classi prop. \nTutti gli elementi, come titolo, descrizione, buttonHandle, tra gli altri, possono essere regolati in base alle tue esigenze.",
+        "desc-personalize-1": "I tuoi toast possono essere altamente personalizzati in base alle tue preferenze. \nQuesta funzionalità può essere implementata utilizzando il prop",
+        "desc-personalize-2": "Tutti gli elementi, come titolo, descrizione, buttonHandle, tra gli altri, possono essere regolati in base alle tue esigenze.",
+        "subtitle-example": "Esempio di utilizzo",
+        "desc-example": "Cambia l'intero stile dei tuoi toast."
+      },
+      "position": {
+        "title-position": "Posizione",
+        "desc-position": "Per impostazione predefinita, tutti i toast sono posizionati nell'angolo in alto a destra. \nQuesto comportamento può essere modificato utilizzando il prop di posizione.",
+        "desc-position-2": "Per impostazione predefinita, tutti i toast sono posizionati nell'angolo in alto a destra. \nQuesto comportamento può essere modificato utilizzando il prop",
+        "desc-positions": "Posizioni: in alto a sinistra, in alto al centro, in alto a destra, in basso a sinistra, in basso al centro e in basso a destra.",
+        "subtitle-example": "Esempio di utilizzo",
+        "desc-example": "Impostazione di un valore diverso da quello predefinito tramite il prop di posizione:"
+      },
+      "progress-bar": {
+        "title-progress-bar": "Barra di avanzamento",
+        "desc-progress-bar": "La barra di avanzamento offre un modo visivo per monitorare la durata del toast. \nSe preferisci disabilitare questa funzione, puoi farlo utilizzando il prop",
+        "subtitle-example": "Esempio di utilizzo",
+        "desc-example": "Disabilitare la barra di avanzamento."
+      },
+      "theme": {
+        "title-theme": "Tema",
+        "desc-theme": "Un'ottima funzionalità da integrare nel tuo progetto è la possibilità di scegliere tra temi chiari e scuri per i toast. \nQuesti temi possono essere modificati facilmente tramite l'oggetto di scena",
+        "subtitle-example": "Esempio di utilizzo",
+        "desc-example": "Utilizzo dei temi:"
+      }
+    }
+  },
+  "routes-name": {
+    "install": "Installare",
+    "demo": "Dimostrazione",
+    "palette": "Tavolozza dei colori",
+    "position": "Posizione",
+    "close-toast": "Chiudi il toast",
+    "duration": "Orario di chiusura",
+    "colorful": "Abilita/Disabilita colori",
+    "maximum": "Toast massimi",
+    "theme": "Tema",
+    "personalize": "Personalizzazione del toast",
+    "event": "Gestire gli eventi",
+    "progress-bar": "Barra di avanzamento"
+  },
+  "additionals": {
+    "use-sequence-toast": "Descrizione per toast"
+  }
+}

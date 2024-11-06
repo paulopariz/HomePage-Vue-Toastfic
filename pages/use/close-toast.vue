@@ -10,13 +10,14 @@ import { type ICode, Code } from "~/components/_default/code-block";
 import { close, automaticClose } from "~/utils/codes/close-toast";
 import { IconVue } from "~/assets/icons/managers";
 
+const { $i18n } = useNuxtApp();
+
 useHead({
-  title: "Vue Toastfic | Fechar toast",
+  title: `Vue Toastfic - ${$i18n.t("pages.use.close-toast.title-close")}`,
   meta: [
     {
       name: "description",
-      content:
-        "Você pode configurar o fechamento do toast de duas maneiras: ocultando o ícone de fechar com a prop close e desativando o fechamento automático com a prop automatic-close.",
+      content: $i18n.t("pages.use.close-toast.desc-close-toast-1"),
     },
   ],
 });
@@ -42,19 +43,24 @@ const codeAutomaticClose: ICode[] = [
 
 <template>
   <Header>
-    <HeaderTitle> Fechar toast </HeaderTitle>
+    <HeaderTitle> {{ $t("pages.use.close-toast.title-close") }} </HeaderTitle>
 
     <HeaderDescription>
-      Você pode configurar o fechamento do toast de duas maneiras: ocultando o ícone de fechar com a prop
-      <b class="rounded-[6px] bg-green-light px-2 py-1 text-sm text-green">close</b> e desativando o fechamento
-      automático com a prop <b class="rounded-[6px] bg-green-light px-2 py-1 text-sm text-green">automatic-close</b>.
+      {{ $t("pages.use.close-toast.desc-close-toast-2") }}
+      <b class="rounded-[6px] bg-green-light px-2 py-1 text-sm text-green">close</b>
+      {{ $t("pages.use.close-toast.desc-close-toast-3") }}
+      <b class="rounded-[6px] bg-green-light px-2 py-1 text-sm text-green">automatic-close</b>.
     </HeaderDescription>
   </Header>
 
   <div>
     <Header>
-      <HeaderSubTitle id="Esconder o botão"> 01. Esconder o botão </HeaderSubTitle>
-      <HeaderSubDescription> Use <b>true</b> ou <b>false</b>: </HeaderSubDescription>
+      <HeaderSubTitle :id="$t('pages.use.close-toast.subtitle-use')">
+        01. {{ $t("pages.use.close-toast.subtitle-use") }}
+      </HeaderSubTitle>
+      <HeaderSubDescription>
+        {{ $t("pages.use.close-toast.use") }} <b>true</b> {{ $t("pages.use.close-toast.or") }} <b>false</b>:
+      </HeaderSubDescription>
     </Header>
 
     <Code :codes="codeClose" />
@@ -62,8 +68,12 @@ const codeAutomaticClose: ICode[] = [
 
   <div>
     <Header>
-      <HeaderSubTitle id="Desabilitar fechamento"> 02. Desabilitar fechamento </HeaderSubTitle>
-      <HeaderSubDescription> Use <b>true</b> ou <b>false</b>: </HeaderSubDescription>
+      <HeaderSubTitle :id="$t('pages.use.close-toast.subtitle-disabled')">
+        02. {{ $t("pages.use.close-toast.subtitle-disabled") }}
+      </HeaderSubTitle>
+      <HeaderSubDescription>
+        {{ $t("pages.use.close-toast.use") }} <b>true</b> {{ $t("pages.use.close-toast.or") }} <b>false</b>:
+      </HeaderSubDescription>
     </Header>
 
     <Code :codes="codeAutomaticClose" />
