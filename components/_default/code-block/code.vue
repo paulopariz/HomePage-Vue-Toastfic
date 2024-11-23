@@ -3,6 +3,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 
 import { highlightCode } from "~/utils/useHighlighter";
 import { type ICode } from "~/components/_default/code-block";
+import { Skeleton } from "~/components/ui/skeleton";
 
 const props = defineProps<{
   codes: ICode[];
@@ -18,6 +19,8 @@ const tabContents = ref<{ [key: string]: string }>({});
 const activeTab = ref(props.codes[0].label);
 const currentCode = ref("");
 const tooltipVisible = ref(false);
+
+const loading = ref(true);
 
 async function setCodes() {
   for (const tab of props.codes) {
@@ -44,8 +47,10 @@ watch(activeTab, (newTab) => {
 });
 
 onMounted(async () => {
+  loading.value = true;
   await setCodes();
   currentCode.value = props.codes[0].code;
+  loading.value = false;
 });
 </script>
 
@@ -89,7 +94,7 @@ onMounted(async () => {
 
       <TooltipProvider>
         <Tooltip :open="tooltipVisible">
-          <TooltipTrigger as-child>
+          <TooltipTrigger as-child role="button">
             <Button
               variant="ghost"
               class="ml-auto size-8 rounded-[6px] p-0 hover:bg-[#1c1c1f]"
@@ -109,7 +114,7 @@ onMounted(async () => {
       </TooltipProvider>
     </TabsList>
 
-    <div class="flex min-h-12 items-center bg-[#0d0d0d] p-4">
+    <div v-if="!loading" class="flex min-h-12 items-center bg-[#0d0d0d] p-4">
       <TabsContent
         v-for="tab in codes"
         :key="tab.label"
@@ -131,6 +136,12 @@ onMounted(async () => {
       >
         <slot name="preview" />
       </TabsContent>
+    </div>
+
+    <div v-else class="grid w-full gap-1.5 bg-[#0d0d0d] p-4">
+      <Skeleton class="h-3 w-72" />
+      <Skeleton class="h-3 w-52" />
+      <Skeleton class="h-3 w-32" />
     </div>
   </Tabs>
 </template>

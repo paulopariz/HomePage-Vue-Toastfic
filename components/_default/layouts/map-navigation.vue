@@ -72,4 +72,10 @@ function updateTopics() {
       <PhosphorIconArrowUp weight="bold" />
     </p>
   </div>
+
+  <div v-else class="grid gap-2 pl-3">
+    <Skeleton class="h-3 w-20" />
+    <Skeleton class="h-3 w-24" />
+    <Skeleton class="h-3 w-32" />
+  </div>
 </template>
