@@ -1,75 +1,111 @@
-# Nuxt 3 Minimal Starter
+# vue-toastfic
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+**vue-toastfic** is a simple and customizable toast notification library for Vue.js and Nuxt.js projects. Follow the instructions below to integrate and use it in your application.
 
-## Setup
+---
 
-Make sure to install the dependencies:
+## Prerequisites
+Before installing **vue-toastfic**, ensure you have the following installed in your development environment:
+- **Node.js** (version v18.0.0 or later)
+- **Vue.js** (version v3.0.0 or later)
 
-```bash
-# npm
-npm install
+---
 
-# pnpm
-pnpm install
+## 01. Installation
 
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
+Install **vue-toastfic** using your preferred package manager:
 
 ```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
+npm install vue-toastfic
+#or
+yarn add vue-toastfic
+#or
+pnpm install vue-toastfic
+#or
+bun add vue-toastfic
 ```
 
-## Production
+---
 
-Build the application for production:
+## 02. Import the CSS file
+
+You need to import the style file into **main.ts** or in **nuxt.config.ts** if you are in Nuxt:
 
 ```bash
-# npm
-npm run build
+#main.ts
+import "vue-toastfic/style.css"
 
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
+#or nuxt.config.ts
+css: ["vue-toastfic/style.css"]
 ```
 
-Locally preview production build:
+---
+
+## 03. To Vue 3
+
+Usage for your app Vue.js 3:
+
+#### app.vue
 
 ```bash
-# npm
-npm run preview
+<script setup lang="ts">
+import { Toast, useToast } from "vue-toastfic";
 
-# pnpm
-pnpm run preview
+function handle() {
+  useToast.default("First toast in Vue.js 3");
+}
+</script>
 
-# yarn
-yarn preview
-
-# bun
-bun run preview
+<template>
+  <Toast />
+  <button @click="handle">Toastfic Vue.js 3</button>
+</template>
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+---
+
+## 04. To Nuxt 3
+
+Usage for your app Nuxt.js 3:
+
+#### plugins/toastfic.ts
+```bash
+import { Toast, useToast } from "vue-toastfic";
+
+export default defineNuxtPlugin((nuxtApp) => {
+  nuxtApp.vueApp.component("Toast", Toast);
+
+  return {
+    provide: {
+      useToast,
+    },
+  };
+});
+```
+
+#### nuxt.config.ts
+```bash
+export default defineNuxtConfig({
+  build: {
+    transpile: ["vue-toastfic"]
+  }
+})
+```
+
+#### app.vue
+```bash
+<script setup lang="ts">
+const { $useToast } = useNuxtApp();
+
+function handle() {
+  $useToast.default("First toast in Nuxt.js");
+}
+</script>
+
+<template>
+  <NuxtPage />
+  <Toast theme="dark" />
+
+  <button @click="handle">Toastfic Nuxt.js</button>
+</template>
+```
