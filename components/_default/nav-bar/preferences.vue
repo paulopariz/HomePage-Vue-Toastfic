@@ -43,10 +43,10 @@ function selectLanguage(code: string) {
       as-child
       class="group flex h-full w-20 cursor-pointer items-center rounded-none border-y-0 border-l border-r-0 border-border bg-transparent px-5 text-sm font-medium opacity-80 transition-all hover:border-transparent hover:bg-green-light hover:text-green max-md:h-9 max-md:w-10 max-md:rounded-sm max-md:border max-md:p-0"
     >
-      <Button variant="outline">
+      <section class="flex items-center justify-center">
         <PhosphorIconGearSix size="21" class="max-md:hidden" />
         <PhosphorIconList size="18" class="md:hidden" />
-      </Button>
+      </section>
     </DropdownMenuTrigger>
 
     <DropdownMenuContent class="w-56" align="end" aria-label="Theme and Language preferences">
@@ -78,6 +78,7 @@ function selectLanguage(code: string) {
             target="_blank"
             href="https://github.com/paulopariz/vue-toastfic"
             aria-label="Open Vue Toastfic project repository on GitHub"
+            rel="noopener noreferrer"
           >
             {{ $t("components.nav-bar.preferences.github") }}
           </NuxtLink>
@@ -89,6 +90,7 @@ function selectLanguage(code: string) {
             target="_blank"
             href="https://www.npmjs.com/package/vue-toastfic"
             aria-label="Open Vue Toastfic package in NPM"
+            rel="noopener noreferrer"
           >
             {{ $t("components.nav-bar.preferences.npm") }}
           </NuxtLink>
