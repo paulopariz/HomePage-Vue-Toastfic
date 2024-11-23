@@ -41,6 +41,7 @@ function selectLanguage(code: string) {
   <DropdownMenu>
     <DropdownMenuTrigger
       as-child
+      aria-label="Theme and Language preferences"
       class="group flex h-full w-20 cursor-pointer items-center rounded-none border-y-0 border-l border-r-0 border-border bg-transparent px-5 text-sm font-medium opacity-80 transition-all hover:border-transparent hover:bg-green-light hover:text-green max-md:h-9 max-md:w-10 max-md:rounded-sm max-md:border max-md:p-0"
     >
       <section class="flex items-center justify-center">
@@ -49,7 +50,7 @@ function selectLanguage(code: string) {
       </section>
     </DropdownMenuTrigger>
 
-    <DropdownMenuContent class="w-56" align="end" aria-label="Theme and Language preferences">
+    <DropdownMenuContent class="w-56" align="end">
       <DropdownMenuLabel class="max-md:hidden"> {{ $t("components.nav-bar.preferences.title") }} </DropdownMenuLabel>
       <DropdownMenuSeparator class="max-md:hidden" />
 
@@ -72,26 +73,19 @@ function selectLanguage(code: string) {
           </NuxtLink>
         </DropdownMenuItem>
 
-        <DropdownMenuItem class="flex items-center gap-4 text-xs">
+        <DropdownMenuItem
+          class="flex items-center gap-4 text-xs"
+          aria-label="Open Vue Toastfic project repository on GitHub"
+        >
           <PhosphorIconArrowUpRight weight="bold" size="18" />
-          <NuxtLink
-            target="_blank"
-            href="https://github.com/paulopariz/vue-toastfic"
-            aria-label="Open Vue Toastfic project repository on GitHub"
-            rel="noopener noreferrer"
-          >
+          <NuxtLink target="_blank" href="https://github.com/paulopariz/vue-toastfic" rel="noopener noreferrer">
             {{ $t("components.nav-bar.preferences.github") }}
           </NuxtLink>
         </DropdownMenuItem>
 
-        <DropdownMenuItem class="flex items-center gap-4 text-xs">
+        <DropdownMenuItem class="flex items-center gap-4 text-xs" aria-label="Open Vue Toastfic package in NPM">
           <PhosphorIconArrowUpRight weight="bold" size="18" />
-          <NuxtLink
-            target="_blank"
-            href="https://www.npmjs.com/package/vue-toastfic"
-            aria-label="Open Vue Toastfic package in NPM"
-            rel="noopener noreferrer"
-          >
+          <NuxtLink target="_blank" href="https://www.npmjs.com/package/vue-toastfic" rel="noopener noreferrer">
             {{ $t("components.nav-bar.preferences.npm") }}
           </NuxtLink>
         </DropdownMenuItem>
