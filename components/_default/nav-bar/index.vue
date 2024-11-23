@@ -53,6 +53,7 @@ const route = useRoute();
                 href="https://github.com/paulopariz/vue-toastfic"
                 target="_blank"
                 class="group flex h-full w-20 cursor-pointer items-center justify-center rounded-none border-y-0 border-l border-r-0 border-border px-5 text-sm font-medium opacity-80 transition-all hover:border-transparent hover:bg-green-light hover:text-green"
+                aria-label="Open Vue Toastfic project repository on GitHub"
               >
                 <PhosphorIconGithubLogo size="21" />
               </NuxtLink>
@@ -70,6 +71,7 @@ const route = useRoute();
                 href="https://www.npmjs.com/package/vue-toastfic"
                 target="_blank"
                 class="border-l-1 group flex h-full w-20 cursor-pointer items-center justify-center rounded-none border-x border-y-0 border-border px-5 text-sm font-medium opacity-80 transition-all hover:border-transparent hover:bg-green-light hover:text-green"
+                aria-label="Open Vue Toastfic project repository on GitHub"
               >
                 <IconNpmLight class="size-9" />
               </NuxtLink>

@@ -42,9 +42,9 @@ function selectLanguage(code: string) {
     <DropdownMenuTrigger
       as-child
       aria-label="Theme and Language preferences"
-      class="group flex h-full w-20 cursor-pointer items-center rounded-none border-y-0 border-l border-r-0 border-border bg-transparent px-5 text-sm font-medium opacity-80 transition-all hover:border-transparent hover:bg-green-light hover:text-green max-md:h-9 max-md:w-10 max-md:rounded-sm max-md:border max-md:p-0"
+      class="group grid h-full w-20 cursor-pointer place-content-center place-items-center rounded-none border-y-0 border-l border-r-0 border-border bg-transparent px-5 text-sm font-medium opacity-80 transition-all hover:border-transparent hover:bg-green-light hover:text-green max-md:h-9 max-md:w-10 max-md:rounded-sm max-md:border max-md:p-0"
     >
-      <section class="flex items-center justify-center">
+      <section class="grid justify-center">
         <PhosphorIconGearSix size="21" class="max-md:hidden" />
         <PhosphorIconList size="18" class="md:hidden" />
       </section>

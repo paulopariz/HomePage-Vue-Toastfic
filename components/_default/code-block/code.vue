@@ -64,6 +64,8 @@ onMounted(async () => {
         :value="tab.label"
         :class="{ '!bg-transparent': codes.length === 1 && !slots.preview }"
         class="flex w-min items-center gap-2 rounded-[6px] bg-transparent !text-[#e2e2e2] !shadow-none hover:bg-[#1c1c1f] data-[state=active]:bg-[#1c1c1f]"
+        role="tab"
+        :aria-selected="tab.label === activeTab"
       >
         <component :is="tab.icon" />
 
@@ -76,6 +78,7 @@ onMounted(async () => {
         v-if="slots.preview"
         value="preview"
         class="flex w-min items-center gap-2 rounded-[6px] bg-transparent !text-[#e2e2e2] !shadow-none hover:bg-[#1c1c1f] data-[state=active]:bg-[#1c1c1f]"
+        role="tab"
       >
         <PhosphorIconBrowsers size="16" />
         {{ $t("components.code-block.preview") }}
@@ -87,6 +90,7 @@ onMounted(async () => {
             <Button
               variant="ghost"
               class="ml-auto size-8 rounded-[6px] p-0 hover:bg-[#1c1c1f]"
+              aria-label="Copy code"
               @click="handleCopyClick"
             >
               <PhosphorIconCopySimple v-if="!tooltipVisible" size="18" weight="fill" color="#e2e2e2" />
