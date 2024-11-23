@@ -94,17 +94,16 @@ onMounted(async () => {
 
       <TooltipProvider>
         <Tooltip :open="tooltipVisible">
-          <TooltipTrigger as-child role="button">
-            <Button
-              variant="ghost"
-              class="ml-auto size-8 rounded-[6px] p-0 hover:bg-[#1c1c1f]"
+          <TooltipTrigger as-child>
+            <button
+              class="ml-auto flex size-8 items-center justify-center rounded-[6px] p-0 transition-all hover:bg-[#1c1c1f]"
               aria-label="Copy code"
-              role="button"
+              role="tab"
               @click="handleCopyClick"
             >
               <PhosphorIconCopySimple v-if="!tooltipVisible" size="18" weight="fill" color="#e2e2e2" />
               <PhosphorIconCheck v-else size="18" color="var(--green)" />
-            </Button>
+            </button>
           </TooltipTrigger>
 
           <TooltipContent>
