@@ -70,7 +70,7 @@ onMounted(async () => {
         :class="{ '!bg-transparent': codes.length === 1 && !slots.preview }"
         class="flex w-min items-center gap-2 rounded-[6px] bg-transparent !text-[#e2e2e2] !shadow-none hover:bg-[#1c1c1f] data-[state=active]:bg-[#1c1c1f]"
         role="tab"
-        :aria-selected="tab.label === activeTab"
+        :aria-selected="tab.label === activeTab ? 'true' : 'false'"
         :aria-controls="tab.label"
       >
         <component :is="tab.icon" />

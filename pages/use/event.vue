@@ -73,7 +73,7 @@ function hello() {
     <div class="flex w-full items-center gap-4 rounded-md border border-dashed border-yellow-600 bg-yellow-600/10 p-3">
       <PhosphorIconWarning size="24" weight="fill" class="text-yellow-600" />
 
-      <p class="text-sm tracking-wide text-yellow-600">
+      <p class="text-sm tracking-wide text-yellow-900 dark:text-yellow-500">
         {{ $t("pages.use.event.warning") }}
       </p>
     </div>
