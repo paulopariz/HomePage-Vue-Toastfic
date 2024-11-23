@@ -49,7 +49,21 @@ export default defineNuxtConfig({
   nitro: {
     preset: "vercel-edge",
     prerender: {
-      routes: ["/", "/getting-started/demo"],
+      routes: [
+        "/",
+        "/getting-started/demo",
+        "/getting-started",
+        "/style/palette",
+        "/use/position",
+        "/use/close-toast",
+        "/use/duration",
+        "/use/progress-bar",
+        "/use/colorful",
+        "/use/maximum",
+        "/use/theme",
+        "/use/event",
+        "/use/personalize",
+      ],
     },
   },
 

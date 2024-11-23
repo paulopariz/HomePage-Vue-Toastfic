@@ -66,6 +66,7 @@ onMounted(async () => {
         class="flex w-min items-center gap-2 rounded-[6px] bg-transparent !text-[#e2e2e2] !shadow-none hover:bg-[#1c1c1f] data-[state=active]:bg-[#1c1c1f]"
         role="tab"
         :aria-selected="tab.label === activeTab"
+        :aria-controls="tab.label"
       >
         <component :is="tab.icon" />
 
@@ -79,6 +80,8 @@ onMounted(async () => {
         value="preview"
         class="flex w-min items-center gap-2 rounded-[6px] bg-transparent !text-[#e2e2e2] !shadow-none hover:bg-[#1c1c1f] data-[state=active]:bg-[#1c1c1f]"
         role="tab"
+        aria-selected="false"
+        aria-controls="preview"
       >
         <PhosphorIconBrowsers size="16" />
         {{ $t("components.code-block.preview") }}
@@ -106,11 +109,25 @@ onMounted(async () => {
     </TabsList>
 
     <div class="flex min-h-12 items-center bg-[#0d0d0d] p-4">
-      <TabsContent v-for="tab in codes" :key="tab.label" :value="tab.label" class="mt-0 text-sm">
+      <TabsContent
+        v-for="tab in codes"
+        :key="tab.label"
+        :value="tab.label"
+        class="mt-0 text-sm"
+        role="tabpanel"
+        :aria-labelledby="tab.label"
+      >
         <pre v-html="tabContents[tab.label]" />
       </TabsContent>
 
-      <TabsContent v-if="slots.preview" value="preview" class="w-full">
+      <TabsContent
+        v-if="slots.preview"
+        id="preview"
+        value="preview"
+        class="w-full"
+        role="tabpanel"
+        aria-labelledby="preview"
+      >
         <slot name="preview" />
       </TabsContent>
     </div>

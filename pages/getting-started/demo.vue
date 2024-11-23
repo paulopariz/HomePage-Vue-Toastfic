@@ -28,17 +28,17 @@ const buttons = ref([
   },
   {
     label: "error",
-    class: "bg-red-600/10 text-red-600",
+    class: "bg-red-600/10 text-red-900 dark:text-red-500",
     action: () => toastError(),
   },
   {
     label: "info",
-    class: "bg-blue-600/10 text-blue-600",
+    class: "bg-blue-600/10 text-blue-900 dark:text-blue-500",
     action: () => toastInfo(),
   },
   {
     label: "warning",
-    class: "bg-yellow-600/10 text-yellow-600",
+    class: "bg-yellow-600/10 text-yellow-900 dark:text-yellow-500",
     action: () => toastWarning(),
   },
   {
