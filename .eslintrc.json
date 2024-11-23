@@ -82,6 +82,7 @@
     "onBeforeUnmount": "readonly",
     "watch": "readonly",
     "watchEffect": "readonly",
-    "computed": "readonly"
+    "computed": "readonly",
+    "defineAsyncComponent": "readonly"
   }
 }

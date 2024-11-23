@@ -7,10 +7,12 @@ import {
   HeaderTitle,
 } from "~/components/_default/header";
 
-import { type ICode, Code } from "~/components/_default/code-block";
+import { type ICode } from "~/components/_default/code-block";
 import { event } from "~/utils/codes/event";
 import { IconVue } from "~/assets/icons/managers";
 import { Toast } from "vue-toastfic";
+
+const Code = defineAsyncComponent(() => import("~/components/_default/code-block/code.vue"));
 
 const { $i18n, $useToast } = useNuxtApp();
 

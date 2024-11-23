@@ -7,10 +7,12 @@ import {
   HeaderSubTitle,
 } from "~/components/_default/header";
 import { Tag } from "~/components/ui/tag";
-import { type ICode, Code } from "~/components/_default/code-block";
+import { type ICode } from "~/components/_default/code-block";
 
 import { IconTs, IconVue, IconNuxt, IconNpm, IconYarn, IconPnpm, IconBun } from "@/assets/icons/managers";
 import { pluginNuxt, appNuxt, configNuxt, appVue, install, importCss } from "~/utils/codes/getting-started";
+
+const Code = defineAsyncComponent(() => import("~/components/_default/code-block/code.vue"));
 
 const { $i18n } = useNuxtApp();
 

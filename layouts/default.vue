@@ -1,5 +1,9 @@
 <script setup lang="ts">
-import { NavBar, Navigation, MapNavigation, Sidebar, SidebarMobile } from "~/components/_default";
+const NavBar = defineAsyncComponent(() => import("~/components/_default/nav-bar/index.vue"));
+const Navigation = defineAsyncComponent(() => import("~/components/_default/layouts/navigation.vue"));
+const MapNavigation = defineAsyncComponent(() => import("~/components/_default/layouts/map-navigation.vue"));
+const Sidebar = defineAsyncComponent(() => import("~/components/_default/sidebar/index.vue"));
+const SidebarMobile = defineAsyncComponent(() => import("~/components/_default/sidebar-mobile/index.vue"));
 </script>
 
 <template>

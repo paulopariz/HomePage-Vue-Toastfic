@@ -46,6 +46,17 @@ export default defineNuxtConfig({
     transpile: ["vue-toastfic"],
   },
 
+  nitro: {
+    preset: "vercel-edge",
+    prerender: {
+      routes: ["/"],
+    },
+  },
+
+  routeRules: {
+    "/": { headers: { "Cache-Control": "s-maxage=31536000, stale-while-revalidate" } },
+  },
+
   vite: {
     resolve: {
       alias: {
@@ -66,8 +77,10 @@ export default defineNuxtConfig({
     "@nuxt/content",
   ],
 
-  plugins: ["~/plugins/date.ts", "~/plugins/toast.ts"],
-
+  plugins: [
+    { src: "~/plugins/date.ts", mode: "client" },
+    { src: "~/plugins/toast.ts", mode: "client" },
+  ],
   css: ["vue-toastfic/style.css", "@/assets/css/main.css"],
 
   colorMode: {
@@ -79,21 +92,18 @@ export default defineNuxtConfig({
   },
 
   shadcn: {
-    /**
-     * Prefix for all the imported component
-     */
     prefix: "",
-    /**
-     * Directory that the component lives in.
-     * @default "./components/ui"
-     */
     componentDir: "./components/ui",
+  },
+
+  components: {
+    dirs: [{ path: "~/components", extensions: ["vue"], isAsync: true }],
   },
 
   content: {
     highlight: {
-      theme: "github-dark", // Você pode escolher outros temas suportados pelo Shiki
-      preload: ["javascript", "typescript", "vue"], // Linguagens a serem pré-carregadas
+      theme: "github-dark",
+      preload: ["javascript", "typescript", "vue"],
     },
   },
 });

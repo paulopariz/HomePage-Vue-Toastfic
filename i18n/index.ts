@@ -7,6 +7,7 @@ import it from "./it.json";
 export default defineI18nConfig(() => ({
   legacy: false,
   locale: process.client ? localStorage.getItem("language") || "en" : "en",
+  fallbackLocale: "en", // Idioma padrão de fallback
   messages: {
     pt,
     es,

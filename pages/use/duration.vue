@@ -6,6 +6,12 @@ import {
   HeaderSubTitle,
   HeaderTitle,
 } from "~/components/_default/header";
+import { duration, durationOption } from "~/utils/codes/duration";
+import { IconVue } from "~/assets/icons/managers";
+import { Toast } from "vue-toastfic";
+import { type ICode } from "~/components/_default/code-block";
+
+const Code = defineAsyncComponent(() => import("~/components/_default/code-block/code.vue"));
 
 const { $i18n, $useToast } = useNuxtApp();
 
@@ -18,11 +24,6 @@ useHead({
     },
   ],
 });
-
-import { type ICode, Code } from "~/components/_default/code-block";
-import { duration, durationOption } from "~/utils/codes/duration";
-import { IconVue } from "~/assets/icons/managers";
-import { Toast } from "vue-toastfic";
 
 const durationToast: ICode[] = [
   {

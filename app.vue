@@ -1,3 +1,14 @@
+<script setup lang="ts">
+const { $i18n } = useNuxtApp();
+const { locale } = $i18n;
+
+useHead({
+  htmlAttrs: {
+    lang: locale.value,
+  },
+});
+</script>
+
 <template>
   <NuxtLayout>
     <NuxtPage />

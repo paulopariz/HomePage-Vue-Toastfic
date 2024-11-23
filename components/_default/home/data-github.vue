@@ -4,13 +4,9 @@ import { Header, HeaderDescription, HeaderTitle } from "@/components/_default/he
 
 import { useGitHubRepoInfo } from "~/composables/apiGithub";
 
-const { repoInfo } = useGitHubRepoInfo();
+const { $formatDate } = useNuxtApp();
 
-onMounted(() => {
-  setTimeout(() => {
-    console.log("repoInfo", repoInfo.value);
-  }, 1000);
-});
+const { repoInfo } = useGitHubRepoInfo();
 </script>
 
 <template>
@@ -32,7 +28,11 @@ onMounted(() => {
             </p>
             <div class="flex items-center gap-2">
               <Avatar class="size-5">
-                <AvatarImage :src="repoInfo?.owner.avatar_url ?? ''" :alt="repoInfo?.owner.login ?? 'Avatar'" />
+                <AvatarImage
+                  class="size-5"
+                  :src="repoInfo?.owner.avatar_url ?? ''"
+                  :alt="repoInfo?.owner.login ?? 'Avatar'"
+                />
                 <AvatarFallback>PP</AvatarFallback>
               </Avatar>
               <NuxtLink

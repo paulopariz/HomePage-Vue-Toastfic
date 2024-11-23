@@ -6,9 +6,11 @@ import {
   HeaderSubTitle,
   HeaderTitle,
 } from "~/components/_default/header";
-import { type ICode, Code } from "~/components/_default/code-block";
+import { type ICode } from "~/components/_default/code-block";
 import { close, automaticClose } from "~/utils/codes/close-toast";
 import { IconVue } from "~/assets/icons/managers";
+
+const Code = defineAsyncComponent(() => import("~/components/_default/code-block/code.vue"));
 
 const { $i18n } = useNuxtApp();
 

@@ -49,7 +49,7 @@ function selectLanguage(code: string) {
       </Button>
     </DropdownMenuTrigger>
 
-    <DropdownMenuContent class="w-56" align="end">
+    <DropdownMenuContent class="w-56" align="end" aria-label="Theme and Language preferences">
       <DropdownMenuLabel class="max-md:hidden"> {{ $t("components.nav-bar.preferences.title") }} </DropdownMenuLabel>
       <DropdownMenuSeparator class="max-md:hidden" />
 
@@ -63,21 +63,33 @@ function selectLanguage(code: string) {
 
         <DropdownMenuItem class="flex items-center gap-4 text-xs">
           <PhosphorIconArrowUpRight weight="bold" size="18" />
-          <NuxtLink target="_blank" href="/https://github.com/paulopariz/vue-toastfic/releases">
+          <NuxtLink
+            target="_blank"
+            href="/https://github.com/paulopariz/vue-toastfic/releases"
+            aria-label="Open changelog of Vue Toastfic project on GitHub"
+          >
             {{ $t("components.nav-bar.preferences.changelog") }}
           </NuxtLink>
         </DropdownMenuItem>
 
         <DropdownMenuItem class="flex items-center gap-4 text-xs">
           <PhosphorIconArrowUpRight weight="bold" size="18" />
-          <NuxtLink target="_blank" href="https://github.com/paulopariz/vue-toastfic">
+          <NuxtLink
+            target="_blank"
+            href="https://github.com/paulopariz/vue-toastfic"
+            aria-label="Open Vue Toastfic project repository on GitHub"
+          >
             {{ $t("components.nav-bar.preferences.github") }}
           </NuxtLink>
         </DropdownMenuItem>
 
         <DropdownMenuItem class="flex items-center gap-4 text-xs">
           <PhosphorIconArrowUpRight weight="bold" size="18" />
-          <NuxtLink target="_blank" href="https://www.npmjs.com/package/vue-toastfic">
+          <NuxtLink
+            target="_blank"
+            href="https://www.npmjs.com/package/vue-toastfic"
+            aria-label="Open Vue Toastfic package in NPM"
+          >
             {{ $t("components.nav-bar.preferences.npm") }}
           </NuxtLink>
         </DropdownMenuItem>

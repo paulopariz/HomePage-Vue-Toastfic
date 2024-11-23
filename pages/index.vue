@@ -5,10 +5,13 @@ definePageMeta({
 const { $router } = useNuxtApp();
 
 import { IconNuxtLight, IconVueLight } from "~/assets/icons/managers";
-import { DataGithub, DataNpm, RedirectForm } from "~/components/_default";
 import { Button } from "~/components/ui/button";
 
 import { useNpmInfo } from "~/composables/apiNpm";
+
+const DataGithub = defineAsyncComponent(() => import("~/components/_default/home/data-github.vue"));
+const DataNpm = defineAsyncComponent(() => import("~/components/_default/home/data-npm.vue"));
+const RedirectForm = defineAsyncComponent(() => import("~/components/_default/home/redirect-form.vue"));
 
 const { npmInfo } = useNpmInfo();
 
