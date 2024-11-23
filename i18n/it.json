@@ -57,7 +57,7 @@
         "subtitle-use": "Nascondi il pulsante",
         "use": "Utilizzo",
         "or": "O",
-        "subtitle-disabled": ""
+        "subtitle-disabled": "Disabilita chiusura"
       },
       "colorful": {
         "title-colorful": "Abilita/Disabilita colori",
@@ -141,6 +141,60 @@
     "progress-bar": "Barra di avanzamento"
   },
   "additionals": {
-    "use-sequence-toast": "Descrizione per toast"
+    "use-sequence-toast": "Descrizione per toast",
+    "home-page": "Pagina iniziale",
+    "documentation": "Documentazione",
+    "back-to-top": "Torna all'inizio"
+  },
+  "components": {
+    "code-block": {
+      "preview": "Anteprima",
+      "copied": "Copiato!"
+    },
+    "nav-bar": {
+      "command": {
+        "searchPlaceholder": "Per cercare...",
+        "inputPlaceholder": "Cerca documentazione....",
+        "noResults": "Nessun risultato.",
+        "form": "Modulo",
+        "suggestions": "Suggerimenti e miglioramenti",
+        "utilities": "Utilità",
+        "githubRepo": "Archivio su github",
+        "npmPackage": "Pacchetto su npm",
+        "documentation": "Documentazione",
+        "gettingStarted": "Inizio",
+        "style": "Stile",
+        "use": "Utilizzo",
+        "theme": "Tema",
+        "themeLight": "Leggero",
+        "themeDark": "Buio",
+        "themeSystem": "Sistema"
+      },
+      "logoAlt": "Logo Vue Toastfic",
+      "gettingStarted": "Inizio",
+      "changelog": "Cambiamenti",
+      "githubTooltip": "Archivio su GitHub",
+      "npmTooltip": "Pacchetto su NPM",
+      "preferences": {
+        "title": "Preferenze",
+        "links": "Collegamenti",
+        "start": "Inizio",
+        "changelog": "Cambiamenti",
+        "github": "Archivio su GitHub",
+        "npm": "Pacchetto su NPM",
+        "theme": "Tema",
+        "light": "Ovviamente",
+        "dark": "Buio",
+        "system": "Sistema",
+        "language": "Lingua"
+      }
+    },
+    "sidebar": {
+      "card": {
+        "title": "Suggerimenti e miglioramenti",
+        "description": "Aiutaci a potenziare vue-toastfic",
+        "button": "Modulo"
+      }
+    }
   }
 }

@@ -51,7 +51,7 @@ function redirectForm() {
       <div class="pr-2">
         <PhosphorIconMagnifyingGlass color="var(--icon)" size="16" />
       </div>
-      Pesquisar...
+      {{ $t("components.nav-bar.command.searchPlaceholder") }}
 
       <kbd
         class="pointer-events-none absolute right-2 top-2 inline-flex h-5 min-h-5 select-none items-center gap-0.5 rounded border border-border bg-muted px-1.5 pt-0.5 font-sans text-xs font-semibold opacity-100 sm:flex"
@@ -61,39 +61,39 @@ function redirectForm() {
       </kbd>
     </Button>
     <CommandDialog v-model:open="open">
-      <CommandInput placeholder="Pesquisar documentação...." />
+      <CommandInput :placeholder="$t('components.nav-bar.command.inputPlaceholder')" />
       <CommandList>
-        <CommandEmpty>Sem resultados.</CommandEmpty>
+        <CommandEmpty>{{ $t("components.nav-bar.command.noResults") }}</CommandEmpty>
 
-        <CommandGroup heading="Formulário">
+        <CommandGroup :heading="$t('components.nav-bar.command.form')">
           <CommandItem value="form" class="group flex items-center gap-3" @click="redirectForm">
             <PhosphorIconPaperPlaneTilt color="var(--icon)" size="16" weight="fill" />
-            Sugestões e melhorias
+            {{ $t("components.nav-bar.command.suggestions") }}
           </CommandItem>
         </CommandGroup>
 
         <CommandSeparator />
 
-        <CommandGroup heading="Utilitários">
+        <CommandGroup :heading="$t('components.nav-bar.command.utilities')">
           <NuxtLink href="https://github.com/paulopariz/vue-toastfic" target="_blank">
             <CommandItem value="github" class="group flex items-center gap-4">
               <PhosphorIconGithubLogo size="21" />
-              Repositório no github
+              {{ $t("components.nav-bar.command.githubRepo") }}
             </CommandItem>
           </NuxtLink>
 
           <NuxtLink href="https://www.npmjs.com/package/vue-toastfic" target="_blank">
             <CommandItem value="npm" class="group flex items-center gap-3">
               <IconNpmLight class="size-7" />
-              Pacote no npm
+              {{ $t("components.nav-bar.command.npmPackage") }}
             </CommandItem>
           </NuxtLink>
         </CommandGroup>
 
         <CommandSeparator />
 
-        <CommandGroup heading="Documentação">
-          <CommandGroup heading="Iniciar">
+        <CommandGroup :heading="$t('components.nav-bar.command.documentation')">
+          <CommandGroup :heading="$t('components.nav-bar.command.gettingStarted')">
             <div class="flex flex-wrap gap-2">
               <NuxtLink v-for="(link, index) in getting_started" :key="index" :to="link.to">
                 <CommandItem
@@ -107,7 +107,7 @@ function redirectForm() {
             </div>
           </CommandGroup>
 
-          <CommandGroup heading="Style">
+          <CommandGroup :heading="$t('components.nav-bar.command.style')">
             <div class="flex flex-wrap gap-2">
               <NuxtLink v-for="(link, index) in style" :key="index" :to="link.to">
                 <CommandItem
@@ -121,7 +121,7 @@ function redirectForm() {
             </div>
           </CommandGroup>
 
-          <CommandGroup heading="Uso">
+          <CommandGroup :heading="$t('components.nav-bar.command.use')">
             <div class="flex flex-wrap gap-2">
               <NuxtLink v-for="(link, index) in use" :key="index" :to="link.to">
                 <CommandItem
@@ -138,20 +138,20 @@ function redirectForm() {
 
         <CommandSeparator />
 
-        <CommandGroup heading="Tema">
+        <CommandGroup :heading="$t('components.nav-bar.command.theme')">
           <CommandItem value="light" class="group flex items-center gap-3" @select="colorMode.preference = 'light'">
             <PhosphorIconSun size="16" weight="duotone" color="var(--icon)" />
-            Light
+            {{ $t("components.nav-bar.command.themeLight") }}
           </CommandItem>
 
           <CommandItem value="dark" class="group flex items-center gap-3" @select="colorMode.preference = 'dark'">
             <PhosphorIconMoonStars size="16" weight="duotone" color="var(--icon)" />
-            Dark
+            {{ $t("components.nav-bar.command.themeDark") }}
           </CommandItem>
 
           <CommandItem value="system" class="group flex items-center gap-3" @select="colorMode.preference = 'system'">
             <PhosphorIconMonitor size="16" weight="duotone" color="var(--icon)" />
-            System
+            {{ $t("components.nav-bar.command.themeSystem") }}
           </CommandItem>
         </CommandGroup>
       </CommandList>

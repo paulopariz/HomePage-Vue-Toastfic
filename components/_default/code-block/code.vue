@@ -78,7 +78,7 @@ onMounted(async () => {
         class="flex w-min items-center gap-2 rounded-[6px] bg-transparent !text-[#e2e2e2] !shadow-none hover:bg-[#1c1c1f] data-[state=active]:bg-[#1c1c1f]"
       >
         <PhosphorIconBrowsers size="16" />
-        Preview
+        {{ $t("components.code-block.preview") }}
       </TabsTrigger>
 
       <TooltipProvider>
@@ -95,7 +95,7 @@ onMounted(async () => {
           </TooltipTrigger>
 
           <TooltipContent>
-            <p>Copiado!</p>
+            <p>{{ $t("components.code-block.copied") }}</p>
           </TooltipContent>
         </Tooltip>
       </TooltipProvider>

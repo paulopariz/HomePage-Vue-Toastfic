@@ -57,7 +57,7 @@
         "subtitle-use": "Cacher le bouton",
         "use": "Utiliser",
         "or": "ou",
-        "subtitle-disabled": ""
+        "subtitle-disabled": "Désactiver la fermeture"
       },
       "colorful": {
         "title-colorful": "Activer/Désactiver les couleurs",
@@ -141,6 +141,60 @@
     "event": "Gérer les événements"
   },
   "additionals": {
-    "use-sequence-toast": "Description du pain toast"
+    "use-sequence-toast": "Description du pain toast",
+    "home-page": "Page d'accueil",
+    "documentation": "Documentation",
+    "back-to-top": "Retour en haut"
+  },
+  "components": {
+    "code-block": {
+      "preview": "Aperçu",
+      "copied": "Copié!"
+    },
+    "nav-bar": {
+      "command": {
+        "searchPlaceholder": "A chercher...",
+        "inputPlaceholder": "Rechercher des documents....",
+        "noResults": "Aucun résultat.",
+        "form": "Formulaire",
+        "suggestions": "Suggestions et améliorations",
+        "utilities": "Utilitaires",
+        "githubRepo": "Dépôt sur github",
+        "npmPackage": "Forfait sur npm",
+        "documentation": "Documentation",
+        "gettingStarted": "Commencer",
+        "style": "Style",
+        "use": "Utiliser",
+        "theme": "Thème",
+        "themeLight": "Lumière",
+        "themeDark": "Sombre",
+        "themeSystem": "Système"
+      },
+      "logoAlt": "Logo Vue Toastfic",
+      "gettingStarted": "Commencer",
+      "changelog": "Changements",
+      "githubTooltip": "Dépôt sur GitHub",
+      "npmTooltip": "Forfait sur NPM",
+      "preferences": {
+        "title": "Préférences",
+        "links": "Links",
+        "start": "Commencer",
+        "changelog": "Changements",
+        "github": "Dépôt sur GitHub",
+        "npm": "Forfait sur NPM",
+        "theme": "Thème",
+        "light": "Bien sûr",
+        "dark": "Sombre",
+        "system": "Système",
+        "language": "Langue"
+      }
+    },
+    "sidebar": {
+      "card": {
+        "title": "Suggestions et améliorations",
+        "description": "Aidez à booster vue-toastfic",
+        "button": "Formulaire"
+      }
+    }
   }
 }

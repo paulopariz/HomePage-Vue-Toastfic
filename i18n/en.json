@@ -57,7 +57,7 @@
         "subtitle-use": "Hide the button",
         "use": "Use",
         "or": "or",
-        "subtitle-disabled": ""
+        "subtitle-disabled": "Disable closing"
       },
       "colorful": {
         "title-colorful": "Enable/Disable colors",
@@ -141,6 +141,60 @@
     "event": "Handle events"
   },
   "additionals": {
-    "use-sequence-toast": "Description for toast"
+    "use-sequence-toast": "Description for toast",
+    "home-page": "Home page",
+    "documentation": "Documentation",
+    "back-to-top": "Back to top"
+  },
+  "components": {
+    "code-block": {
+      "preview": "Preview",
+      "copied": "Copied!"
+    },
+    "nav-bar": {
+      "command": {
+        "searchPlaceholder": "To look for...",
+        "inputPlaceholder": "Search documentation....",
+        "noResults": "No results.",
+        "form": "Form",
+        "suggestions": "Suggestions and improvements",
+        "utilities": "Utilities",
+        "githubRepo": "Repository on github",
+        "npmPackage": "Package on npm",
+        "documentation": "Documentation",
+        "gettingStarted": "Get Started",
+        "style": "Style",
+        "use": "Use",
+        "theme": "Theme",
+        "themeLight": "Light",
+        "themeDark": "Dark",
+        "themeSystem": "System"
+      },
+      "logoAlt": "Vue Toastfic logo",
+      "gettingStarted": "Get Started",
+      "changelog": "Changelog",
+      "githubTooltip": "Repository on GitHub",
+      "npmTooltip": "Package on NPM",
+      "preferences": {
+        "title": "Preferences",
+        "links": "Links",
+        "start": "Get Started",
+        "changelog": "Changes",
+        "github": "Repository on GitHub",
+        "npm": "Package on NPM",
+        "theme": "Theme",
+        "light": "Light",
+        "dark": "Dark",
+        "system": "System",
+        "language": "Language"
+      }
+    },
+    "sidebar": {
+      "card": {
+        "title": "Suggestions and improvements",
+        "description": "Help boost vue-toastfic",
+        "button": "Form"
+      }
+    }
   }
 }

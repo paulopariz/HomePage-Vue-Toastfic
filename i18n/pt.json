@@ -141,6 +141,60 @@
     "personalize": "Personalização do toast"
   },
   "additionals": {
-    "use-sequence-toast": "Descrição para o toast "
+    "use-sequence-toast": "Descrição para o toast ",
+    "home-page": "Página inicial",
+    "documentation": "Documentação",
+    "back-to-top": "Voltar para o topo"
+  },
+  "components": {
+    "code-block": {
+      "copied": "Copiado!",
+      "preview": "Visualização"
+    },
+    "nav-bar": {
+      "logoAlt": "Logotipo do Vue Toastfic",
+      "gettingStarted": "Iniciar",
+      "changelog": "Alterações",
+      "githubTooltip": "Repositório no GitHub",
+      "npmTooltip": "Pacote no NPM",
+      "command": {
+        "searchPlaceholder": "Pesquisar...",
+        "inputPlaceholder": "Pesquisar documentação....",
+        "noResults": "Sem resultados.",
+        "form": "Formulário",
+        "suggestions": "Sugestões e melhorias",
+        "utilities": "Utilitários",
+        "githubRepo": "Repositório no github",
+        "npmPackage": "Pacote no npm",
+        "documentation": "Documentação",
+        "gettingStarted": "Iniciar",
+        "style": "Style",
+        "use": "Uso",
+        "theme": "Tema",
+        "themeLight": "Claro",
+        "themeDark": "Escuro",
+        "themeSystem": "Sistema"
+      },
+      "preferences": {
+        "title": "Preferências",
+        "links": "Links",
+        "start": "Iniciar",
+        "changelog": "Alterações",
+        "github": "Repositório no GitHub",
+        "npm": "Pacote no NPM",
+        "theme": "Tema",
+        "light": "Claro",
+        "dark": "Escuro",
+        "system": "Sistema",
+        "language": "Idioma"
+      }
+    },
+    "sidebar": {
+      "card": {
+        "title": "Sugestões e melhorias",
+        "description": "Ajude a impulsionar o vue-toastfic",
+        "button": "Formulário"
+      }
+    }
   }
 }

@@ -2,7 +2,8 @@
 import { useRoute } from "vue-router";
 
 const route = useRoute();
-const { $router } = useNuxtApp();
+const { $router, $i18n } = useNuxtApp();
+const { t } = $i18n;
 
 interface IRoutes {
   path: string;
@@ -10,18 +11,18 @@ interface IRoutes {
 }
 
 const routes: IRoutes[] = [
-  { path: "/getting-started", name: "Instalar" },
-  { path: "/getting-started/demo", name: "Demonstração" },
-  { path: "/style/palette", name: "Paleta de cores" },
-  { path: "/use/position", name: "Posição" },
-  { path: "/use/close-toast", name: "Fechar toast" },
-  { path: "/use/duration", name: "Tempo de fechamento" },
-  { path: "/use/progress-bar", name: "Barra de progresso" },
-  { path: "/use/colorful", name: "Ativar/Desativar cores" },
-  { path: "/use/maximum", name: "Máximo de toasts" },
-  { path: "/use/theme", name: "Tema" },
-  { path: "/use/event", name: "Lidar com eventos" },
-  { path: "/use/personalize", name: "Personalização do toast" },
+  { path: "/getting-started", name: t("routes-name.install") },
+  { path: "/getting-started/demo", name: t("routes-name.demo") },
+  { path: "/style/palette", name: t("routes-name.palette") },
+  { path: "/use/position", name: t("routes-name.position") },
+  { path: "/use/close-toast", name: t("routes-name.close-toast") },
+  { path: "/use/duration", name: t("routes-name.duration") },
+  { path: "/use/progress-bar", name: t("routes-name.progress-bar") },
+  { path: "/use/colorful", name: t("routes-name.colorful") },
+  { path: "/use/maximum", name: t("routes-name.maximum") },
+  { path: "/use/theme", name: t("routes-name.theme") },
+  { path: "/use/event", name: t("routes-name.event") },
+  { path: "/use/personalize", name: t("routes-name.personalize") },
 ];
 
 const currentIndex = computed(() => {
@@ -53,7 +54,7 @@ function navigateTo(path: string) {
   <div class="flex w-full items-center justify-between gap-3">
     <Button variant="secondary" class="flex items-center gap-2" @click="navigateTo(prevRoute ?? '/')">
       <PhosphorIconCaretLeft color="var(--icon)" weight="bold" />
-      {{ prevRouteName ?? "Página inicial" }}
+      {{ prevRouteName ?? $t("additionals.home-page") }}
     </Button>
 
     <Button v-if="nextRoute" variant="secondary" class="flex items-center gap-2" @click="navigateTo(nextRoute)">

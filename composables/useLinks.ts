@@ -3,9 +3,8 @@ export interface Link {
   text: string;
 }
 
-const { $i18n } = useNuxtApp();
-
 export function useLinks() {
+  const { $i18n } = useNuxtApp();
   const { t } = $i18n;
 
   const getting_started: Link[] = [

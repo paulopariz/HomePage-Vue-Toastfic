@@ -20,7 +20,7 @@ const route = useRoute();
     <div class="container flex h-full items-center justify-between max-sm:px-4">
       <div class="flex items-center gap-10">
         <NuxtLink to="/" class="flex items-center gap-1">
-          <NuxtImg src="/logo.svg" alt="Vue Toasctfic" class="h-6 w-6" />
+          <NuxtImg src="/logo.svg" :alt="$t('components.nav-bar.logoAlt')" class="h-6 w-6" />
           <h1 class="text-xs font-extrabold leading-4">toastfic</h1>
         </NuxtLink>
 
@@ -32,7 +32,7 @@ const route = useRoute();
           to="/getting-started"
           class="flex h-full cursor-pointer items-center border-l border-border px-5 text-sm font-medium opacity-80 transition-all hover:bg-green-light hover:text-green"
         >
-          Iniciar
+          {{ $t("components.nav-bar.gettingStarted") }}
         </NuxtLink>
 
         <NuxtLink
@@ -40,7 +40,7 @@ const route = useRoute();
           target="_blank"
           class="flex h-full cursor-pointer items-center border-l border-border px-5 text-sm font-medium opacity-80 transition-all hover:bg-green-light hover:text-green"
         >
-          Alterações
+          {{ $t("components.nav-bar.changelog") }}
           <PhosphorIconArrowUpRight weight="bold" size="12" />
         </NuxtLink>
 
@@ -58,7 +58,7 @@ const route = useRoute();
               </NuxtLink>
             </TooltipTrigger>
             <TooltipContent>
-              <p>Repositório no github</p>
+              <p>{{ $t("components.nav-bar.githubTooltip") }}</p>
             </TooltipContent>
           </Tooltip>
         </TooltipProvider>
@@ -75,7 +75,7 @@ const route = useRoute();
               </NuxtLink>
             </TooltipTrigger>
             <TooltipContent>
-              <p>Pacote no npm</p>
+              <p>{{ $t("components.nav-bar.npmTooltip") }}</p>
             </TooltipContent>
           </Tooltip>
         </TooltipProvider>

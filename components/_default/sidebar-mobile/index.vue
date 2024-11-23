@@ -16,27 +16,29 @@ const { getting_started, style, use } = useLinks();
         class="container fixed top-16 flex h-9 w-full items-center border-b bg-background max-sm:px-4"
       >
         <div class="flex items-center gap-1">
-          <p class="cursor-pointer text-sm text-muted-foreground hover:text-foreground hover:underline">Documentação</p>
+          <p class="cursor-pointer text-sm text-muted-foreground hover:text-foreground hover:underline">
+            {{ $t("additionals.documentation") }}
+          </p>
           <PhosphorIconCaretRight size="14" color="var(--icon)" />
         </div>
       </SheetTrigger>
 
       <SheetContent side="bottom" class="h-[93%]">
         <SheetHeader class="items-start">
-          <SheetTitle> Documentação </SheetTitle>
+          <SheetTitle> {{ $t("additionals.documentation") }} </SheetTitle>
         </SheetHeader>
 
         <div class="mt-5 grid w-min gap-3">
           <SheetClose>
-            <Group title="Iniciar" :links="getting_started" />
+            <Group :title="$t('components.nav-bar.command.gettingStarted')" :links="getting_started" />
           </SheetClose>
 
           <SheetClose>
-            <Group title="Style" :links="style" />
+            <Group :title="$t('components.nav-bar.command.style')" :links="style" />
           </SheetClose>
 
           <SheetClose>
-            <Group title="Uso" :links="use" />
+            <Group :title="$t('components.nav-bar.command.use')" :links="use" />
           </SheetClose>
         </div>
 

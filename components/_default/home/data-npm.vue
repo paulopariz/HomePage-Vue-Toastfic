@@ -29,7 +29,7 @@ const { fetchNpmDownloads } = useNpmDownloads();
 const downloads = ref<{ day: string; downloads: number }[]>([]);
 
 const limitedVersions = computed(() => {
-  return npmInfo.value?.versions?.slice(0, 17).reverse() || [];
+  return [...(npmInfo.value?.versions || [])].reverse();
 });
 
 async function setDays(days: number) {

@@ -24,11 +24,13 @@ onMounted(() => {
   <div v-if="showCard" class="group absolute bottom-3 h-32 w-[90%]">
     <div class="relative flex size-full flex-col justify-between overflow-hidden rounded-lg border p-4">
       <div>
-        <h1 class="font-semibold">Sugestões e melhorias</h1>
-        <p class="mt-0.5 text-xs tracking-wide text-muted-foreground">Ajude a impulsionar o vue-toastfic</p>
+        <h1 class="text-sm font-semibold">{{ $t("components.sidebar.card.title") }}</h1>
+        <p class="mt-0.5 text-xs tracking-wide text-muted-foreground">
+          {{ $t("components.sidebar.card.description") }}
+        </p>
       </div>
 
-      <Button size="xs" class="text-sm" @click="redirectForm">Formulário</Button>
+      <Button size="xs" class="text-sm" @click="redirectForm">{{ $t("components.sidebar.card.button") }}</Button>
 
       <div
         class="absolute left-0 top-0 -z-10 flex h-16 w-32 items-center justify-center rounded-full bg-green-light blur-xl"

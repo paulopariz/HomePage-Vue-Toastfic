@@ -18,9 +18,7 @@ function isActive(link: string) {
 
 <template>
   <div class="w-min">
-    <h1 class="text-start font-semibold">
-      {{ title }}
-    </h1>
+    <h1 class="text-nowrap text-start font-semibold">{{ title }}</h1>
 
     <div class="ml-2 mt-2 grid gap-2">
       <NuxtLink

@@ -67,7 +67,7 @@ function updateTopics() {
       class="ml-3 mt-2.5 flex cursor-pointer items-center gap-2 text-xs font-semibold"
       @click="scrollToTop"
     >
-      Voltar para o topo
+      {{ $t("additionals.back-to-top") }}
 
       <PhosphorIconArrowUp weight="bold" />
     </p>

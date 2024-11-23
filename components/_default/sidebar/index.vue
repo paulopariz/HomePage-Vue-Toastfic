@@ -16,9 +16,9 @@ const { getting_started, style, use } = useLinks();
       <Command />
 
       <div class="mt-8 grid gap-10">
-        <Group title="Iniciar" :links="getting_started" />
-        <Group title="Style" :links="style" />
-        <Group title="Uso" :links="use" />
+        <Group :title="$t('components.nav-bar.command.gettingStarted')" :links="getting_started" />
+        <Group :title="$t('components.nav-bar.command.style')" :links="style" />
+        <Group :title="$t('components.nav-bar.command.use')" :links="use" />
       </div>
     </div>
 

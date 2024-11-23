@@ -57,7 +57,7 @@
         "subtitle-use": "Ocultar el botón",
         "use": "Usar",
         "or": "o",
-        "subtitle-disabled": ""
+        "subtitle-disabled": "Desactivar cierre"
       },
       "colorful": {
         "title-colorful": "Activar/Desactivar colores",
@@ -141,6 +141,60 @@
     "event": "Manejar eventos"
   },
   "additionals": {
-    "use-sequence-toast": "Descripción de toast"
+    "use-sequence-toast": "Descripción de toast",
+    "home-page": "Pagina de inicio",
+    "documentation": "Documentación",
+    "back-to-top": "Volver arriba"
+  },
+  "components": {
+    "code-block": {
+      "preview": "Avance",
+      "copied": "¡Copiado!"
+    },
+    "nav-bar": {
+      "command": {
+        "searchPlaceholder": "Para buscar...",
+        "inputPlaceholder": "Buscar documentación....",
+        "noResults": "Sin resultados.",
+        "form": "Forma",
+        "suggestions": "Sugerencias y mejoras",
+        "githubRepo": "Repositorio en github",
+        "npmPackage": "Paquete en npm",
+        "documentation": "Documentación",
+        "gettingStarted": "Comenzar",
+        "style": "Estilo",
+        "use": "Usar",
+        "theme": "Tema",
+        "themeLight": "Luz",
+        "themeDark": "Oscuro",
+        "themeSystem": "Sistema",
+        "utilities": "Utilidades"
+      },
+      "logoAlt": "Logotipo de Vue Toastfic",
+      "gettingStarted": "Comenzar",
+      "changelog": "Cambios",
+      "githubTooltip": "Repositorio en GitHub",
+      "npmTooltip": "Paquete sobre NPM",
+      "preferences": {
+        "title": "Preferencias",
+        "links": "Campo de golf",
+        "start": "Comenzar",
+        "changelog": "Cambios",
+        "github": "Repositorio en GitHub",
+        "npm": "Paquete sobre NPM",
+        "theme": "Tema",
+        "light": "Por supuesto",
+        "dark": "Oscuro",
+        "system": "Sistema",
+        "language": "Idioma"
+      }
+    },
+    "sidebar": {
+      "card": {
+        "title": "Sugerencias y mejoras",
+        "description": "Ayuda a impulsar vue-toastfic",
+        "button": "Forma"
+      }
+    }
   }
 }

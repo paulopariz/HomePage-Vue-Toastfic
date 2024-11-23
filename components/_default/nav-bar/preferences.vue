@@ -50,57 +50,63 @@ function selectLanguage(code: string) {
     </DropdownMenuTrigger>
 
     <DropdownMenuContent class="w-56" align="end">
-      <DropdownMenuLabel class="max-md:hidden"> Preferências </DropdownMenuLabel>
+      <DropdownMenuLabel class="max-md:hidden"> {{ $t("components.nav-bar.preferences.title") }} </DropdownMenuLabel>
       <DropdownMenuSeparator class="max-md:hidden" />
 
       <DropdownMenuGroup class="md:hidden">
-        <DropdownMenuLabel> Links </DropdownMenuLabel>
+        <DropdownMenuLabel> {{ $t("components.nav-bar.preferences.links") }} </DropdownMenuLabel>
 
         <DropdownMenuItem class="flex items-center gap-4 text-xs">
           <PhosphorIconArrowUpRight weight="bold" size="18" />
-          <NuxtLink to="/getting-started"> Iniciar </NuxtLink>
+          <NuxtLink to="/getting-started"> {{ $t("components.nav-bar.preferences.start") }} </NuxtLink>
         </DropdownMenuItem>
 
         <DropdownMenuItem class="flex items-center gap-4 text-xs">
           <PhosphorIconArrowUpRight weight="bold" size="18" />
-          <NuxtLink target="_blank" href="/https://github.com/paulopariz/vue-toastfic/releases"> Alterações </NuxtLink>
+          <NuxtLink target="_blank" href="/https://github.com/paulopariz/vue-toastfic/releases">
+            {{ $t("components.nav-bar.preferences.changelog") }}
+          </NuxtLink>
         </DropdownMenuItem>
 
         <DropdownMenuItem class="flex items-center gap-4 text-xs">
           <PhosphorIconArrowUpRight weight="bold" size="18" />
-          <NuxtLink target="_blank" href="https://github.com/paulopariz/vue-toastfic"> Repositório no github </NuxtLink>
+          <NuxtLink target="_blank" href="https://github.com/paulopariz/vue-toastfic">
+            {{ $t("components.nav-bar.preferences.github") }}
+          </NuxtLink>
         </DropdownMenuItem>
 
         <DropdownMenuItem class="flex items-center gap-4 text-xs">
           <PhosphorIconArrowUpRight weight="bold" size="18" />
-          <NuxtLink target="_blank" href="https://www.npmjs.com/package/vue-toastfic"> Pacote no npm </NuxtLink>
+          <NuxtLink target="_blank" href="https://www.npmjs.com/package/vue-toastfic">
+            {{ $t("components.nav-bar.preferences.npm") }}
+          </NuxtLink>
         </DropdownMenuItem>
       </DropdownMenuGroup>
 
       <DropdownMenuSeparator class="md:hidden" />
 
       <DropdownMenuGroup>
-        <DropdownMenuLabel> Tema </DropdownMenuLabel>
+        <DropdownMenuLabel> {{ $t("components.nav-bar.preferences.theme") }} </DropdownMenuLabel>
 
         <DropdownMenuItem class="flex items-center gap-4 text-xs" @click="colorMode.preference = 'light'">
           <PhosphorIconSun size="18" weight="duotone" color="var(--icon)" />
-          Light
+          {{ $t("components.nav-bar.preferences.light") }}
         </DropdownMenuItem>
 
         <DropdownMenuItem class="flex items-center gap-4 text-xs" @click="colorMode.preference = 'dark'">
           <PhosphorIconMoonStars size="18" weight="duotone" color="var(--icon)" />
-          Dark
+          {{ $t("components.nav-bar.preferences.dark") }}
         </DropdownMenuItem>
 
         <DropdownMenuItem class="flex items-center gap-4 text-xs" @click="colorMode.preference = 'system'">
           <PhosphorIconMonitor size="18" weight="duotone" color="var(--icon)" />
-          System
+          {{ $t("components.nav-bar.preferences.system") }}
         </DropdownMenuItem>
       </DropdownMenuGroup>
       <DropdownMenuSeparator />
 
       <DropdownMenuGroup>
-        <DropdownMenuLabel> Idioma </DropdownMenuLabel>
+        <DropdownMenuLabel> {{ $t("components.nav-bar.preferences.language") }} </DropdownMenuLabel>
 
         <DropdownMenuSub>
           <DropdownMenuSubTrigger class="flex items-center gap-2">
