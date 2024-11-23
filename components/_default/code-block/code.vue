@@ -94,6 +94,7 @@ onMounted(async () => {
               variant="ghost"
               class="ml-auto size-8 rounded-[6px] p-0 hover:bg-[#1c1c1f]"
               aria-label="Copy code"
+              role="button"
               @click="handleCopyClick"
             >
               <PhosphorIconCopySimple v-if="!tooltipVisible" size="18" weight="fill" color="#e2e2e2" />
