@@ -51,7 +51,7 @@ function hello() {
 </script>
 
 <template>
-  <Toast position="bottom-right" theme="light" />
+  <Toast position="bottom-right" theme="dark" />
 
   <Header>
     <HeaderTitle> {{ $t("pages.use.event.title-event") }} </HeaderTitle>
