@@ -40,8 +40,8 @@ const maximumToasts: ICode[] = [
 </script>
 
 <template>
-  <Toast position="bottom-left" theme="dark" />
-  <Toast position="bottom-right" theme="light" />
+  <Toast position="bottom-center" :max-toasts="4" theme="dark" />
+  <Toast position="top-center" :max-toasts="4" theme="light" />
 
   <Header>
     <HeaderTitle> {{ $t("pages.use.theme.title-theme") }} </HeaderTitle>
